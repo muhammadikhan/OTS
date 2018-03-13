@@ -9,3 +9,4 @@ C:\Users\Imran Khan\Documents\GitHub\OTS\DatabaseFactory\bin\Debug\DatabaseFacto
 C:\Users\Imran Khan\Documents\GitHub\OTS\DatabaseFactory\bin\Debug\DatabaseFactory.pdb
 C:\Users\Imran Khan\Documents\GitHub\OTS\DatabaseFactory\obj\Debug\DatabaseFactory.dll
 C:\Users\Imran Khan\Documents\GitHub\OTS\DatabaseFactory\obj\Debug\DatabaseFactory.pdb
+C:\Users\Imran Khan\Documents\GitHub\OTS\DatabaseFactory\obj\Debug\DatabaseFactory.csprojResolveAssemblyReference.cache

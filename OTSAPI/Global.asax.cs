@@ -10,7 +10,7 @@ namespace OTSAPI
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
-        
+
     }
     public static class GlobalSettings
     {
@@ -19,8 +19,17 @@ namespace OTSAPI
         {
             get
             {
-                    return "Imran";
-                    //return ConfigurationManager.ConnectionStrings["ProjectConnection"].ConnectionString.Replace("@", "^").Replace("#", "~").Replace("!", "|");
+                try
+                {
+                    if (ConfigurationManager.AppSettings["isStagging"].ToString().ToUpper().Contains("TRUE"))
+                        return ConfigurationManager.ConnectionStrings["StaggingConnectionString"].ConnectionString;
+                    else
+                        return ConfigurationManager.ConnectionStrings["LiveConnectionString"].ConnectionString;
+                }
+                catch (System.Exception ex)
+                {
+                return ex.ToString();
+                }
             }
         }
         #endregion

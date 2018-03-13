@@ -25,13 +25,6 @@ namespace OTS
     }
     public static class GlobalSettings
     {
-        public static string GetConnectionString
-        {
-            get
-            {
-                return string.Empty;
-            }
-        }
         public static string WebAPIURL
         {
             get

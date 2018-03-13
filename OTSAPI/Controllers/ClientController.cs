@@ -18,7 +18,7 @@ namespace OTSAPI.Controllers
     public class ClientController : ApiController
     {
         #region Database CRUD (Create, Read, Update, Delete) Operations
-        DataClasses_DataContext DBContext = new DataClasses_DataContext();
+        DataClasses_DataContext DBContext = new DataClasses_DataContext(GlobalSettings.GetConnectionString);
 
         #region Create / Insert
         [HttpPost]

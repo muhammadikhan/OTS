@@ -26,7 +26,8 @@ namespace DatabaseFactory.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=Tailorshop;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Password=Allahisgr8;Persist Security Info=True;User ID=sa;Initial Catalog=Tailors" +
+            "hop;Data Source=(local)")]
         public string TailorshopConnectionString {
             get {
                 return ((string)(this["TailorshopConnectionString"]));
