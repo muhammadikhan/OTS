@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\ApiLocalDeploy.pubxml" />
     <None Include="Properties\PublishProfiles\OnlineTailoringService.pubxml" />
     <None Include="Properties\PublishProfiles\OnlineTailoringServiceApi.pubxml" />
     <None Include="Web.Debug.config">

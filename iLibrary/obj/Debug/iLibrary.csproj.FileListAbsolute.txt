@@ -40,3 +40,8 @@ C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Debug\iLibrary.pdb
 C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Debug\iLibrary.dll
 C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Debug\iLibrary.pdb
 C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Imran Khan\Documents\GitHub\OTS\iLibrary\bin\Debug\iLibrary.dll
+C:\Users\Imran Khan\Documents\GitHub\OTS\iLibrary\bin\Debug\iLibrary.pdb
+C:\Users\Imran Khan\Documents\GitHub\OTS\iLibrary\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Imran Khan\Documents\GitHub\OTS\iLibrary\obj\Debug\iLibrary.dll
+C:\Users\Imran Khan\Documents\GitHub\OTS\iLibrary\obj\Debug\iLibrary.pdb

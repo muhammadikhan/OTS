@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -35,14 +36,24 @@ namespace OTS
         {
             get
             {
-                return "http://localhost:1212/api/";
+                if (ConfigurationManager.AppSettings["isStagingSite"].ToString().ToUpper().Contains("TRUE"))
+                    return ConfigurationManager.AppSettings["WebApiURL_Staging"];
+                else
+                    return ConfigurationManager.AppSettings["WebApiURL_Live"];
             }
         }
         public static int WebAPITimeout
         {
             get
             {
-                return 50000;
+                try
+                {
+                    return int.Parse(ConfigurationManager.AppSettings["WebApiTimeout"].ToString());
+                }
+                catch
+                {
+                    return 9000;
+                }
             }
         }
     }
