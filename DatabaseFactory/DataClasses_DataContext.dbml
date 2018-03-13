@@ -1,0 +1,2239 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tailorshop" EntityNamespace="DatabaseEntity" ContextNamespace="DatabaseContext" Class="DataClasses_DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=Tailorshop;Integrated Security=True" SettingsObjectName="DatabaseFactory.Properties.Settings" SettingsPropertyName="TailorshopConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Client" Member="Clients">
+    <Type Name="Client">
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId1">
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="pickUp_Address" Member="PickUp_Address" />
+      <Argument Parameter="drop_Address" Member="Drop_Address" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId2">
+      <Argument Parameter="client_ID" Member="Client_ID" />
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="pickUp_Address" Member="PickUp_Address" />
+      <Argument Parameter="drop_Address" Member="Drop_Address" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId3">
+      <Argument Parameter="client_ID" Member="Client_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Warehouse" Member="Warehouses">
+    <Type Name="Warehouse">
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Warehouse_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Name" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Landline_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fax_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId4">
+      <Argument Parameter="warehouse_Name" Member="Warehouse_Name" />
+      <Argument Parameter="onwer_Name" Member="Onwer_Name" />
+      <Argument Parameter="onwer_Details" Member="Onwer_Details" />
+      <Argument Parameter="landline_Number" Member="Landline_Number" />
+      <Argument Parameter="fax_Number" Member="Fax_Number" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId5">
+      <Argument Parameter="warehouse_ID" Member="Warehouse_ID" />
+      <Argument Parameter="warehouse_Name" Member="Warehouse_Name" />
+      <Argument Parameter="onwer_Name" Member="Onwer_Name" />
+      <Argument Parameter="onwer_Details" Member="Onwer_Details" />
+      <Argument Parameter="landline_Number" Member="Landline_Number" />
+      <Argument Parameter="fax_Number" Member="Fax_Number" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId6">
+      <Argument Parameter="warehouse_ID" Member="Warehouse_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.ClientRider" Member="ClientRiders">
+    <Type Name="ClientRider">
+      <Column Name="C_RiderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId7">
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId8">
+      <Argument Parameter="c_RiderID" Member="C_RiderID" />
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId9">
+      <Argument Parameter="c_RiderID" Member="C_RiderID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.ClientSample" Member="ClientSamples">
+    <Type Name="ClientSample">
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientSample_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId10">
+      <Argument Parameter="clientSample_ID" Member="ClientSample_ID" />
+      <Argument Parameter="clientSample_Name" Member="ClientSample_Name" />
+      <Argument Parameter="clientSample_QR_Code" Member="ClientSample_QR_Code" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId11">
+      <Argument Parameter="clientSample_ID" Member="ClientSample_ID" />
+      <Argument Parameter="clientSample_Name" Member="ClientSample_Name" />
+      <Argument Parameter="clientSample_QR_Code" Member="ClientSample_QR_Code" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId12">
+      <Argument Parameter="clientSample_ID" Member="ClientSample_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Dimension" Member="Dimensions">
+    <Type Name="Dimension">
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Dimension_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId13">
+      <Argument Parameter="dimension_ID" Member="Dimension_ID" />
+      <Argument Parameter="dimension_Name" Member="Dimension_Name" />
+      <Argument Parameter="dimension_Value" Member="Dimension_Value" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId14">
+      <Argument Parameter="dimension_ID" Member="Dimension_ID" />
+      <Argument Parameter="dimension_Name" Member="Dimension_Name" />
+      <Argument Parameter="dimension_Value" Member="Dimension_Value" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId15">
+      <Argument Parameter="dimension_ID" Member="Dimension_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.DressDetails" Member="DressDetails">
+    <Type Name="DressDetail">
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId16">
+      <Argument Parameter="dressCategory_ID" Member="DressCategory_ID" />
+      <Argument Parameter="dressType_ID" Member="DressType_ID" />
+      <Argument Parameter="dressStyle_ID" Member="DressStyle_ID" />
+      <Argument Parameter="dimension_ID" Member="Dimension_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId17">
+      <Argument Parameter="dressDetails_ID" Member="DressDetails_ID" />
+      <Argument Parameter="dressCategory_ID" Member="DressCategory_ID" />
+      <Argument Parameter="dressType_ID" Member="DressType_ID" />
+      <Argument Parameter="dressStyle_ID" Member="DressStyle_ID" />
+      <Argument Parameter="dimension_ID" Member="Dimension_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId18">
+      <Argument Parameter="dressDetails_ID" Member="DressDetails_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.DressStyle" Member="DressStyles">
+    <Type Name="DressStyle">
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DressStyle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId19">
+      <Argument Parameter="dressStyle_Name" Member="DressStyle_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId20">
+      <Argument Parameter="dressStyle_ID" Member="DressStyle_ID" />
+      <Argument Parameter="dressStyle_Name" Member="DressStyle_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId21">
+      <Argument Parameter="dressStyle_ID" Member="DressStyle_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.DressType" Member="DressTypes">
+    <Type Name="DressType">
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DressType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId22">
+      <Argument Parameter="dressType_Name" Member="DressType_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId23">
+      <Argument Parameter="dressType_ID" Member="DressType_ID" />
+      <Argument Parameter="dressType_Name" Member="DressType_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId24">
+      <Argument Parameter="dressType_ID" Member="DressType_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Entity" Member="Entities">
+    <Type Name="Entity">
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Entity_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId25">
+      <Argument Parameter="entity_Name" Member="Entity_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId26">
+      <Argument Parameter="entity_ID" Member="Entity_ID" />
+      <Argument Parameter="entity_Name" Member="Entity_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId27">
+      <Argument Parameter="entity_ID" Member="Entity_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Entity_Offer" Member="Entity_Offers">
+    <Type Name="Entity_Offer">
+      <Column Name="Entity_Offer_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Flat_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId28">
+      <Argument Parameter="entity_Offer_ID" Member="Entity_Offer_ID" />
+      <Argument Parameter="offer_ID" Member="Offer_ID" />
+      <Argument Parameter="dressDetails_ID" Member="DressDetails_ID" />
+      <Argument Parameter="rate" Member="Rate" />
+      <Argument Parameter="percentage_Discount" Member="Percentage_Discount" />
+      <Argument Parameter="flat_Discount" Member="Flat_Discount" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId23">
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId29">
+      <Argument Parameter="offer_ID" Member="Offer_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Entity_Order_Timeframe" Member="Entity_Order_Timeframes">
+    <Type Name="Entity_Order_Timeframe">
+      <Column Name="OrderTimeframe_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estimated_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Actual_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pick" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Drop]" Member="Drop" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId30">
+      <Argument Parameter="order_ID" Member="Order_ID" />
+      <Argument Parameter="entity_ID" Member="Entity_ID" />
+      <Argument Parameter="estimated_DateTime" Member="Estimated_DateTime" />
+      <Argument Parameter="actual_DateTime" Member="Actual_DateTime" />
+      <Argument Parameter="pick" Member="Pick" />
+      <Argument Parameter="drop" Member="Drop" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId31">
+      <Argument Parameter="orderTimeframe_ID" Member="OrderTimeframe_ID" />
+      <Argument Parameter="order_ID" Member="Order_ID" />
+      <Argument Parameter="entity_ID" Member="Entity_ID" />
+      <Argument Parameter="estimated_DateTime" Member="Estimated_DateTime" />
+      <Argument Parameter="actual_DateTime" Member="Actual_DateTime" />
+      <Argument Parameter="pick" Member="Pick" />
+      <Argument Parameter="drop" Member="Drop" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId32">
+      <Argument Parameter="orderTimeframe_ID" Member="OrderTimeframe_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Locations" Member="Locations">
+    <Type Name="Location">
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Area_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Map_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId33">
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="area_ID" Member="Area_ID" />
+      <Argument Parameter="map_ID" Member="Map_ID" />
+      <Argument Parameter="city_ID" Member="City_ID" />
+      <Argument Parameter="country_ID" Member="Country_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId34">
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="area_ID" Member="Area_ID" />
+      <Argument Parameter="map_ID" Member="Map_ID" />
+      <Argument Parameter="city_ID" Member="City_ID" />
+      <Argument Parameter="country_ID" Member="Country_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId35">
+      <Argument Parameter="location_ID" Member="Location_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Offers" Member="Offers">
+    <Type Name="Offer">
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Offer_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Event" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_From" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_Till" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId36">
+      <Argument Parameter="offer_Name" Member="Offer_Name" />
+      <Argument Parameter="offer_Event" Member="Offer_Event" />
+      <Argument Parameter="offer_Valid_From" Member="Offer_Valid_From" />
+      <Argument Parameter="offer_Valid_Till" Member="Offer_Valid_Till" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId37">
+      <Argument Parameter="offer_ID" Member="Offer_ID" />
+      <Argument Parameter="offer_Name" Member="Offer_Name" />
+      <Argument Parameter="offer_Event" Member="Offer_Event" />
+      <Argument Parameter="offer_Valid_From" Member="Offer_Valid_From" />
+      <Argument Parameter="offer_Valid_Till" Member="Offer_Valid_Till" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId29">
+      <Argument Parameter="offer_ID" Member="Offer_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId38">
+      <Argument Parameter="order_ID" Member="Order_ID" />
+      <Argument Parameter="client_ID" Member="Client_ID" />
+      <Argument Parameter="c_Rider_ID" Member="C_Rider_ID" />
+      <Argument Parameter="warehouse_ID" Member="Warehouse_ID" />
+      <Argument Parameter="t_Rider_ID" Member="T_Rider_ID" />
+      <Argument Parameter="tailor_ID" Member="Tailor_ID" />
+      <Argument Parameter="dressDetails_ID" Member="DressDetails_ID" />
+      <Argument Parameter="clientSample_ID" Member="ClientSample_ID" />
+      <Argument Parameter="status_ID" Member="Status_ID" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="remarks" Member="Remarks" />
+      <Argument Parameter="offer_ID" Member="Offer_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId39">
+      <Argument Parameter="order_ID" Member="Order_ID" />
+      <Argument Parameter="client_ID" Member="Client_ID" />
+      <Argument Parameter="c_Rider_ID" Member="C_Rider_ID" />
+      <Argument Parameter="warehouse_ID" Member="Warehouse_ID" />
+      <Argument Parameter="t_Rider_ID" Member="T_Rider_ID" />
+      <Argument Parameter="tailor_ID" Member="Tailor_ID" />
+      <Argument Parameter="dressDetails_ID" Member="DressDetails_ID" />
+      <Argument Parameter="clientSample_ID" Member="ClientSample_ID" />
+      <Argument Parameter="status_ID" Member="Status_ID" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="remarks" Member="Remarks" />
+      <Argument Parameter="offer_ID" Member="Offer_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId40">
+      <Argument Parameter="order_ID" Member="Order_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Status" Member="Status">
+    <Type Name="Status">
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Status_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId41">
+      <Argument Parameter="status_Name" Member="Status_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId42">
+      <Argument Parameter="status_ID" Member="Status_ID" />
+      <Argument Parameter="status_Name" Member="Status_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId43">
+      <Argument Parameter="status_ID" Member="Status_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.Tailor" Member="Tailors">
+    <Type Name="Tailor">
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId44">
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="pickUp_Address" Member="PickUp_Address" />
+      <Argument Parameter="drop_Address" Member="Drop_Address" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId45">
+      <Argument Parameter="tailor_ID" Member="Tailor_ID" />
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="location_ID" Member="Location_ID" />
+      <Argument Parameter="pickUp_Address" Member="PickUp_Address" />
+      <Argument Parameter="drop_Address" Member="Drop_Address" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId46">
+      <Argument Parameter="tailor_ID" Member="Tailor_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.TailorCategory" Member="TailorCategories">
+    <Type Name="TailorCategory">
+      <Column Name="TailorCategory_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TailorCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId47">
+      <Argument Parameter="tailorCategory_ID" Member="TailorCategory_ID" />
+      <Argument Parameter="tailorCategory_Name" Member="TailorCategory_Name" />
+      <Argument Parameter="tailorCategory_Rating" Member="TailorCategory_Rating" />
+      <Argument Parameter="tailorCategory_Days" Member="TailorCategory_Days" />
+      <Argument Parameter="dressCategory_ID" Member="DressCategory_ID" />
+      <Argument Parameter="tailor_ID" Member="Tailor_ID" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <DeleteFunction FunctionId="FunctionId48">
+      <Argument Parameter="tailorCategory_ID" Member="TailorCategory_ID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.TailorRider" Member="TailorRiders">
+    <Type Name="TailorRider">
+      <Column Name="T_RiderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId49">
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId50">
+      <Argument Parameter="t_RiderID" Member="T_RiderID" />
+      <Argument Parameter="profile_Name" Member="Profile_Name" />
+      <Argument Parameter="password" Member="Password" />
+      <Argument Parameter="first_Name" Member="First_Name" />
+      <Argument Parameter="middle_Name" Member="Middle_Name" />
+      <Argument Parameter="last_Name" Member="Last_Name" />
+      <Argument Parameter="email_Address" Member="Email_Address" />
+      <Argument Parameter="contact_Number" Member="Contact_Number" />
+      <Argument Parameter="cell_Number" Member="Cell_Number" />
+      <Argument Parameter="qR_Code" Member="QR_Code" />
+      <Argument Parameter="rating" Member="Rating" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId51">
+      <Argument Parameter="t_RiderID" Member="T_RiderID" />
+    </DeleteFunction>
+  </Table>
+  <Table Name="dbo.DressCategory" Member="DressCategories">
+    <Type Name="DressCategory">
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DressCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId52">
+      <Argument Parameter="dressCategory_Name" Member="DressCategory_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </InsertFunction>
+    <UpdateFunction FunctionId="FunctionId53">
+      <Argument Parameter="dressCategory_ID" Member="DressCategory_ID" />
+      <Argument Parameter="dressCategory_Name" Member="DressCategory_Name" />
+      <Argument Parameter="created_DateTime" Member="Created_DateTime" />
+      <Argument Parameter="created_By" Member="Created_By" />
+      <Argument Parameter="modified_DateTime" Member="Modified_DateTime" />
+      <Argument Parameter="modified_By" Member="Modified_By" />
+      <Argument Parameter="deleted" Member="Deleted" />
+    </UpdateFunction>
+    <DeleteFunction FunctionId="FunctionId54">
+      <Argument Parameter="dressCategory_ID" Member="DressCategory_ID" />
+    </DeleteFunction>
+  </Table>
+  <Function Id="FunctionId3" Name="dbo.usp_ClientDelete" Method="usp_ClientDelete">
+    <Parameter Name="Client_ID" Parameter="client_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId5" Name="dbo.usp_WarehouseUpdate" Method="usp_WarehouseUpdate">
+    <Parameter Name="Warehouse_ID" Parameter="warehouse_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Warehouse_Name" Parameter="warehouse_Name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Onwer_Name" Parameter="onwer_Name" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="Onwer_Details" Parameter="onwer_Details" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Landline_Number" Parameter="landline_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fax_Number" Parameter="fax_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_WarehouseUpdateResult">
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Name" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Landline_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fax_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId1" Name="dbo.usp_ClientInsert" Method="usp_ClientInsert">
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PickUp_Address" Parameter="pickUp_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Drop_Address" Parameter="drop_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_ClientInsertResult">
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId9" Name="dbo.usp_ClientRiderDelete" Method="usp_ClientRiderDelete">
+    <Parameter Name="C_RiderID" Parameter="c_RiderID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId7" Name="dbo.usp_ClientRiderInsert" Method="usp_ClientRiderInsert">
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_ClientRiderInsertResult">
+      <Column Name="C_RiderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_ClientRiderSelect" Method="usp_ClientRiderSelect">
+    <Parameter Name="C_RiderID" Parameter="c_RiderID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_ClientRiderSelectResult">
+      <Column Name="C_RiderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId8" Name="dbo.usp_ClientRiderUpdate" Method="usp_ClientRiderUpdate">
+    <Parameter Name="C_RiderID" Parameter="c_RiderID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_ClientRiderUpdateResult">
+      <Column Name="C_RiderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId12" Name="dbo.usp_ClientSampleDelete" Method="usp_ClientSampleDelete">
+    <Parameter Name="ClientSample_ID" Parameter="clientSample_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId10" Name="dbo.usp_ClientSampleInsert" Method="usp_ClientSampleInsert">
+    <Parameter Name="ClientSample_ID" Parameter="clientSample_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSample_Name" Parameter="clientSample_Name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientSample_QR_Code" Parameter="clientSample_QR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_ClientSampleInsertResult">
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_ClientSampleSelect" Method="usp_ClientSampleSelect">
+    <Parameter Name="ClientSample_ID" Parameter="clientSample_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_ClientSampleSelectResult">
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId11" Name="dbo.usp_ClientSampleUpdate" Method="usp_ClientSampleUpdate">
+    <Parameter Name="ClientSample_ID" Parameter="clientSample_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSample_Name" Parameter="clientSample_Name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ClientSample_QR_Code" Parameter="clientSample_QR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_ClientSampleUpdateResult">
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_ClientSelect" Method="usp_ClientSelect">
+    <Parameter Name="Client_ID" Parameter="client_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_ClientSelectResult">
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId2" Name="dbo.usp_ClientUpdate" Method="usp_ClientUpdate">
+    <Parameter Name="Client_ID" Parameter="client_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PickUp_Address" Parameter="pickUp_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Drop_Address" Parameter="drop_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime2" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_ClientUpdateResult">
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId15" Name="dbo.usp_DimensionDelete" Method="usp_DimensionDelete">
+    <Parameter Name="Dimension_ID" Parameter="dimension_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId13" Name="dbo.usp_DimensionInsert" Method="usp_DimensionInsert">
+    <Parameter Name="Dimension_ID" Parameter="dimension_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dimension_Name" Parameter="dimension_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Dimension_Value" Parameter="dimension_Value" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DimensionInsertResult">
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_DimensionSelect" Method="usp_DimensionSelect">
+    <Parameter Name="Dimension_ID" Parameter="dimension_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_DimensionSelectResult">
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId14" Name="dbo.usp_DimensionUpdate" Method="usp_DimensionUpdate">
+    <Parameter Name="Dimension_ID" Parameter="dimension_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dimension_Name" Parameter="dimension_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Dimension_Value" Parameter="dimension_Value" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DimensionUpdateResult">
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_Value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId18" Name="dbo.usp_DressDetailsDelete" Method="usp_DressDetailsDelete">
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId16" Name="dbo.usp_DressDetailsInsert" Method="usp_DressDetailsInsert">
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressType_ID" Parameter="dressType_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressStyle_ID" Parameter="dressStyle_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dimension_ID" Parameter="dimension_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressDetailsInsertResult">
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_DressDetailsSelect" Method="usp_DressDetailsSelect">
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_DressDetailsSelectResult">
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId17" Name="dbo.usp_DressDetailsUpdate" Method="usp_DressDetailsUpdate">
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressType_ID" Parameter="dressType_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressStyle_ID" Parameter="dressStyle_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Dimension_ID" Parameter="dimension_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressDetailsUpdateResult">
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dimension_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId21" Name="dbo.usp_DressStyleDelete" Method="usp_DressStyleDelete">
+    <Parameter Name="DressStyle_ID" Parameter="dressStyle_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId19" Name="dbo.usp_DressStyleInsert" Method="usp_DressStyleInsert">
+    <Parameter Name="DressStyle_Name" Parameter="dressStyle_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressStyleInsertResult">
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_DressStyleSelect" Method="usp_DressStyleSelect">
+    <Parameter Name="DressStyle_ID" Parameter="dressStyle_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_DressStyleSelectResult">
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId20" Name="dbo.usp_DressStyleUpdate" Method="usp_DressStyleUpdate">
+    <Parameter Name="DressStyle_ID" Parameter="dressStyle_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressStyle_Name" Parameter="dressStyle_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressStyleUpdateResult">
+      <Column Name="DressStyle_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressStyle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId24" Name="dbo.usp_DressTypeDelete" Method="usp_DressTypeDelete">
+    <Parameter Name="DressType_ID" Parameter="dressType_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId22" Name="dbo.usp_DressTypeInsert" Method="usp_DressTypeInsert">
+    <Parameter Name="DressType_Name" Parameter="dressType_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressTypeInsertResult">
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_DressTypeSelect" Method="usp_DressTypeSelect">
+    <Parameter Name="DressType_ID" Parameter="dressType_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_DressTypeSelectResult">
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId23" Name="dbo.usp_DressTypeUpdate" Method="usp_DressTypeUpdate">
+    <Parameter Name="DressType_ID" Parameter="dressType_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressType_Name" Parameter="dressType_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressTypeUpdateResult">
+      <Column Name="DressType_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Entity_OfferDelete" Method="usp_Entity_OfferDelete">
+    <Parameter Name="Entity_Offer_ID" Parameter="entity_Offer_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId28" Name="dbo.usp_Entity_OfferInsert" Method="usp_Entity_OfferInsert">
+    <Parameter Name="Entity_Offer_ID" Parameter="entity_Offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Rate" Parameter="rate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Percentage_Discount" Parameter="percentage_Discount" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Flat_Discount" Parameter="flat_Discount" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_Entity_OfferInsertResult">
+      <Column Name="Entity_Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Flat_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Entity_OfferSelect" Method="usp_Entity_OfferSelect">
+    <Parameter Name="Entity_Offer_ID" Parameter="entity_Offer_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_Entity_OfferSelectResult">
+      <Column Name="Entity_Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Flat_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Entity_OfferUpdate" Method="usp_Entity_OfferUpdate">
+    <Parameter Name="Entity_Offer_ID" Parameter="entity_Offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Entity_ID" Parameter="entity_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Rate" Parameter="rate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Percentage_Discount" Parameter="percentage_Discount" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Flat_Discount" Parameter="flat_Discount" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_Entity_OfferUpdateResult">
+      <Column Name="Entity_Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Percentage_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Flat_Discount" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId32" Name="dbo.usp_Entity_Order_TimeframeDelete" Method="usp_Entity_Order_TimeframeDelete">
+    <Parameter Name="OrderTimeframe_ID" Parameter="orderTimeframe_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId30" Name="dbo.usp_Entity_Order_TimeframeInsert" Method="usp_Entity_Order_TimeframeInsert">
+    <Parameter Name="Order_ID" Parameter="order_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Entity_ID" Parameter="entity_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estimated_DateTime" Parameter="estimated_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Actual_DateTime" Parameter="actual_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Pick" Parameter="pick" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Drop" Parameter="drop" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_Entity_Order_TimeframeInsertResult">
+      <Column Name="OrderTimeframe_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estimated_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Actual_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pick" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Drop]" Member="Drop" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Entity_Order_TimeframeSelect" Method="usp_Entity_Order_TimeframeSelect">
+    <Parameter Name="OrderTimeframe_ID" Parameter="orderTimeframe_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_Entity_Order_TimeframeSelectResult">
+      <Column Name="OrderTimeframe_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estimated_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Actual_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pick" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Drop]" Member="Drop" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId31" Name="dbo.usp_Entity_Order_TimeframeUpdate" Method="usp_Entity_Order_TimeframeUpdate">
+    <Parameter Name="OrderTimeframe_ID" Parameter="orderTimeframe_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Order_ID" Parameter="order_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Entity_ID" Parameter="entity_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Estimated_DateTime" Parameter="estimated_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Actual_DateTime" Parameter="actual_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Pick" Parameter="pick" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Drop" Parameter="drop" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_Entity_Order_TimeframeUpdateResult">
+      <Column Name="OrderTimeframe_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estimated_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Actual_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pick" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="[Drop]" Member="Drop" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId27" Name="dbo.usp_EntityDelete" Method="usp_EntityDelete">
+    <Parameter Name="Entity_ID" Parameter="entity_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId25" Name="dbo.usp_EntityInsert" Method="usp_EntityInsert">
+    <Parameter Name="Entity_Name" Parameter="entity_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_EntityInsertResult">
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_EntitySelect" Method="usp_EntitySelect">
+    <Parameter Name="Entity_ID" Parameter="entity_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_EntitySelectResult">
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId26" Name="dbo.usp_EntityUpdate" Method="usp_EntityUpdate">
+    <Parameter Name="Entity_ID" Parameter="entity_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Entity_Name" Parameter="entity_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_EntityUpdateResult">
+      <Column Name="Entity_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Entity_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId35" Name="dbo.usp_LocationsDelete" Method="usp_LocationsDelete">
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId33" Name="dbo.usp_LocationsInsert" Method="usp_LocationsInsert">
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Area_ID" Parameter="area_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Map_ID" Parameter="map_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Country_ID" Parameter="country_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_LocationsInsertResult">
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Area_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Map_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_LocationsSelect" Method="usp_LocationsSelect">
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_LocationsSelectResult">
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Area_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Map_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId34" Name="dbo.usp_LocationsUpdate" Method="usp_LocationsUpdate">
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Area_ID" Parameter="area_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Map_ID" Parameter="map_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="City_ID" Parameter="city_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Country_ID" Parameter="country_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_LocationsUpdateResult">
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Area_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Map_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId29" Name="dbo.usp_OffersDelete" Method="usp_OffersDelete">
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId36" Name="dbo.usp_OffersInsert" Method="usp_OffersInsert">
+    <Parameter Name="Offer_Name" Parameter="offer_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Offer_Event" Parameter="offer_Event" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Offer_Valid_From" Parameter="offer_Valid_From" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Offer_Valid_Till" Parameter="offer_Valid_Till" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_OffersInsertResult">
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Event" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_From" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_Till" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_Offerselect" Method="usp_Offerselect">
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_OfferselectResult">
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Event" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_From" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_Till" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId37" Name="dbo.usp_OffersUpdate" Method="usp_OffersUpdate">
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Offer_Name" Parameter="offer_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Offer_Event" Parameter="offer_Event" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Offer_Valid_From" Parameter="offer_Valid_From" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Offer_Valid_Till" Parameter="offer_Valid_Till" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_OffersUpdateResult">
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Event" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_From" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_Valid_Till" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId40" Name="dbo.usp_OrderDelete" Method="usp_OrderDelete">
+    <Parameter Name="Order_ID" Parameter="order_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId38" Name="dbo.usp_OrderInsert" Method="usp_OrderInsert">
+    <Parameter Name="Order_ID" Parameter="order_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Client_ID" Parameter="client_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="C_Rider_ID" Parameter="c_Rider_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Warehouse_ID" Parameter="warehouse_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T_Rider_ID" Parameter="t_Rider_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSample_ID" Parameter="clientSample_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status_ID" Parameter="status_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Remarks" Parameter="remarks" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_OrderInsertResult">
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_OrderSelect" Method="usp_OrderSelect">
+    <Parameter Name="Order_ID" Parameter="order_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_OrderSelectResult">
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId39" Name="dbo.usp_OrderUpdate" Method="usp_OrderUpdate">
+    <Parameter Name="Order_ID" Parameter="order_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Client_ID" Parameter="client_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="C_Rider_ID" Parameter="c_Rider_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Warehouse_ID" Parameter="warehouse_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="T_Rider_ID" Parameter="t_Rider_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressDetails_ID" Parameter="dressDetails_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ClientSample_ID" Parameter="clientSample_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status_ID" Parameter="status_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Remarks" Parameter="remarks" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Offer_ID" Parameter="offer_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_OrderUpdateResult">
+      <Column Name="Order_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Client_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="C_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="T_Rider_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressDetails_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientSample_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Offer_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId43" Name="dbo.usp_StatusDelete" Method="usp_StatusDelete">
+    <Parameter Name="Status_ID" Parameter="status_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId41" Name="dbo.usp_StatusInsert" Method="usp_StatusInsert">
+    <Parameter Name="Status_Name" Parameter="status_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_StatusInsertResult">
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_StatusSelect" Method="usp_StatusSelect">
+    <Parameter Name="Status_ID" Parameter="status_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_StatusSelectResult">
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId42" Name="dbo.usp_StatusUpdate" Method="usp_StatusUpdate">
+    <Parameter Name="Status_ID" Parameter="status_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status_Name" Parameter="status_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_StatusUpdateResult">
+      <Column Name="Status_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId48" Name="dbo.usp_TailorCategoryDelete" Method="usp_TailorCategoryDelete">
+    <Parameter Name="TailorCategory_ID" Parameter="tailorCategory_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId47" Name="dbo.usp_TailorCategoryInsert" Method="usp_TailorCategoryInsert">
+    <Parameter Name="TailorCategory_ID" Parameter="tailorCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TailorCategory_Name" Parameter="tailorCategory_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TailorCategory_Rating" Parameter="tailorCategory_Rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TailorCategory_Days" Parameter="tailorCategory_Days" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Char" DbType="Char(1)" />
+    <ElementType Name="usp_TailorCategoryInsertResult">
+      <Column Name="TailorCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_TailorCategorySelect" Method="usp_TailorCategorySelect">
+    <Parameter Name="TailorCategory_ID" Parameter="tailorCategory_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_TailorCategorySelectResult">
+      <Column Name="TailorCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_TailorCategoryUpdate" Method="usp_TailorCategoryUpdate">
+    <Parameter Name="TailorCategory_ID" Parameter="tailorCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TailorCategory_Name" Parameter="tailorCategory_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="TailorCategory_Rating" Parameter="tailorCategory_Rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TailorCategory_Days" Parameter="tailorCategory_Days" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Char" DbType="Char(1)" />
+    <ElementType Name="usp_TailorCategoryUpdateResult">
+      <Column Name="TailorCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TailorCategory_Days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId46" Name="dbo.usp_TailorDelete" Method="usp_TailorDelete">
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId44" Name="dbo.usp_TailorInsert" Method="usp_TailorInsert">
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PickUp_Address" Parameter="pickUp_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Drop_Address" Parameter="drop_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_TailorInsertResult">
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId51" Name="dbo.usp_TailorRiderDelete" Method="usp_TailorRiderDelete">
+    <Parameter Name="T_RiderID" Parameter="t_RiderID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId49" Name="dbo.usp_TailorRiderInsert" Method="usp_TailorRiderInsert">
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_TailorRiderInsertResult">
+      <Column Name="T_RiderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_TailorRiderSelect" Method="usp_TailorRiderSelect">
+    <Parameter Name="T_RiderID" Parameter="t_RiderID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_TailorRiderSelectResult">
+      <Column Name="T_RiderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId50" Name="dbo.usp_TailorRiderUpdate" Method="usp_TailorRiderUpdate">
+    <Parameter Name="T_RiderID" Parameter="t_RiderID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_TailorRiderUpdateResult">
+      <Column Name="T_RiderID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_TailorSelect" Method="usp_TailorSelect">
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_TailorSelectResult">
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId45" Name="dbo.usp_TailorUpdate" Method="usp_TailorUpdate">
+    <Parameter Name="Tailor_ID" Parameter="tailor_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Profile_Name" Parameter="profile_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="First_Name" Parameter="first_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Middle_Name" Parameter="middle_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Last_Name" Parameter="last_Name" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PickUp_Address" Parameter="pickUp_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Drop_Address" Parameter="drop_Address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_TailorUpdateResult">
+      <Column Name="Tailor_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Profile_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PickUp_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Drop_Address" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId6" Name="dbo.usp_WarehouseDelete" Method="usp_WarehouseDelete">
+    <Parameter Name="Warehouse_ID" Parameter="warehouse_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId4" Name="dbo.usp_WarehouseInsert" Method="usp_WarehouseInsert">
+    <Parameter Name="Warehouse_Name" Parameter="warehouse_Name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Onwer_Name" Parameter="onwer_Name" Type="System.String" DbType="Char(20)" />
+    <Parameter Name="Onwer_Details" Parameter="onwer_Details" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Landline_Number" Parameter="landline_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Fax_Number" Parameter="fax_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Email_Address" Parameter="email_Address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Contact_Number" Parameter="contact_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Cell_Number" Parameter="cell_Number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Location_ID" Parameter="location_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QR_Code" Parameter="qR_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Rating" Parameter="rating" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_WarehouseInsertResult">
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Name" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Landline_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fax_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_WarehouseSelect" Method="usp_WarehouseSelect">
+    <Parameter Name="Warehouse_ID" Parameter="warehouse_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_WarehouseSelectResult">
+      <Column Name="Warehouse_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse_Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Name" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Onwer_Details" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Landline_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fax_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cell_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QR_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId54" Name="dbo.usp_DressCategoryDelete" Method="usp_DressCategoryDelete">
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId52" Name="dbo.usp_DressCategoryInsert" Method="usp_DressCategoryInsert">
+    <Parameter Name="DressCategory_Name" Parameter="dressCategory_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressCategoryInsertResult">
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.usp_DressCategorySelect" Method="usp_DressCategorySelect">
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="usp_DressCategorySelectResult">
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId53" Name="dbo.usp_DressCategoryUpdate" Method="usp_DressCategoryUpdate">
+    <Parameter Name="DressCategory_ID" Parameter="dressCategory_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DressCategory_Name" Parameter="dressCategory_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Created_DateTime" Parameter="created_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Created_By" Parameter="created_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Modified_DateTime" Parameter="modified_DateTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Modified_By" Parameter="modified_By" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Deleted" Parameter="deleted" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="usp_DressCategoryUpdateResult">
+      <Column Name="DressCategory_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DressCategory_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Created_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Created_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified_By" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

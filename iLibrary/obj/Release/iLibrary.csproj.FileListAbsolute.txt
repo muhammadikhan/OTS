@@ -1,0 +1,5 @@
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Release\iLibrary.dll
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Release\iLibrary.pdb
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Release\iLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Release\iLibrary.dll
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Release\iLibrary.pdb

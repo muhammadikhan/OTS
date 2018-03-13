@@ -1,0 +1,11 @@
+﻿@{
+
+    string ipAddress = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+    if (string.IsNullOrEmpty(ipAddress))
+    {
+        ipAddress = Request.ServerVariables["REMOTE_ADDR"];
+    }
+    Session["IPAddress"] = ipAddress;
+
+    Layout = "~/Views/Shared/Master_Layout.cshtml";
+}

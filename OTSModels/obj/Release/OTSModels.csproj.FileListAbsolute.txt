@@ -1,0 +1,5 @@
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\bin\Release\OTSModels.dll
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\bin\Release\OTSModels.pdb
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\obj\Release\OTSModels.csprojResolveAssemblyReference.cache
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\obj\Release\OTSModels.dll
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\obj\Release\OTSModels.pdb

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTS", "OTS\OTS.csproj", "{417FC1FD-77E6-45A6-85AE-EFB94F43239E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFactory", "DatabaseFactory\DatabaseFactory.csproj", "{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTSAPI", "OTSAPI\OTSAPI.csproj", "{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3D5F8EBA-8897-4B82-ADCC-114E99A9B846} = {3D5F8EBA-8897-4B82-ADCC-114E99A9B846}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLibrary", "iLibrary\iLibrary.csproj", "{1BCD5929-38B0-4431-8C27-E4B478B16874}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F9C92709-A2CB-4B8D-B40E-DADED8AE0041}"
+	ProjectSection(SolutionItems) = preProject
+		Project Prerequisite\Project DFD.png = Project Prerequisite\Project DFD.png
+		Project Prerequisite\Project Mapping or Flow.dgml = Project Prerequisite\Project Mapping or Flow.dgml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTSModels", "OTSModels\OTSModels.csproj", "{49FADE5D-3876-41AF-ADB6-9A62DBA896F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{417FC1FD-77E6-45A6-85AE-EFB94F43239E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417FC1FD-77E6-45A6-85AE-EFB94F43239E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417FC1FD-77E6-45A6-85AE-EFB94F43239E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417FC1FD-77E6-45A6-85AE-EFB94F43239E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BCD5929-38B0-4431-8C27-E4B478B16874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BCD5929-38B0-4431-8C27-E4B478B16874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BCD5929-38B0-4431-8C27-E4B478B16874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BCD5929-38B0-4431-8C27-E4B478B16874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49FADE5D-3876-41AF-ADB6-9A62DBA896F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49FADE5D-3876-41AF-ADB6-9A62DBA896F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49FADE5D-3876-41AF-ADB6-9A62DBA896F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49FADE5D-3876-41AF-ADB6-9A62DBA896F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

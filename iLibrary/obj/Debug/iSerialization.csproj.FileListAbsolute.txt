@@ -1,0 +1,5 @@
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\bin\Debug\iSerialization.dll
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\bin\Debug\iSerialization.pdb
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iSerialization.dll
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iSerialization.pdb

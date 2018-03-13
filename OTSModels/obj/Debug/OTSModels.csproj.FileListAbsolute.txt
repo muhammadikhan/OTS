@@ -1,0 +1,5 @@
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\bin\Debug\OTSModels.dll
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\bin\Debug\OTSModels.pdb
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\obj\Debug\OTSModels.dll
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\obj\Debug\OTSModels.pdb
+C:\Users\Imran Khan\Desktop\OTS\OTSModels\obj\Debug\OTSModels.csprojResolveAssemblyReference.cache

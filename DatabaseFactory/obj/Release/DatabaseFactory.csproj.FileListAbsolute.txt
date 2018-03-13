@@ -1,0 +1,6 @@
+C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\bin\Release\DatabaseFactory.dll
+C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\bin\Release\DatabaseFactory.pdb
+C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\obj\Release\DatabaseFactory.dll
+C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\obj\Release\DatabaseFactory.pdb
+C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\bin\Release\DatabaseFactory.dll.config
+C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\obj\Release\DatabaseFactory.csprojResolveAssemblyReference.cache

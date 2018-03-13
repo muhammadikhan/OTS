@@ -1,0 +1,237 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_SolutionProjectConfiguration>Debug|Any CPU</_SolutionProjectConfiguration>
+    <_SolutionProjectToolsVersion>4.0</_SolutionProjectToolsVersion>
+    <_SolutionProjectCacheVersion>12.0</_SolutionProjectCacheVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <_SolutionProjectProjects Include="DatabaseFactory\DatabaseFactory.csproj" />
+    <_SolutionProjectProjects Include="iLibrary\iLibrary.csproj" />
+    <_SolutionProjectProjects Include="OTSAPI\OTSAPI.csproj" />
+    <_SolutionProjectProjects Include="OTS\OTS.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <BuildLevel1 Include="OTSAPI\OTSAPI.csproj">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel1>
+    <BuildLevel1 Include="OTS\OTS.csproj">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel1>
+    <BuildLevel0 Include="DatabaseFactory\DatabaseFactory.csproj">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel0>
+    <BuildLevel0 Include="iLibrary\iLibrary.csproj">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel0>
+  </ItemGroup>
+  <ItemGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <BuildLevel1 Include="OTSAPI\OTSAPI.csproj">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel1>
+    <BuildLevel1 Include="OTS\OTS.csproj">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel1>
+    <BuildLevel0 Include="DatabaseFactory\DatabaseFactory.csproj">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel0>
+    <BuildLevel0 Include="iLibrary\iLibrary.csproj">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </BuildLevel0>
+  </ItemGroup>
+  <UsingTask TaskName="Microsoft.Build.Tasks.CreateTemporaryVCProject" AssemblyName="Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <UsingTask TaskName="Microsoft.Build.Tasks.ResolveVCProjectOutput" AssemblyName="Microsoft.Build.Tasks.v3.5, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <PropertyGroup Condition=" '$(Configuration)' == '' ">
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '' ">
+    <Platform>Any CPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(AspNetConfiguration)' == '') ">
+    <AspNetConfiguration>$(Configuration)</AspNetConfiguration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SolutionDir>C:\Users\Imran Khan\Desktop\OTS\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>OTS.sln</SolutionFileName>
+    <SolutionName>OTS</SolutionName>
+    <SolutionPath>C:\Users\Imran Khan\Desktop\OTS\OTS.sln</SolutionPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '2.0'">v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and ('$(MSBuildToolsVersion)' == '3.5' or '$(MSBuildToolsVersion)' == '3.0')">v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == '' and '$(MSBuildToolsVersion)' == '4.0'">v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+        <ProjectConfiguration Project="{417FC1FD-77E6-45A6-85AE-EFB94F43239E}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}">Debug|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{1BCD5929-38B0-4431-8C27-E4B478B16874}">Debug|AnyCPU</ProjectConfiguration>
+      </SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <PropertyGroup Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+        <ProjectConfiguration Project="{417FC1FD-77E6-45A6-85AE-EFB94F43239E}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{3D5F8EBA-8897-4B82-ADCC-114E99A9B846}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{E2B0FD52-E5C6-4D31-AFBF-78700B8FF847}">Release|AnyCPU</ProjectConfiguration>
+        <ProjectConfiguration Project="{1BCD5929-38B0-4431-8C27-E4B478B16874}">Release|AnyCPU</ProjectConfiguration>
+      </SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <Target Name="ValidateSolutionConfiguration">
+    <Error Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')" />
+    <Warning Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')" />
+    <Message Text="Building solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="'$(CurrentSolutionConfigurationContents)' != ''" />
+  </Target>
+  <Target Name="ValidateToolsVersions">
+    <Error Text="The tools version &quot;$(MSBuildToolsVersion)&quot; of the solution does not support building projects with a different tools version." Code="MSB4149" HelpKeyword="MSBuild.SolutionToolsVersionDoesNotSupportProjectToolsVersion" Condition="'$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')" />
+  </Target>
+  <Target Name="OTS" DependsOnTargets="iLibrary" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(OTSBuildOutput)">
+    <MSBuild Projects="OTS\OTS.csproj" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="OTS\OTS.csproj" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="OTS:Clean" DependsOnTargets="iLibrary:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="OTS\OTS.csproj" Targets="Clean" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="OTS\OTS.csproj" Targets="Clean" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="OTS:Rebuild" DependsOnTargets="iLibrary:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(OTSBuildOutput)">
+    <MSBuild Projects="OTS\OTS.csproj" Targets="Rebuild" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="OTS\OTS.csproj" Targets="Rebuild" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="OTS:Publish" DependsOnTargets="iLibrary:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="OTS\OTS.csproj" Targets="Publish" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="OTS\OTS.csproj" Targets="Publish" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="DatabaseFactory" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(DatabaseFactoryBuildOutput)">
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="DatabaseFactoryBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="DatabaseFactoryBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="DatabaseFactory:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Targets="Clean" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Targets="Clean" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="DatabaseFactory:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(DatabaseFactoryBuildOutput)">
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Targets="Rebuild" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="DatabaseFactoryBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Targets="Rebuild" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="DatabaseFactoryBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="DatabaseFactory:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Targets="Publish" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="DatabaseFactory\DatabaseFactory.csproj" Targets="Publish" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="OTSAPI" DependsOnTargets="DatabaseFactory;DatabaseFactory" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(OTSAPIBuildOutput)">
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSAPIBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSAPIBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="OTSAPI:Clean" DependsOnTargets="DatabaseFactory:Clean;DatabaseFactory:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Targets="Clean" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Targets="Clean" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="OTSAPI:Rebuild" DependsOnTargets="DatabaseFactory:Rebuild;DatabaseFactory:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(OTSAPIBuildOutput)">
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Targets="Rebuild" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSAPIBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Targets="Rebuild" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="OTSAPIBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="OTSAPI:Publish" DependsOnTargets="DatabaseFactory:Publish;DatabaseFactory:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Targets="Publish" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="OTSAPI\OTSAPI.csproj" Targets="Publish" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="iLibrary" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(iLibraryBuildOutput)">
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="iLibraryBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="iLibraryBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="iLibrary:Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Targets="Clean" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Targets="Clean" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="iLibrary:Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(iLibraryBuildOutput)">
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Targets="Rebuild" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="iLibraryBuildOutput" />
+    </MSBuild>
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Targets="Rebuild" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') ">
+      <Output TaskParameter="TargetOutputs" ItemName="iLibraryBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="iLibrary:Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Targets="Publish" Properties="Configuration=Debug; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " />
+    <MSBuild Projects="iLibrary\iLibrary.csproj" Targets="Publish" Properties="Configuration=Release; Platform=AnyCPU; BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " />
+  </Target>
+  <Target Name="Build" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <MSBuild Condition="@(BuildLevel1) != ''" Projects="@(BuildLevel1)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+    <Message Text="The project &quot;%(SkipLevel1.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel1) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel1.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel1) != ''" />
+  </Target>
+  <Target Name="Clean" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Clean" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" />
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <MSBuild Condition="@(BuildLevel1) != ''" Projects="@(BuildLevel1)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Clean" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" />
+    <Message Text="The project &quot;%(SkipLevel1.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel1) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel1.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel1) != ''" />
+    <Delete Files="OTS.sln.cache" />
+  </Target>
+  <Target Name="Rebuild" Condition="'$(CurrentSolutionConfigurationContents)' != ''" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Rebuild" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <MSBuild Condition="@(BuildLevel1) != ''" Projects="@(BuildLevel1)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Rebuild" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+    <Message Text="The project &quot;%(SkipLevel1.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel1) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel1.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel1) != ''" />
+  </Target>
+  <Target Name="Publish" Condition="'$(CurrentSolutionConfigurationContents)' != ''">
+    <MSBuild Condition="@(BuildLevel0) != ''" Projects="@(BuildLevel0)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Publish" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" />
+    <Message Text="The project &quot;%(SkipLevel0.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel0) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel0.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel0) != ''" />
+    <MSBuild Condition="@(BuildLevel1) != ''" Projects="@(BuildLevel1)" Properties="Configuration=%(Configuration); Platform=%(Platform); BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" Targets="Publish" ToolsVersion="$(ProjectToolsVersion)" BuildInParallel="true" UnloadProjectsOnCompletion="$(UnloadProjectsOnCompletion)" UseResultsCache="$(UseResultsCache)" />
+    <Message Text="The project &quot;%(SkipLevel1.Identity)&quot; is not selected for building in solution configuration &quot;$(Configuration)|$(Platform)&quot;." Condition="@(SkipLevel1) != ''" />
+    <Warning Text="The project configuration for project &quot;%(MissingConfigLevel1.Identity)&quot; was not specified in the solution file for the solution configuration &quot;$(Configuration)|$(Platform)&quot;." Code="MSB4121" HelpKeyword="MSBuild.SolutionProjectConfigurationMissing" Condition="@(MissingConfigLevel1) != ''" />
+  </Target>
+</Project>

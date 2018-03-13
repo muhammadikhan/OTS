@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\DatabaseFactory.csproj" Category="CSProject" Bounds="-54.0155518086749,-103.866128289795,346.220000610352,86.0001131774901" Group="Expanded" Label="DatabaseFactory" UseManualLocation="True" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\bin\Debug\DatabaseFactory.dll" Bounds="149.324448801677,-63.8261151123047,122.88,25.96" Label="DatabaseFactory.dll" UseManualLocation="True" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\OTSAPI.csproj" Category="CSProject" Bounds="-71.9051050313311,-238.927606408691,379.226698506673,101.9202" Group="Expanded" Label="OTSAPI" UseManualLocation="True" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\bin\OTSAPI.dll" Bounds="213.254926808675,-194.007404785156,74.0666666666668,25.96" Label="OTSAPI.dll" UseManualLocation="True" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\OTS\OTS.csproj" Category="CSProject" Bounds="-422.322040557861,-241.899350488281,231.784695483965,85.9602" Group="Expanded" Label="OTS" UseManualLocation="True" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\OTS\bin\OTS.dll" Bounds="-267.017538247229,-201.885054991367,56.4801931733334,25.94579968" Label="OTS.dll" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Debug\iLibrary.dll" Bounds="-236.161771697998,-63.9389500427246,74.2566666666667,25.96" Label="iLibrary.dll" />
+    <Node Id="C:\Users\Imran Khan\Desktop\OTS\iLibrary\iLibrary.csproj" Category="CSProject" Bounds="-470.845174916585,-103.939050042725,328.940069885254,86.920498538208" Group="Expanded" Label="iLibrary" UseManualLocation="True" />
+    <Node Id="ILibraryUsedToInvokeWebAPI" Category="Comment" Bounds="-450.845174916585,-62.9786515045166,184.683333333333,25.96" Label="iLibrary used to invoke WebAPI" UseManualLocation="True" />
+    <Node Id="LINQToSQLProjectCalls" Category="Comment" Bounds="-34.0155518086749,-63.8660282897949,153.34,25.96" Label="LINQ to SQL Project Calls" UseManualLocation="True" />
+    <Node Id="WebAPIProjectFlow" Bounds="-91.9051050313311,-278.927706408691,419.226698506673,281.061791296387" Group="Expanded" Label="WebAPI Project Flow" UseManualLocation="True" />
+    <Node Id="WebAPIUsedToPerformAllOperations" Category="Comment" Bounds="-51.9051050313311,-198.927506408691,235.16,41.92" Label="WebAPI used to perform all operations. &#xD;&#xA;Used to Get and Set data from database." UseManualLocation="True" />
+    <Node Id="WebsiteProject" Category="Comment" Bounds="-402.322040557861,-201.899250488281,102.416666666667,25.96" Label="Website Project" UseManualLocation="True" />
+    <Node Id="WebsiteProject1" Bounds="-490.845174916585,-281.899450488281,368.940069885254,284.880998983765" Group="Expanded" Label="Website Project Flow" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\DatabaseFactory.csproj" Target="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\bin\Debug\DatabaseFactory.dll" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\DatabaseFactory.csproj" Target="LINQToSQLProjectCalls" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\OTSAPI.csproj" Target="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\DatabaseFactory.csproj" Bounds="118.264029517515,-137.007406408691,0.263297459331469,24.141813332735" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\OTSAPI.csproj" Target="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\bin\OTSAPI.dll" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\OTSAPI.csproj" Target="WebAPIUsedToPerformAllOperations" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\OTS\OTS.csproj" Target="C:\Users\Imran Khan\Desktop\OTS\OTS\bin\OTS.dll" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\OTS\OTS.csproj" Target="C:\Users\Imran Khan\Desktop\OTS\iLibrary\iLibrary.csproj" Bounds="-306.412756388657,-155.939150488281,0.0169443087272043,43.0001011443056" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\OTS\OTS.csproj" Target="WebsiteProject" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\iLibrary\iLibrary.csproj" Target="C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Debug\iLibrary.dll" Category="Contains" />
+    <Link Source="C:\Users\Imran Khan\Desktop\OTS\iLibrary\iLibrary.csproj" Target="ILibraryUsedToInvokeWebAPI" Category="Contains" />
+    <Link Source="WebAPIProjectFlow" Target="C:\Users\Imran Khan\Desktop\OTS\DatabaseFactory\DatabaseFactory.csproj" Category="Contains" />
+    <Link Source="WebAPIProjectFlow" Target="C:\Users\Imran Khan\Desktop\OTS\OTSAPI\OTSAPI.csproj" Category="Contains" />
+    <Link Source="WebsiteProject1" Target="C:\Users\Imran Khan\Desktop\OTS\OTS\OTS.csproj" Category="Contains" />
+    <Link Source="WebsiteProject1" Target="C:\Users\Imran Khan\Desktop\OTS\iLibrary\iLibrary.csproj" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CSProject" Background="#FF3A8F35" />
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Background" Label="Background" Description="The background color" DataType="System.Windows.Media.Brush" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Category 2" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Category2')" />
+      <Setter Property="Background" Value="#FF339933" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>

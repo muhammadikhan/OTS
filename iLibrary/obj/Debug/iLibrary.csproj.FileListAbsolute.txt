@@ -1,0 +1,42 @@
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\bin\Debug\iLibrary.dll
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\bin\Debug\iLibrary.pdb
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iLibrary.dll
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iLibrary.pdb
+\\it-n45\c$\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\bin\Debug\iLibrary.dll
+\\it-n45\c$\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\bin\Debug\iLibrary.pdb
+\\it-n45\c$\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iLibrary.dll
+\\it-n45\c$\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iLibrary.pdb
+C:\Users\muhammadimran1\Desktop\FaxFinderService\iSerialization\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
+C:\Users\muham_000\Desktop\iSerialization\bin\Debug\iLibrary.dll
+C:\Users\muham_000\Desktop\iSerialization\bin\Debug\iLibrary.pdb
+C:\Users\muham_000\Desktop\iSerialization\obj\Debug\iLibrary.dll
+C:\Users\muham_000\Desktop\iSerialization\obj\Debug\iLibrary.pdb
+D:\OpenSourceRepositories\iLibrary\bin\Debug\iLibrary.dll
+D:\OpenSourceRepositories\iLibrary\bin\Debug\iLibrary.pdb
+D:\OpenSourceRepositories\iLibrary\obj\Debug\iLibrary.dll
+D:\OpenSourceRepositories\iLibrary\obj\Debug\iLibrary.pdb
+\\172.16.0.70\d$\OpenSourceRepositories\iLibrary\bin\Debug\iLibrary.dll
+\\172.16.0.70\d$\OpenSourceRepositories\iLibrary\bin\Debug\iLibrary.pdb
+\\172.16.0.70\d$\OpenSourceRepositories\iLibrary\obj\Debug\ResolveAssemblyReference.cache
+\\172.16.0.70\d$\OpenSourceRepositories\iLibrary\obj\Debug\iLibrary.dll
+\\172.16.0.70\d$\OpenSourceRepositories\iLibrary\obj\Debug\iLibrary.pdb
+C:\Users\Imran Khan\Desktop\ImportVirtualCourseData\iLibrary\bin\Debug\iLibrary.dll
+C:\Users\Imran Khan\Desktop\ImportVirtualCourseData\iLibrary\bin\Debug\iLibrary.pdb
+C:\Users\Imran Khan\Desktop\ImportVirtualCourseData\iLibrary\obj\Debug\iLibrary.dll
+C:\Users\Imran Khan\Desktop\ImportVirtualCourseData\iLibrary\obj\Debug\iLibrary.pdb
+C:\Users\Imran Khan\Desktop\ImportVirtualCourseData\iLibrary\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT_HEMS_Student_Console\iLibrary\bin\Debug\iLibrary.dll
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT_HEMS_Student_Console\iLibrary\bin\Debug\iLibrary.pdb
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT_HEMS_Student_Console\iLibrary\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT_HEMS_Student_Console\iLibrary\obj\Debug\iLibrary.dll
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT_HEMS_Student_Console\iLibrary\obj\Debug\iLibrary.pdb
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT HEMS Based Student Console\iLibrary\bin\Debug\iLibrary.dll
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT HEMS Based Student Console\iLibrary\bin\Debug\iLibrary.pdb
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT HEMS Based Student Console\iLibrary\obj\Debug\iLibrary.dll
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT HEMS Based Student Console\iLibrary\obj\Debug\iLibrary.pdb
+D:\TFS\StudentConsole\StudentConsoleCIIT\CIIT HEMS Based Student Console\iLibrary\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Debug\iLibrary.dll
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\bin\Debug\iLibrary.pdb
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Debug\iLibrary.dll
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Debug\iLibrary.pdb
+C:\Users\Imran Khan\Desktop\OTS\iLibrary\obj\Debug\iLibrary.csprojResolveAssemblyReference.cache
