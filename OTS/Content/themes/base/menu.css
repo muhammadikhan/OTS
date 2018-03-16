@@ -38,7 +38,6 @@
 .ui-menu .ui-state-active {
 	margin: -1px;
 }
-
 /* icon support */
 .ui-menu-icons {
 	position: relative;
@@ -46,7 +45,6 @@
 .ui-menu-icons .ui-menu-item {
 	padding-left: 2em;
 }
-
 /* left-aligned */
 .ui-menu .ui-icon {
 	position: absolute;
@@ -55,7 +53,6 @@
 	left: .2em;
 	margin: auto 0;
 }
-
 /* right-aligned */
 .ui-menu .ui-menu-icon {
 	left: auto;

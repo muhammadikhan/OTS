@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-
 namespace OTSAPI.Controllers
 {
     public class TestController : ApiController
@@ -30,7 +29,6 @@ namespace OTSAPI.Controllers
             {
                 response += ex.ToString() + "<br>";
             }
-
             return response;
         }
         [HttpGet]
@@ -38,7 +36,5 @@ namespace OTSAPI.Controllers
         {
             return "No Detail Log Found at the moment.";
         }
-
     }
-
 }

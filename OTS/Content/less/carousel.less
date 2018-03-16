@@ -1,23 +1,18 @@
 //
 // Carousel
 // --------------------------------------------------
-
-
 // Wrapper for the slide container and indicators
 .carousel {
   position: relative;
 }
-
 .carousel-inner {
   position: relative;
   overflow: hidden;
   width: 100%;
-
   > .item {
     display: none;
     position: relative;
     .transition(.6s ease-in-out left);
-
     // Account for jankitude on images
     > img,
     > a > img {
@@ -25,22 +20,18 @@
       line-height: 1;
     }
   }
-
   > .active,
   > .next,
   > .prev { display: block; }
-
   > .active {
     left: 0;
   }
-
   > .next,
   > .prev {
     position: absolute;
     top: 0;
     width: 100%;
   }
-
   > .next {
     left: 100%;
   }
@@ -51,19 +42,15 @@
   > .prev.right {
     left: 0;
   }
-
   > .active.left {
     left: -100%;
   }
   > .active.right {
     left: 100%;
   }
-
 }
-
 // Left/right controls for nav
 // ---------------------------
-
 .carousel-control {
   position: absolute;
   top: 0;
@@ -77,7 +64,6 @@
   text-shadow: @carousel-text-shadow;
   // We can't have this transition here because WebKit cancels the carousel
   // animation if you trip this while in the middle of another animation.
-
   // Set gradients for backgrounds
   &.left {
     #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
@@ -87,7 +73,6 @@
     right: 0;
     #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
   }
-
   // Hover/focus state
   &:hover,
   &:focus {
@@ -95,7 +80,6 @@
     text-decoration: none;
     .opacity(.9);
   }
-
   // Toggles
   .icon-prev,
   .icon-next,
@@ -122,7 +106,6 @@
     margin-left: -10px;
     font-family: serif;
   }
-
   .icon-prev {
     &:before {
       content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
@@ -134,12 +117,10 @@
     }
   }
 }
-
 // Optional indicator pips
 //
 // Add an unordered list with the following class and add a list item for each
 // slide your carousel holds.
-
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
@@ -150,7 +131,6 @@
   padding-left: 0;
   list-style: none;
   text-align: center;
-
   li {
     display: inline-block;
     width:  10px;
@@ -160,7 +140,6 @@
     border: 1px solid @carousel-indicator-border-color;
     border-radius: 10px;
     cursor: pointer;
-
     // IE8-9 hack for event handling
     //
     // Internet Explorer 8-9 does not support clicks on elements without a set
@@ -179,7 +158,6 @@
     background-color: @carousel-indicator-active-bg;
   }
 }
-
 // Optional captions
 // -----------------------------
 // Hidden by default for smaller viewports
@@ -198,11 +176,8 @@
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
 }
-
-
 // Scale up controls for tablets and up
 @media screen and (min-width: @screen-sm-min) {
-
   // Scale up the controls a smidge
   .carousel-control {
     .glyphicons-chevron-left,
@@ -216,14 +191,12 @@
       font-size: 30px;
     }
   }
-
   // Show and left align the captions
   .carousel-caption {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
   }
-
   // Move up the indicators
   .carousel-indicators {
     bottom: 20px;

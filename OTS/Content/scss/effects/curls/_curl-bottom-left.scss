@@ -2,7 +2,6 @@
 @mixin curl-bottom-left {
 	@include hacks();
 	position: relative;
-
 	&:before {
 		pointer-events: none;
 		position: absolute;
@@ -23,7 +22,6 @@
 		@include prefixed(transition-duration, $mediumDuration);
 		@include prefixed(transition-property, "width, height");
 	}
-
 	&:hover:before,
 	&:focus:before,
 	&:active:before {

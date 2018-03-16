@@ -4,7 +4,6 @@
 	position: relative;
 	.prefixed(transition-duration, @mediumDuration);
 	.prefixed(transition-property, transform);
-
 	&:before {
 		position: absolute;
 		z-index: -1;
@@ -17,12 +16,10 @@
 		.prefixed(transition-duration, @mediumDuration);
 		.prefixed(transition-property, transform);
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
 		.prefixed(transform, translateY(@tipHeight));
-
 		&:before {
 			.prefixed(transform, translateY(-(@tipHeight)));
 		}

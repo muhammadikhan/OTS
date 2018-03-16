@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
-
 namespace OTSAPI
 {
     public static class WebApiConfig
@@ -11,7 +10,6 @@ namespace OTSAPI
         public static void Register(HttpConfiguration config)
         {
             config.MapHttpAttributeRoutes();
-
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{Controller}/{Action}/{id}",

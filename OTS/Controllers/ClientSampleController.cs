@@ -4,20 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OTS.Model;
-
 namespace OTS.Controllers
 {
     public class ClientSampleController : Controller
     {
         #region Database CRUD (Create, Read, Update, Delete) Operations
-
         #region Create / Insert
         [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
-
         [HttpPost]
         public ActionResult Create(ClientSampleModel ObjClientSampleModel)
         {
@@ -35,10 +32,8 @@ namespace OTS.Controllers
                 ViewBag.Error = ex.ToString();
                 return View("Error");
             }
-
         }
         #endregion
-
         #region Read / Select
         /// <summary>
         /// Index
@@ -62,9 +57,7 @@ namespace OTS.Controllers
             }
             return View(ObjClientSampleModel);
         }
-
         #endregion
-
         #region Update / Edit
         [HttpGet]
         public ActionResult Edit(int id)
@@ -105,7 +98,6 @@ namespace OTS.Controllers
             }
         }
         #endregion
-
         #region Delete
         [HttpGet]
         public ActionResult Delete(int id)
@@ -146,7 +138,6 @@ namespace OTS.Controllers
             }
         }
         #endregion
-
         #endregion
     }
 }

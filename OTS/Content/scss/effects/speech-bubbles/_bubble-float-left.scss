@@ -4,7 +4,6 @@
 	position: relative;
 	@include prefixed(transition-duration, $mediumDuration);
 	@include prefixed(transition-property, transform);
-
 	&:before {
 		position: absolute;
 		z-index: -1;
@@ -17,12 +16,10 @@
 		@include prefixed(transition-duration, $mediumDuration);
 		@include prefixed(transition-property, transform);
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
 		@include prefixed(transform, translateX($tipWidth));
-
 		&:before {
 			@include prefixed(transform, translateX(-($tipWidth)));
 		}

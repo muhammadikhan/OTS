@@ -10,13 +10,11 @@
 		.prefixed(transform, translateY(6px));
 	}
 });
-
 /* Icon Down */
 .icon-down() {
 	.hacks();
 	position: relative;
 	padding-right: @spaceBetweenTextAndArrows;
-
 	&:before {
 		content: "\f01a";
 		position: absolute;
@@ -25,11 +23,9 @@
 		font-family: FontAwesome;
 		.prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			.prefixed(animation-name, ~"@{nameSpace}-icon-down");
 			.prefixed(animation-duration, .75s);

@@ -10,19 +10,16 @@
 		.prefixed(transform, translateY(6px));
 	}
 });
-
 .keyframes(~"@{nameSpace}-icon-hang-sink", {
 	100% {
 		.prefixed(transform, translateY(6px));
 	}
 });
-
 .icon-hang() {
 	.hacks();
 	position: relative;
 	padding-right: 2.2em;
 	.prefixed(transition-duration, @mediumDuration);
-
 	&:before {
 		content: "\f078";
 		position: absolute;
@@ -31,11 +28,9 @@
 		font-family: FontAwesome;
 		.prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			.prefixed(animation-name, ~"@{nameSpace}-icon-hang-sink, @{nameSpace}-icon-hang");
 			.prefixed(animation-duration, ~".3s, 1.5s");

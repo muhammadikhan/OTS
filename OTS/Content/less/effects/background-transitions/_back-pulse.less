@@ -4,13 +4,11 @@
 		background-color: rgba(32, 152, 209, .75);
 	}
 });
-
 .back-pulse() {
 	.hacks();
 	overflow: hidden;
 	.prefixed(transition-duration, @slowDuration);
 	.prefixed(transition-property, "color, background-color");
-
 	&:hover,
 	&:focus,
 	&:active {

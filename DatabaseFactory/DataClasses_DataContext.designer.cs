@@ -8,7 +8,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 namespace DatabaseContext
 {
 	using System.Data.Linq;
@@ -18,49 +17,39 @@ namespace DatabaseContext
 	using System.Reflection;
 	using System.Linq;
 	using System.Linq.Expressions;
-	
-	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Tailorshop")]
 	public partial class DataClasses_DataContext : System.Data.Linq.DataContext
 	{
-		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
-		
     #region Extensibility Method Definitions
     partial void OnCreated();
     partial void UpdateTailorCategory(DatabaseEntity.TailorCategory instance);
     #endregion
-		
 		public DataClasses_DataContext() : 
 				base(global::DatabaseFactory.Properties.Settings.Default.TailorshopConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
-		
 		public DataClasses_DataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
 		public DataClasses_DataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
 		public DataClasses_DataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
 		public DataClasses_DataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Client> Clients
 		{
 			get
@@ -68,7 +57,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Client>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Warehouse> Warehouses
 		{
 			get
@@ -76,7 +64,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Warehouse>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.ClientRider> ClientRiders
 		{
 			get
@@ -84,7 +71,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.ClientRider>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.ClientSample> ClientSamples
 		{
 			get
@@ -92,7 +78,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.ClientSample>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Dimension> Dimensions
 		{
 			get
@@ -100,7 +85,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Dimension>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.DressDetail> DressDetails
 		{
 			get
@@ -108,7 +92,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.DressDetail>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.DressStyle> DressStyles
 		{
 			get
@@ -116,7 +99,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.DressStyle>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.DressType> DressTypes
 		{
 			get
@@ -124,7 +106,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.DressType>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Entity> Entities
 		{
 			get
@@ -132,7 +113,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Entity>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Entity_Offer> Entity_Offers
 		{
 			get
@@ -140,7 +120,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Entity_Offer>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Entity_Order_Timeframe> Entity_Order_Timeframes
 		{
 			get
@@ -148,7 +127,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Entity_Order_Timeframe>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Location> Locations
 		{
 			get
@@ -156,7 +134,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Location>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Offer> Offers
 		{
 			get
@@ -164,7 +141,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Offer>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Order> Orders
 		{
 			get
@@ -172,7 +148,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Order>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Status> Status
 		{
 			get
@@ -180,7 +155,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Status>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.Tailor> Tailors
 		{
 			get
@@ -188,7 +162,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.Tailor>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.TailorCategory> TailorCategories
 		{
 			get
@@ -196,7 +169,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.TailorCategory>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.TailorRider> TailorRiders
 		{
 			get
@@ -204,7 +176,6 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.TailorRider>();
 			}
 		}
-		
 		public System.Data.Linq.Table<DatabaseEntity.DressCategory> DressCategories
 		{
 			get
@@ -212,294 +183,236 @@ namespace DatabaseContext
 				return this.GetTable<DatabaseEntity.DressCategory>();
 			}
 		}
-		
 		private void InsertClient(DatabaseEntity.Client obj)
 		{
 			this.usp_ClientInsert(obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), ((System.Nullable<int>)(obj.Location_ID)), obj.PickUp_Address, obj.Drop_Address, obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateClient(DatabaseEntity.Client obj)
 		{
 			this.usp_ClientUpdate(((System.Nullable<int>)(obj.Client_ID)), obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), ((System.Nullable<int>)(obj.Location_ID)), obj.PickUp_Address, obj.Drop_Address, obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteClient(DatabaseEntity.Client obj)
 		{
 			this.usp_ClientDelete(((System.Nullable<int>)(obj.Client_ID)));
 		}
-		
 		private void InsertWarehouse(DatabaseEntity.Warehouse obj)
 		{
 			this.usp_WarehouseInsert(obj.Warehouse_Name, obj.Onwer_Name, obj.Onwer_Details, ((System.Nullable<int>)(obj.Landline_Number)), ((System.Nullable<int>)(obj.Fax_Number)), obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), ((System.Nullable<int>)(obj.Location_ID)), obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateWarehouse(DatabaseEntity.Warehouse obj)
 		{
 			this.usp_WarehouseUpdate(((System.Nullable<int>)(obj.Warehouse_ID)), obj.Warehouse_Name, obj.Onwer_Name, obj.Onwer_Details, ((System.Nullable<int>)(obj.Landline_Number)), ((System.Nullable<int>)(obj.Fax_Number)), obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), ((System.Nullable<int>)(obj.Location_ID)), obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteWarehouse(DatabaseEntity.Warehouse obj)
 		{
 			this.usp_WarehouseDelete(((System.Nullable<int>)(obj.Warehouse_ID)));
 		}
-		
 		private void InsertClientRider(DatabaseEntity.ClientRider obj)
 		{
 			this.usp_ClientRiderInsert(obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateClientRider(DatabaseEntity.ClientRider obj)
 		{
 			this.usp_ClientRiderUpdate(((System.Nullable<int>)(obj.C_RiderID)), obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteClientRider(DatabaseEntity.ClientRider obj)
 		{
 			this.usp_ClientRiderDelete(((System.Nullable<int>)(obj.C_RiderID)));
 		}
-		
 		private void InsertClientSample(DatabaseEntity.ClientSample obj)
 		{
 			this.usp_ClientSampleInsert(((System.Nullable<int>)(obj.ClientSample_ID)), obj.ClientSample_Name, obj.ClientSample_QR_Code, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateClientSample(DatabaseEntity.ClientSample obj)
 		{
 			this.usp_ClientSampleUpdate(((System.Nullable<int>)(obj.ClientSample_ID)), obj.ClientSample_Name, obj.ClientSample_QR_Code, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteClientSample(DatabaseEntity.ClientSample obj)
 		{
 			this.usp_ClientSampleDelete(((System.Nullable<int>)(obj.ClientSample_ID)));
 		}
-		
 		private void InsertDimension(DatabaseEntity.Dimension obj)
 		{
 			this.usp_DimensionInsert(((System.Nullable<int>)(obj.Dimension_ID)), obj.Dimension_Name, ((System.Nullable<int>)(obj.Dimension_Value)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateDimension(DatabaseEntity.Dimension obj)
 		{
 			this.usp_DimensionUpdate(((System.Nullable<int>)(obj.Dimension_ID)), obj.Dimension_Name, ((System.Nullable<int>)(obj.Dimension_Value)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteDimension(DatabaseEntity.Dimension obj)
 		{
 			this.usp_DimensionDelete(((System.Nullable<int>)(obj.Dimension_ID)));
 		}
-		
 		private void InsertDressDetail(DatabaseEntity.DressDetail obj)
 		{
 			this.usp_DressDetailsInsert(((System.Nullable<int>)(obj.DressCategory_ID)), ((System.Nullable<int>)(obj.DressType_ID)), ((System.Nullable<int>)(obj.DressStyle_ID)), ((System.Nullable<int>)(obj.Dimension_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateDressDetail(DatabaseEntity.DressDetail obj)
 		{
 			this.usp_DressDetailsUpdate(((System.Nullable<int>)(obj.DressDetails_ID)), ((System.Nullable<int>)(obj.DressCategory_ID)), ((System.Nullable<int>)(obj.DressType_ID)), ((System.Nullable<int>)(obj.DressStyle_ID)), ((System.Nullable<int>)(obj.Dimension_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteDressDetail(DatabaseEntity.DressDetail obj)
 		{
 			this.usp_DressDetailsDelete(((System.Nullable<int>)(obj.DressDetails_ID)));
 		}
-		
 		private void InsertDressStyle(DatabaseEntity.DressStyle obj)
 		{
 			this.usp_DressStyleInsert(obj.DressStyle_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateDressStyle(DatabaseEntity.DressStyle obj)
 		{
 			this.usp_DressStyleUpdate(((System.Nullable<int>)(obj.DressStyle_ID)), obj.DressStyle_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteDressStyle(DatabaseEntity.DressStyle obj)
 		{
 			this.usp_DressStyleDelete(((System.Nullable<int>)(obj.DressStyle_ID)));
 		}
-		
 		private void InsertDressType(DatabaseEntity.DressType obj)
 		{
 			this.usp_DressTypeInsert(obj.DressType_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateDressType(DatabaseEntity.DressType obj)
 		{
 			this.usp_DressTypeUpdate(((System.Nullable<int>)(obj.DressType_ID)), obj.DressType_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteDressType(DatabaseEntity.DressType obj)
 		{
 			this.usp_DressTypeDelete(((System.Nullable<int>)(obj.DressType_ID)));
 		}
-		
 		private void InsertEntity(DatabaseEntity.Entity obj)
 		{
 			this.usp_EntityInsert(obj.Entity_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateEntity(DatabaseEntity.Entity obj)
 		{
 			this.usp_EntityUpdate(((System.Nullable<int>)(obj.Entity_ID)), obj.Entity_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteEntity(DatabaseEntity.Entity obj)
 		{
 			this.usp_EntityDelete(((System.Nullable<int>)(obj.Entity_ID)));
 		}
-		
 		private void InsertEntity_Offer(DatabaseEntity.Entity_Offer obj)
 		{
 			this.usp_Entity_OfferInsert(((System.Nullable<int>)(obj.Entity_Offer_ID)), ((System.Nullable<int>)(obj.Offer_ID)), ((System.Nullable<int>)(obj.DressDetails_ID)), ((System.Nullable<int>)(obj.Rate)), obj.Percentage_Discount, obj.Flat_Discount, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateEntity_Offer(DatabaseEntity.Entity_Offer obj)
 		{
 			this.usp_DressTypeUpdate(default(System.Nullable<int>), default(string), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteEntity_Offer(DatabaseEntity.Entity_Offer obj)
 		{
 			this.usp_OffersDelete(((System.Nullable<int>)(obj.Offer_ID)));
 		}
-		
 		private void InsertEntity_Order_Timeframe(DatabaseEntity.Entity_Order_Timeframe obj)
 		{
 			this.usp_Entity_Order_TimeframeInsert(((System.Nullable<int>)(obj.Order_ID)), ((System.Nullable<int>)(obj.Entity_ID)), ((System.Nullable<System.DateTime>)(obj.Estimated_DateTime)), ((System.Nullable<System.DateTime>)(obj.Actual_DateTime)), ((System.Nullable<System.DateTime>)(obj.Pick)), ((System.Nullable<System.DateTime>)(obj.Drop)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateEntity_Order_Timeframe(DatabaseEntity.Entity_Order_Timeframe obj)
 		{
 			this.usp_Entity_Order_TimeframeUpdate(((System.Nullable<int>)(obj.OrderTimeframe_ID)), ((System.Nullable<int>)(obj.Order_ID)), ((System.Nullable<int>)(obj.Entity_ID)), ((System.Nullable<System.DateTime>)(obj.Estimated_DateTime)), ((System.Nullable<System.DateTime>)(obj.Actual_DateTime)), ((System.Nullable<System.DateTime>)(obj.Pick)), ((System.Nullable<System.DateTime>)(obj.Drop)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteEntity_Order_Timeframe(DatabaseEntity.Entity_Order_Timeframe obj)
 		{
 			this.usp_Entity_Order_TimeframeDelete(((System.Nullable<int>)(obj.OrderTimeframe_ID)));
 		}
-		
 		private void InsertLocation(DatabaseEntity.Location obj)
 		{
 			this.usp_LocationsInsert(((System.Nullable<int>)(obj.Location_ID)), ((System.Nullable<int>)(obj.Area_ID)), ((System.Nullable<int>)(obj.Map_ID)), ((System.Nullable<int>)(obj.City_ID)), ((System.Nullable<int>)(obj.Country_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateLocation(DatabaseEntity.Location obj)
 		{
 			this.usp_LocationsUpdate(((System.Nullable<int>)(obj.Location_ID)), ((System.Nullable<int>)(obj.Area_ID)), ((System.Nullable<int>)(obj.Map_ID)), ((System.Nullable<int>)(obj.City_ID)), ((System.Nullable<int>)(obj.Country_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteLocation(DatabaseEntity.Location obj)
 		{
 			this.usp_LocationsDelete(((System.Nullable<int>)(obj.Location_ID)));
 		}
-		
 		private void InsertOffer(DatabaseEntity.Offer obj)
 		{
 			this.usp_OffersInsert(obj.Offer_Name, obj.Offer_Event, ((System.Nullable<System.DateTime>)(obj.Offer_Valid_From)), ((System.Nullable<System.DateTime>)(obj.Offer_Valid_Till)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateOffer(DatabaseEntity.Offer obj)
 		{
 			this.usp_OffersUpdate(((System.Nullable<int>)(obj.Offer_ID)), obj.Offer_Name, obj.Offer_Event, ((System.Nullable<System.DateTime>)(obj.Offer_Valid_From)), ((System.Nullable<System.DateTime>)(obj.Offer_Valid_Till)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteOffer(DatabaseEntity.Offer obj)
 		{
 			this.usp_OffersDelete(((System.Nullable<int>)(obj.Offer_ID)));
 		}
-		
 		private void InsertOrder(DatabaseEntity.Order obj)
 		{
 			this.usp_OrderInsert(((System.Nullable<int>)(obj.Order_ID)), ((System.Nullable<int>)(obj.Client_ID)), ((System.Nullable<int>)(obj.C_Rider_ID)), ((System.Nullable<int>)(obj.Warehouse_ID)), ((System.Nullable<int>)(obj.T_Rider_ID)), ((System.Nullable<int>)(obj.Tailor_ID)), ((System.Nullable<int>)(obj.DressDetails_ID)), ((System.Nullable<int>)(obj.ClientSample_ID)), ((System.Nullable<int>)(obj.Status_ID)), obj.QR_Code, obj.Remarks, ((System.Nullable<int>)(obj.Offer_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateOrder(DatabaseEntity.Order obj)
 		{
 			this.usp_OrderUpdate(((System.Nullable<int>)(obj.Order_ID)), ((System.Nullable<int>)(obj.Client_ID)), ((System.Nullable<int>)(obj.C_Rider_ID)), ((System.Nullable<int>)(obj.Warehouse_ID)), ((System.Nullable<int>)(obj.T_Rider_ID)), ((System.Nullable<int>)(obj.Tailor_ID)), ((System.Nullable<int>)(obj.DressDetails_ID)), ((System.Nullable<int>)(obj.ClientSample_ID)), ((System.Nullable<int>)(obj.Status_ID)), obj.QR_Code, obj.Remarks, ((System.Nullable<int>)(obj.Offer_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteOrder(DatabaseEntity.Order obj)
 		{
 			this.usp_OrderDelete(((System.Nullable<int>)(obj.Order_ID)));
 		}
-		
 		private void InsertStatus(DatabaseEntity.Status obj)
 		{
 			this.usp_StatusInsert(obj.Status_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateStatus(DatabaseEntity.Status obj)
 		{
 			this.usp_StatusUpdate(((System.Nullable<int>)(obj.Status_ID)), obj.Status_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteStatus(DatabaseEntity.Status obj)
 		{
 			this.usp_StatusDelete(((System.Nullable<int>)(obj.Status_ID)));
 		}
-		
 		private void InsertTailor(DatabaseEntity.Tailor obj)
 		{
 			this.usp_TailorInsert(obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), ((System.Nullable<int>)(obj.Location_ID)), obj.PickUp_Address, obj.Drop_Address, obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateTailor(DatabaseEntity.Tailor obj)
 		{
 			this.usp_TailorUpdate(((System.Nullable<int>)(obj.Tailor_ID)), obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), ((System.Nullable<int>)(obj.Location_ID)), obj.PickUp_Address, obj.Drop_Address, obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteTailor(DatabaseEntity.Tailor obj)
 		{
 			this.usp_TailorDelete(((System.Nullable<int>)(obj.Tailor_ID)));
 		}
-		
 		private void InsertTailorCategory(DatabaseEntity.TailorCategory obj)
 		{
 			this.usp_TailorCategoryInsert(((System.Nullable<int>)(obj.TailorCategory_ID)), obj.TailorCategory_Name, ((System.Nullable<int>)(obj.TailorCategory_Rating)), ((System.Nullable<int>)(obj.TailorCategory_Days)), ((System.Nullable<int>)(obj.DressCategory_ID)), ((System.Nullable<int>)(obj.Tailor_ID)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<char>)(obj.Deleted)));
 		}
-		
 		private void DeleteTailorCategory(DatabaseEntity.TailorCategory obj)
 		{
 			this.usp_TailorCategoryDelete(((System.Nullable<int>)(obj.TailorCategory_ID)));
 		}
-		
 		private void InsertTailorRider(DatabaseEntity.TailorRider obj)
 		{
 			this.usp_TailorRiderInsert(obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateTailorRider(DatabaseEntity.TailorRider obj)
 		{
 			this.usp_TailorRiderUpdate(((System.Nullable<int>)(obj.T_RiderID)), obj.Profile_Name, obj.Password, obj.First_Name, obj.Middle_Name, obj.Last_Name, obj.Email_Address, ((System.Nullable<int>)(obj.Contact_Number)), ((System.Nullable<int>)(obj.Cell_Number)), obj.QR_Code, ((System.Nullable<int>)(obj.Rating)), ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteTailorRider(DatabaseEntity.TailorRider obj)
 		{
 			this.usp_TailorRiderDelete(((System.Nullable<int>)(obj.T_RiderID)));
 		}
-		
 		private void InsertDressCategory(DatabaseEntity.DressCategory obj)
 		{
 			this.usp_DressCategoryInsert(obj.DressCategory_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void UpdateDressCategory(DatabaseEntity.DressCategory obj)
 		{
 			this.usp_DressCategoryUpdate(((System.Nullable<int>)(obj.DressCategory_ID)), obj.DressCategory_Name, ((System.Nullable<System.DateTime>)(obj.Created_DateTime)), ((System.Nullable<int>)(obj.Created_By)), ((System.Nullable<System.DateTime>)(obj.Modified_DateTime)), ((System.Nullable<int>)(obj.Modified_By)), ((System.Nullable<bool>)(obj.Deleted)));
 		}
-		
 		private void DeleteDressCategory(DatabaseEntity.DressCategory obj)
 		{
 			this.usp_DressCategoryDelete(((System.Nullable<int>)(obj.DressCategory_ID)));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientDelete")]
 		public int usp_ClientDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Client_ID", DbType="Int")] System.Nullable<int> client_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), client_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_WarehouseUpdate")]
 		public ISingleResult<DatabaseEntity.usp_WarehouseUpdateResult> usp_WarehouseUpdate(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Warehouse_ID", DbType="Int")] System.Nullable<int> warehouse_ID, 
@@ -523,7 +436,6 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), warehouse_ID, warehouse_Name, onwer_Name, onwer_Details, landline_Number, fax_Number, email_Address, contact_Number, cell_Number, location_ID, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_WarehouseUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientInsert")]
 		public ISingleResult<DatabaseEntity.usp_ClientInsertResult> usp_ClientInsert(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profile_Name", DbType="NVarChar(100)")] string profile_Name, 
@@ -548,28 +460,24 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, location_ID, pickUp_Address, drop_Address, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_ClientInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientRiderDelete")]
 		public int usp_ClientRiderDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="C_RiderID", DbType="Int")] System.Nullable<int> c_RiderID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), c_RiderID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientRiderInsert")]
 		public ISingleResult<DatabaseEntity.usp_ClientRiderInsertResult> usp_ClientRiderInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profile_Name", DbType="NVarChar(MAX)")] string profile_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(50)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="First_Name", DbType="Char(10)")] string first_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Middle_Name", DbType="Char(10)")] string middle_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Last_Name", DbType="Char(10)")] string last_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email_Address", DbType="NVarChar(50)")] string email_Address, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contact_Number", DbType="Int")] System.Nullable<int> contact_Number, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cell_Number", DbType="Int")] System.Nullable<int> cell_Number, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QR_Code", DbType="NVarChar(MAX)")] string qR_Code, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Rating", DbType="Int")] System.Nullable<int> rating, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_ClientRiderInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientRiderSelect")]
 		public ISingleResult<DatabaseEntity.usp_ClientRiderSelectResult> usp_ClientRiderSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="C_RiderID", DbType="Int")] System.Nullable<int> c_RiderID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), c_RiderID);
 			return ((ISingleResult<DatabaseEntity.usp_ClientRiderSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientRiderUpdate")]
 		public ISingleResult<DatabaseEntity.usp_ClientRiderUpdateResult> usp_ClientRiderUpdate(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="C_RiderID", DbType="Int")] System.Nullable<int> c_RiderID, 
@@ -592,42 +500,36 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), c_RiderID, profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_ClientRiderUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientSampleDelete")]
 		public int usp_ClientSampleDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_ID", DbType="Int")] System.Nullable<int> clientSample_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clientSample_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientSampleInsert")]
 		public ISingleResult<DatabaseEntity.usp_ClientSampleInsertResult> usp_ClientSampleInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_ID", DbType="Int")] System.Nullable<int> clientSample_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_Name", DbType="VarChar(50)")] string clientSample_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_QR_Code", DbType="NVarChar(50)")] string clientSample_QR_Code, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clientSample_ID, clientSample_Name, clientSample_QR_Code, created_DateTime, created_By, modified_DateTime, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_ClientSampleInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientSampleSelect")]
 		public ISingleResult<DatabaseEntity.usp_ClientSampleSelectResult> usp_ClientSampleSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_ID", DbType="Int")] System.Nullable<int> clientSample_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clientSample_ID);
 			return ((ISingleResult<DatabaseEntity.usp_ClientSampleSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientSampleUpdate")]
 		public ISingleResult<DatabaseEntity.usp_ClientSampleUpdateResult> usp_ClientSampleUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_ID", DbType="Int")] System.Nullable<int> clientSample_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_Name", DbType="VarChar(50)")] string clientSample_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ClientSample_QR_Code", DbType="NVarChar(50)")] string clientSample_QR_Code, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), clientSample_ID, clientSample_Name, clientSample_QR_Code, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_ClientSampleUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientSelect")]
 		public ISingleResult<DatabaseEntity.usp_ClientSelectResult> usp_ClientSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Client_ID", DbType="Int")] System.Nullable<int> client_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), client_ID);
 			return ((ISingleResult<DatabaseEntity.usp_ClientSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_ClientUpdate")]
 		public ISingleResult<DatabaseEntity.usp_ClientUpdateResult> usp_ClientUpdate(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Client_ID", DbType="Int")] System.Nullable<int> client_ID, 
@@ -653,266 +555,228 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), client_ID, profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, location_ID, pickUp_Address, drop_Address, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_ClientUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DimensionDelete")]
 		public int usp_DimensionDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_ID", DbType="Int")] System.Nullable<int> dimension_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dimension_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DimensionInsert")]
 		public ISingleResult<DatabaseEntity.usp_DimensionInsertResult> usp_DimensionInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_ID", DbType="Int")] System.Nullable<int> dimension_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_Name", DbType="NVarChar(50)")] string dimension_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_Value", DbType="Int")] System.Nullable<int> dimension_Value, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dimension_ID, dimension_Name, dimension_Value, created_DateTime, created_By, modified_DateTime, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DimensionInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DimensionSelect")]
 		public ISingleResult<DatabaseEntity.usp_DimensionSelectResult> usp_DimensionSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_ID", DbType="Int")] System.Nullable<int> dimension_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dimension_ID);
 			return ((ISingleResult<DatabaseEntity.usp_DimensionSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DimensionUpdate")]
 		public ISingleResult<DatabaseEntity.usp_DimensionUpdateResult> usp_DimensionUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_ID", DbType="Int")] System.Nullable<int> dimension_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_Name", DbType="NVarChar(50)")] string dimension_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_Value", DbType="Int")] System.Nullable<int> dimension_Value, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dimension_ID, dimension_Name, dimension_Value, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DimensionUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressDetailsDelete")]
 		public int usp_DressDetailsDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressDetails_ID", DbType="Int")] System.Nullable<int> dressDetails_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressDetails_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressDetailsInsert")]
 		public ISingleResult<DatabaseEntity.usp_DressDetailsInsertResult> usp_DressDetailsInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_ID", DbType="Int")] System.Nullable<int> dressType_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_ID", DbType="Int")] System.Nullable<int> dressStyle_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_ID", DbType="Int")] System.Nullable<int> dimension_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressCategory_ID, dressType_ID, dressStyle_ID, dimension_ID, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressDetailsInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressDetailsSelect")]
 		public ISingleResult<DatabaseEntity.usp_DressDetailsSelectResult> usp_DressDetailsSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressDetails_ID", DbType="Int")] System.Nullable<int> dressDetails_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressDetails_ID);
 			return ((ISingleResult<DatabaseEntity.usp_DressDetailsSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressDetailsUpdate")]
 		public ISingleResult<DatabaseEntity.usp_DressDetailsUpdateResult> usp_DressDetailsUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressDetails_ID", DbType="Int")] System.Nullable<int> dressDetails_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_ID", DbType="Int")] System.Nullable<int> dressType_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_ID", DbType="Int")] System.Nullable<int> dressStyle_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Dimension_ID", DbType="Int")] System.Nullable<int> dimension_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressDetails_ID, dressCategory_ID, dressType_ID, dressStyle_ID, dimension_ID, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressDetailsUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressStyleDelete")]
 		public int usp_DressStyleDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_ID", DbType="Int")] System.Nullable<int> dressStyle_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressStyle_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressStyleInsert")]
 		public ISingleResult<DatabaseEntity.usp_DressStyleInsertResult> usp_DressStyleInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_Name", DbType="NVarChar(50)")] string dressStyle_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressStyle_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressStyleInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressStyleSelect")]
 		public ISingleResult<DatabaseEntity.usp_DressStyleSelectResult> usp_DressStyleSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_ID", DbType="Int")] System.Nullable<int> dressStyle_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressStyle_ID);
 			return ((ISingleResult<DatabaseEntity.usp_DressStyleSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressStyleUpdate")]
 		public ISingleResult<DatabaseEntity.usp_DressStyleUpdateResult> usp_DressStyleUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_ID", DbType="Int")] System.Nullable<int> dressStyle_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressStyle_Name", DbType="NVarChar(50)")] string dressStyle_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressStyle_ID, dressStyle_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressStyleUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressTypeDelete")]
 		public int usp_DressTypeDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_ID", DbType="Int")] System.Nullable<int> dressType_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressType_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressTypeInsert")]
 		public ISingleResult<DatabaseEntity.usp_DressTypeInsertResult> usp_DressTypeInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_Name", DbType="NVarChar(50)")] string dressType_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressType_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressTypeInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressTypeSelect")]
 		public ISingleResult<DatabaseEntity.usp_DressTypeSelectResult> usp_DressTypeSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_ID", DbType="Int")] System.Nullable<int> dressType_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressType_ID);
 			return ((ISingleResult<DatabaseEntity.usp_DressTypeSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressTypeUpdate")]
 		public ISingleResult<DatabaseEntity.usp_DressTypeUpdateResult> usp_DressTypeUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_ID", DbType="Int")] System.Nullable<int> dressType_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressType_Name", DbType="NVarChar(50)")] string dressType_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressType_ID, dressType_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressTypeUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_OfferDelete")]
 		public int usp_Entity_OfferDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_Offer_ID", DbType="Int")] System.Nullable<int> entity_Offer_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_Offer_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_OfferInsert")]
 		public ISingleResult<DatabaseEntity.usp_Entity_OfferInsertResult> usp_Entity_OfferInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_Offer_ID", DbType="Int")] System.Nullable<int> entity_Offer_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_ID", DbType="Int")] System.Nullable<int> offer_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressDetails_ID", DbType="Int")] System.Nullable<int> dressDetails_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Rate", DbType="Int")] System.Nullable<int> rate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Percentage_Discount", DbType="NVarChar(50)")] string percentage_Discount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Flat_Discount", DbType="NVarChar(50)")] string flat_Discount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_Offer_ID, offer_ID, dressDetails_ID, rate, percentage_Discount, flat_Discount, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_Entity_OfferInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_OfferSelect")]
 		public ISingleResult<DatabaseEntity.usp_Entity_OfferSelectResult> usp_Entity_OfferSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_Offer_ID", DbType="Int")] System.Nullable<int> entity_Offer_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_Offer_ID);
 			return ((ISingleResult<DatabaseEntity.usp_Entity_OfferSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_OfferUpdate")]
 		public ISingleResult<DatabaseEntity.usp_Entity_OfferUpdateResult> usp_Entity_OfferUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_Offer_ID", DbType="Int")] System.Nullable<int> entity_Offer_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_ID", DbType="Int")] System.Nullable<int> entity_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_ID", DbType="Int")] System.Nullable<int> offer_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressDetails_ID", DbType="Int")] System.Nullable<int> dressDetails_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Rate", DbType="Int")] System.Nullable<int> rate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Percentage_Discount", DbType="NVarChar(50)")] string percentage_Discount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Flat_Discount", DbType="NVarChar(50)")] string flat_Discount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_Offer_ID, entity_ID, offer_ID, dressDetails_ID, rate, percentage_Discount, flat_Discount, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_Entity_OfferUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_Order_TimeframeDelete")]
 		public int usp_Entity_Order_TimeframeDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrderTimeframe_ID", DbType="Int")] System.Nullable<int> orderTimeframe_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), orderTimeframe_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_Order_TimeframeInsert")]
 		public ISingleResult<DatabaseEntity.usp_Entity_Order_TimeframeInsertResult> usp_Entity_Order_TimeframeInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Order_ID", DbType="Int")] System.Nullable<int> order_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_ID", DbType="Int")] System.Nullable<int> entity_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Estimated_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> estimated_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Actual_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> actual_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Pick", DbType="DateTime")] System.Nullable<System.DateTime> pick, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Drop", DbType="DateTime")] System.Nullable<System.DateTime> drop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), order_ID, entity_ID, estimated_DateTime, actual_DateTime, pick, drop, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_Entity_Order_TimeframeInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_Order_TimeframeSelect")]
 		public ISingleResult<DatabaseEntity.usp_Entity_Order_TimeframeSelectResult> usp_Entity_Order_TimeframeSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrderTimeframe_ID", DbType="Int")] System.Nullable<int> orderTimeframe_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), orderTimeframe_ID);
 			return ((ISingleResult<DatabaseEntity.usp_Entity_Order_TimeframeSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Entity_Order_TimeframeUpdate")]
 		public ISingleResult<DatabaseEntity.usp_Entity_Order_TimeframeUpdateResult> usp_Entity_Order_TimeframeUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrderTimeframe_ID", DbType="Int")] System.Nullable<int> orderTimeframe_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Order_ID", DbType="Int")] System.Nullable<int> order_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_ID", DbType="Int")] System.Nullable<int> entity_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Estimated_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> estimated_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Actual_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> actual_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Pick", DbType="DateTime")] System.Nullable<System.DateTime> pick, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Drop", DbType="DateTime")] System.Nullable<System.DateTime> drop, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), orderTimeframe_ID, order_ID, entity_ID, estimated_DateTime, actual_DateTime, pick, drop, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_Entity_Order_TimeframeUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_EntityDelete")]
 		public int usp_EntityDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_ID", DbType="Int")] System.Nullable<int> entity_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_EntityInsert")]
 		public ISingleResult<DatabaseEntity.usp_EntityInsertResult> usp_EntityInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_Name", DbType="NVarChar(50)")] string entity_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_EntityInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_EntitySelect")]
 		public ISingleResult<DatabaseEntity.usp_EntitySelectResult> usp_EntitySelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_ID", DbType="Int")] System.Nullable<int> entity_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_ID);
 			return ((ISingleResult<DatabaseEntity.usp_EntitySelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_EntityUpdate")]
 		public ISingleResult<DatabaseEntity.usp_EntityUpdateResult> usp_EntityUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_ID", DbType="Int")] System.Nullable<int> entity_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Entity_Name", DbType="NVarChar(50)")] string entity_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), entity_ID, entity_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_EntityUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_LocationsDelete")]
 		public int usp_LocationsDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Location_ID", DbType="Int")] System.Nullable<int> location_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), location_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_LocationsInsert")]
 		public ISingleResult<DatabaseEntity.usp_LocationsInsertResult> usp_LocationsInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Location_ID", DbType="Int")] System.Nullable<int> location_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Area_ID", DbType="Int")] System.Nullable<int> area_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Map_ID", DbType="Int")] System.Nullable<int> map_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Country_ID", DbType="Int")] System.Nullable<int> country_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), location_ID, area_ID, map_ID, city_ID, country_ID, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_LocationsInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_LocationsSelect")]
 		public ISingleResult<DatabaseEntity.usp_LocationsSelectResult> usp_LocationsSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Location_ID", DbType="Int")] System.Nullable<int> location_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), location_ID);
 			return ((ISingleResult<DatabaseEntity.usp_LocationsSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_LocationsUpdate")]
 		public ISingleResult<DatabaseEntity.usp_LocationsUpdateResult> usp_LocationsUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Location_ID", DbType="Int")] System.Nullable<int> location_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Area_ID", DbType="Int")] System.Nullable<int> area_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Map_ID", DbType="Int")] System.Nullable<int> map_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="City_ID", DbType="Int")] System.Nullable<int> city_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Country_ID", DbType="Int")] System.Nullable<int> country_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), location_ID, area_ID, map_ID, city_ID, country_ID, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_LocationsUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OffersDelete")]
 		public int usp_OffersDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_ID", DbType="Int")] System.Nullable<int> offer_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), offer_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OffersInsert")]
 		public ISingleResult<DatabaseEntity.usp_OffersInsertResult> usp_OffersInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Name", DbType="NVarChar(50)")] string offer_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Event", DbType="NVarChar(50)")] string offer_Event, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Valid_From", DbType="DateTime")] System.Nullable<System.DateTime> offer_Valid_From, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Valid_Till", DbType="DateTime")] System.Nullable<System.DateTime> offer_Valid_Till, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), offer_Name, offer_Event, offer_Valid_From, offer_Valid_Till, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_OffersInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_Offerselect")]
 		public ISingleResult<DatabaseEntity.usp_OfferselectResult> usp_Offerselect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_ID", DbType="Int")] System.Nullable<int> offer_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), offer_ID);
 			return ((ISingleResult<DatabaseEntity.usp_OfferselectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OffersUpdate")]
 		public ISingleResult<DatabaseEntity.usp_OffersUpdateResult> usp_OffersUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_ID", DbType="Int")] System.Nullable<int> offer_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Name", DbType="NVarChar(50)")] string offer_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Event", DbType="NVarChar(50)")] string offer_Event, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Valid_From", DbType="DateTime")] System.Nullable<System.DateTime> offer_Valid_From, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Offer_Valid_Till", DbType="DateTime")] System.Nullable<System.DateTime> offer_Valid_Till, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), offer_ID, offer_Name, offer_Event, offer_Valid_From, offer_Valid_Till, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_OffersUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OrderDelete")]
 		public int usp_OrderDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Order_ID", DbType="Int")] System.Nullable<int> order_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), order_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OrderInsert")]
 		public ISingleResult<DatabaseEntity.usp_OrderInsertResult> usp_OrderInsert(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Order_ID", DbType="Int")] System.Nullable<int> order_ID, 
@@ -935,14 +799,12 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), order_ID, client_ID, c_Rider_ID, warehouse_ID, t_Rider_ID, tailor_ID, dressDetails_ID, clientSample_ID, status_ID, qR_Code, remarks, offer_ID, created_DateTime, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_OrderInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OrderSelect")]
 		public ISingleResult<DatabaseEntity.usp_OrderSelectResult> usp_OrderSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Order_ID", DbType="Int")] System.Nullable<int> order_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), order_ID);
 			return ((ISingleResult<DatabaseEntity.usp_OrderSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_OrderUpdate")]
 		public ISingleResult<DatabaseEntity.usp_OrderUpdateResult> usp_OrderUpdate(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Order_ID", DbType="Int")] System.Nullable<int> order_ID, 
@@ -966,70 +828,60 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), order_ID, client_ID, c_Rider_ID, warehouse_ID, t_Rider_ID, tailor_ID, dressDetails_ID, clientSample_ID, status_ID, qR_Code, remarks, offer_ID, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_OrderUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_StatusDelete")]
 		public int usp_StatusDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status_ID", DbType="Int")] System.Nullable<int> status_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), status_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_StatusInsert")]
 		public ISingleResult<DatabaseEntity.usp_StatusInsertResult> usp_StatusInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status_Name", DbType="NVarChar(50)")] string status_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), status_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_StatusInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_StatusSelect")]
 		public ISingleResult<DatabaseEntity.usp_StatusSelectResult> usp_StatusSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status_ID", DbType="Int")] System.Nullable<int> status_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), status_ID);
 			return ((ISingleResult<DatabaseEntity.usp_StatusSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_StatusUpdate")]
 		public ISingleResult<DatabaseEntity.usp_StatusUpdateResult> usp_StatusUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status_ID", DbType="Int")] System.Nullable<int> status_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status_Name", DbType="NVarChar(50)")] string status_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), status_ID, status_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_StatusUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorCategoryDelete")]
 		public int usp_TailorCategoryDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_ID", DbType="Int")] System.Nullable<int> tailorCategory_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailorCategory_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorCategoryInsert")]
 		public ISingleResult<DatabaseEntity.usp_TailorCategoryInsertResult> usp_TailorCategoryInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_ID", DbType="Int")] System.Nullable<int> tailorCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_Name", DbType="NVarChar(50)")] string tailorCategory_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_Rating", DbType="Int")] System.Nullable<int> tailorCategory_Rating, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_Days", DbType="Int")] System.Nullable<int> tailorCategory_Days, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tailor_ID", DbType="Int")] System.Nullable<int> tailor_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Char(1)")] System.Nullable<char> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailorCategory_ID, tailorCategory_Name, tailorCategory_Rating, tailorCategory_Days, dressCategory_ID, tailor_ID, created_DateTime, created_By, modified_DateTime, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_TailorCategoryInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorCategorySelect")]
 		public ISingleResult<DatabaseEntity.usp_TailorCategorySelectResult> usp_TailorCategorySelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_ID", DbType="Int")] System.Nullable<int> tailorCategory_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailorCategory_ID);
 			return ((ISingleResult<DatabaseEntity.usp_TailorCategorySelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorCategoryUpdate")]
 		public ISingleResult<DatabaseEntity.usp_TailorCategoryUpdateResult> usp_TailorCategoryUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_ID", DbType="Int")] System.Nullable<int> tailorCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_Name", DbType="NVarChar(50)")] string tailorCategory_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_Rating", DbType="Int")] System.Nullable<int> tailorCategory_Rating, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TailorCategory_Days", DbType="Int")] System.Nullable<int> tailorCategory_Days, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tailor_ID", DbType="Int")] System.Nullable<int> tailor_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Char(1)")] System.Nullable<char> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailorCategory_ID, tailorCategory_Name, tailorCategory_Rating, tailorCategory_Days, dressCategory_ID, tailor_ID, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_TailorCategoryUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorDelete")]
 		public int usp_TailorDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tailor_ID", DbType="Int")] System.Nullable<int> tailor_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailor_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorInsert")]
 		public ISingleResult<DatabaseEntity.usp_TailorInsertResult> usp_TailorInsert(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profile_Name", DbType="NVarChar(50)")] string profile_Name, 
@@ -1054,28 +906,24 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, location_ID, pickUp_Address, drop_Address, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_TailorInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorRiderDelete")]
 		public int usp_TailorRiderDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="T_RiderID", DbType="Int")] System.Nullable<int> t_RiderID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), t_RiderID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorRiderInsert")]
 		public ISingleResult<DatabaseEntity.usp_TailorRiderInsertResult> usp_TailorRiderInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Profile_Name", DbType="NVarChar(MAX)")] string profile_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(20)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="First_Name", DbType="Char(10)")] string first_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Middle_Name", DbType="Char(10)")] string middle_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Last_Name", DbType="Char(10)")] string last_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email_Address", DbType="NVarChar(MAX)")] string email_Address, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contact_Number", DbType="Int")] System.Nullable<int> contact_Number, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cell_Number", DbType="Int")] System.Nullable<int> cell_Number, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QR_Code", DbType="NVarChar(50)")] string qR_Code, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Rating", DbType="Int")] System.Nullable<int> rating, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_TailorRiderInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorRiderSelect")]
 		public ISingleResult<DatabaseEntity.usp_TailorRiderSelectResult> usp_TailorRiderSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="T_RiderID", DbType="Int")] System.Nullable<int> t_RiderID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), t_RiderID);
 			return ((ISingleResult<DatabaseEntity.usp_TailorRiderSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorRiderUpdate")]
 		public ISingleResult<DatabaseEntity.usp_TailorRiderUpdateResult> usp_TailorRiderUpdate(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="T_RiderID", DbType="Int")] System.Nullable<int> t_RiderID, 
@@ -1098,14 +946,12 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), t_RiderID, profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_TailorRiderUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorSelect")]
 		public ISingleResult<DatabaseEntity.usp_TailorSelectResult> usp_TailorSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tailor_ID", DbType="Int")] System.Nullable<int> tailor_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailor_ID);
 			return ((ISingleResult<DatabaseEntity.usp_TailorSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_TailorUpdate")]
 		public ISingleResult<DatabaseEntity.usp_TailorUpdateResult> usp_TailorUpdate(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tailor_ID", DbType="Int")] System.Nullable<int> tailor_ID, 
@@ -1131,14 +977,12 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tailor_ID, profile_Name, password, first_Name, middle_Name, last_Name, email_Address, contact_Number, cell_Number, location_ID, pickUp_Address, drop_Address, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_TailorUpdateResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_WarehouseDelete")]
 		public int usp_WarehouseDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Warehouse_ID", DbType="Int")] System.Nullable<int> warehouse_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), warehouse_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_WarehouseInsert")]
 		public ISingleResult<DatabaseEntity.usp_WarehouseInsertResult> usp_WarehouseInsert(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Warehouse_Name", DbType="NVarChar(MAX)")] string warehouse_Name, 
@@ -1161,35 +1005,30 @@ namespace DatabaseContext
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), warehouse_Name, onwer_Name, onwer_Details, landline_Number, fax_Number, email_Address, contact_Number, cell_Number, location_ID, qR_Code, rating, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_WarehouseInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_WarehouseSelect")]
 		public ISingleResult<DatabaseEntity.usp_WarehouseSelectResult> usp_WarehouseSelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Warehouse_ID", DbType="Int")] System.Nullable<int> warehouse_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), warehouse_ID);
 			return ((ISingleResult<DatabaseEntity.usp_WarehouseSelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressCategoryDelete")]
 		public int usp_DressCategoryDelete([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressCategory_ID);
 			return ((int)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressCategoryInsert")]
 		public ISingleResult<DatabaseEntity.usp_DressCategoryInsertResult> usp_DressCategoryInsert([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_Name", DbType="NVarChar(50)")] string dressCategory_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressCategory_Name, created_DateTime, created_By, modified_DateTime, modified_By, deleted);
 			return ((ISingleResult<DatabaseEntity.usp_DressCategoryInsertResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressCategorySelect")]
 		public ISingleResult<DatabaseEntity.usp_DressCategorySelectResult> usp_DressCategorySelect([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), dressCategory_ID);
 			return ((ISingleResult<DatabaseEntity.usp_DressCategorySelectResult>)(result.ReturnValue));
 		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.usp_DressCategoryUpdate")]
 		public ISingleResult<DatabaseEntity.usp_DressCategoryUpdateResult> usp_DressCategoryUpdate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_ID", DbType="Int")] System.Nullable<int> dressCategory_ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DressCategory_Name", DbType="NVarChar(50)")] string dressCategory_Name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> created_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Created_By", DbType="Int")] System.Nullable<int> created_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_DateTime", DbType="DateTime")] System.Nullable<System.DateTime> modified_DateTime, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Modified_By", DbType="Int")] System.Nullable<int> modified_By, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Deleted", DbType="Bit")] System.Nullable<bool> deleted)
 		{
@@ -1204,52 +1043,29 @@ namespace DatabaseEntity
 	using System.Data.Linq.Mapping;
 	using System.ComponentModel;
 	using System;
-	
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Client")]
 	public partial class Client : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Client_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private System.Nullable<int> _Contact_Number;
-		
 		private int _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1293,12 +1109,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Client()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Client_ID
 		{
@@ -1318,7 +1132,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -1338,7 +1151,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -1358,7 +1170,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -1378,7 +1189,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="NVarChar(20)")]
 		public string Middle_Name
 		{
@@ -1398,7 +1208,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -1418,7 +1227,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -1438,7 +1246,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int")]
 		public System.Nullable<int> Contact_Number
 		{
@@ -1458,7 +1265,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int NOT NULL")]
 		public int Cell_Number
 		{
@@ -1478,7 +1284,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -1498,7 +1303,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -1518,7 +1322,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -1538,7 +1341,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -1558,7 +1360,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -1578,7 +1379,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -1598,7 +1398,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -1618,7 +1417,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -1638,7 +1436,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -1658,7 +1455,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -1678,11 +1474,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -1690,7 +1483,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -1699,47 +1491,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Warehouse")]
 	public partial class Warehouse : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Warehouse_ID;
-		
 		private string _Warehouse_Name;
-		
 		private string _Onwer_Name;
-		
 		private string _Onwer_Details;
-		
 		private int _Landline_Number;
-		
 		private System.Nullable<int> _Fax_Number;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1779,12 +1551,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Warehouse()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Warehouse_ID
 		{
@@ -1804,7 +1574,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Warehouse_Name
 		{
@@ -1824,7 +1593,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Name", DbType="Char(20) NOT NULL", CanBeNull=false)]
 		public string Onwer_Name
 		{
@@ -1844,7 +1612,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Details", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Onwer_Details
 		{
@@ -1864,7 +1631,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Landline_Number", DbType="Int NOT NULL")]
 		public int Landline_Number
 		{
@@ -1884,7 +1650,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fax_Number", DbType="Int")]
 		public System.Nullable<int> Fax_Number
 		{
@@ -1904,7 +1669,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -1924,7 +1688,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -1944,7 +1707,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -1964,7 +1726,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -1984,7 +1745,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -2004,7 +1764,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -2024,7 +1783,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -2044,7 +1802,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -2064,7 +1821,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -2084,7 +1840,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -2104,7 +1859,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -2124,11 +1878,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -2136,7 +1887,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -2145,45 +1895,26 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ClientRider")]
 	public partial class ClientRider : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _C_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2221,12 +1952,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public ClientRider()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_RiderID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int C_RiderID
 		{
@@ -2246,7 +1975,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -2266,7 +1994,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -2286,7 +2013,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -2306,7 +2032,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -2326,7 +2051,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -2346,7 +2070,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -2366,7 +2089,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -2386,7 +2108,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -2406,7 +2127,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -2426,7 +2146,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -2446,7 +2165,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -2466,7 +2184,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -2486,7 +2203,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -2506,7 +2222,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -2526,7 +2241,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -2546,11 +2260,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -2558,7 +2269,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -2567,29 +2277,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ClientSample")]
 	public partial class ClientSample : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _ClientSample_ID;
-		
 		private string _ClientSample_Name;
-		
 		private string _ClientSample_QR_Code;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2611,12 +2310,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public ClientSample()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int ClientSample_ID
 		{
@@ -2636,7 +2333,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_Name
 		{
@@ -2656,7 +2352,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_QR_Code
 		{
@@ -2676,7 +2371,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -2696,7 +2390,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -2716,7 +2409,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -2736,7 +2428,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int Modified_By
 		{
@@ -2756,7 +2447,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -2776,11 +2466,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -2788,7 +2475,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -2797,29 +2483,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Dimension")]
 	public partial class Dimension : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Dimension_ID;
-		
 		private string _Dimension_Name;
-		
 		private int _Dimension_Value;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2841,12 +2516,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Dimension()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int Dimension_ID
 		{
@@ -2866,7 +2539,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Dimension_Name
 		{
@@ -2886,7 +2558,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Value", DbType="Int NOT NULL")]
 		public int Dimension_Value
 		{
@@ -2906,7 +2577,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -2926,7 +2596,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -2946,7 +2615,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -2966,7 +2634,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int Modified_By
 		{
@@ -2986,7 +2653,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -3006,11 +2672,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -3018,7 +2681,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -3027,33 +2689,20 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DressDetails")]
 	public partial class DressDetail : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _DressDetails_ID;
-		
 		private int _DressCategory_ID;
-		
 		private int _DressType_ID;
-		
 		private int _DressStyle_ID;
-		
 		private int _Dimension_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3079,12 +2728,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public DressDetail()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int DressDetails_ID
 		{
@@ -3104,7 +2751,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -3124,7 +2770,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -3144,7 +2789,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -3164,7 +2808,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -3184,7 +2827,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -3204,7 +2846,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -3224,7 +2865,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -3244,7 +2884,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -3264,7 +2903,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -3284,11 +2922,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -3296,7 +2931,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -3305,27 +2939,17 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DressStyle")]
 	public partial class DressStyle : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _DressStyle_ID;
-		
 		private string _DressStyle_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3345,12 +2969,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public DressStyle()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int DressStyle_ID
 		{
@@ -3370,7 +2992,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressStyle_Name
 		{
@@ -3390,7 +3011,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -3410,7 +3030,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -3430,7 +3049,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -3450,7 +3068,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -3470,7 +3087,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -3490,11 +3106,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -3502,7 +3115,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -3511,27 +3123,17 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DressType")]
 	public partial class DressType : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _DressType_ID;
-		
 		private string _DressType_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3551,12 +3153,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public DressType()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int DressType_ID
 		{
@@ -3576,7 +3176,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressType_Name
 		{
@@ -3596,7 +3195,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -3616,7 +3214,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -3636,7 +3233,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -3656,7 +3252,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -3676,7 +3271,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -3696,11 +3290,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -3708,7 +3299,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -3717,27 +3307,17 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Entity")]
 	public partial class Entity : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Entity_ID;
-		
 		private string _Entity_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3757,12 +3337,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Entity()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Entity_ID
 		{
@@ -3782,7 +3360,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Entity_Name
 		{
@@ -3802,7 +3379,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -3822,7 +3398,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -3842,7 +3417,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -3862,7 +3436,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -3882,7 +3455,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -3902,11 +3474,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -3914,7 +3483,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -3923,37 +3491,22 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Entity_Offer")]
 	public partial class Entity_Offer : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Entity_Offer_ID;
-		
 		private int _Entity_ID;
-		
 		private int _Offer_ID;
-		
 		private int _DressDetails_ID;
-		
 		private int _Rate;
-		
 		private string _Percentage_Discount;
-		
 		private string _Flat_Discount;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -3983,12 +3536,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Entity_Offer()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Offer_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int Entity_Offer_ID
 		{
@@ -4008,7 +3559,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int Entity_ID
 		{
@@ -4028,7 +3578,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -4048,7 +3597,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -4068,7 +3616,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rate", DbType="Int NOT NULL")]
 		public int Rate
 		{
@@ -4088,7 +3635,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Percentage_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Percentage_Discount
 		{
@@ -4108,7 +3654,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Flat_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Flat_Discount
 		{
@@ -4128,7 +3673,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -4148,7 +3692,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -4168,7 +3711,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -4188,7 +3730,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -4208,7 +3749,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -4228,11 +3768,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -4240,7 +3777,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -4249,37 +3785,22 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Entity_Order_Timeframe")]
 	public partial class Entity_Order_Timeframe : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _OrderTimeframe_ID;
-		
 		private int _Order_ID;
-		
 		private int _Entity_ID;
-		
 		private System.DateTime _Estimated_DateTime;
-		
 		private System.DateTime _Actual_DateTime;
-		
 		private System.DateTime _Pick;
-		
 		private System.DateTime _Drop;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4309,12 +3830,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Entity_Order_Timeframe()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderTimeframe_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int OrderTimeframe_ID
 		{
@@ -4334,7 +3853,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -4354,7 +3872,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -4374,7 +3891,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estimated_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Estimated_DateTime
 		{
@@ -4394,7 +3910,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actual_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Actual_DateTime
 		{
@@ -4414,7 +3929,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pick", DbType="DateTime NOT NULL")]
 		public System.DateTime Pick
 		{
@@ -4434,7 +3948,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Drop]", Storage="_Drop", DbType="DateTime NOT NULL")]
 		public System.DateTime Drop
 		{
@@ -4454,7 +3967,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -4474,7 +3986,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -4494,7 +4005,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -4514,7 +4024,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -4534,7 +4043,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -4554,11 +4062,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -4566,7 +4071,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -4575,33 +4079,20 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Locations")]
 	public partial class Location : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Location_ID;
-		
 		private int _Area_ID;
-		
 		private int _Map_ID;
-		
 		private int _City_ID;
-		
 		private int _Country_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4627,12 +4118,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Location()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int Location_ID
 		{
@@ -4652,7 +4141,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area_ID", DbType="Int NOT NULL")]
 		public int Area_ID
 		{
@@ -4672,7 +4160,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Map_ID", DbType="Int NOT NULL")]
 		public int Map_ID
 		{
@@ -4692,7 +4179,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int NOT NULL")]
 		public int City_ID
 		{
@@ -4712,7 +4198,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Country_ID", DbType="Int NOT NULL")]
 		public int Country_ID
 		{
@@ -4732,7 +4217,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -4752,7 +4236,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -4772,7 +4255,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -4792,7 +4274,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -4812,7 +4293,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -4832,11 +4312,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -4844,7 +4321,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -4853,33 +4329,20 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Offers")]
 	public partial class Offer : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Offer_ID;
-		
 		private string _Offer_Name;
-		
 		private string _Offer_Event;
-		
 		private System.DateTime _Offer_Valid_From;
-		
 		private System.DateTime _Offer_Valid_Till;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -4905,12 +4368,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Offer()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Offer_ID
 		{
@@ -4930,7 +4391,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Name
 		{
@@ -4950,7 +4410,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Event", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Event
 		{
@@ -4970,7 +4429,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_From", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_From
 		{
@@ -4990,7 +4448,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_Till", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_Till
 		{
@@ -5010,7 +4467,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -5030,7 +4486,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -5050,7 +4505,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -5070,7 +4524,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -5090,7 +4543,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -5110,11 +4562,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -5122,7 +4571,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -5131,47 +4579,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Order]")]
 	public partial class Order : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Order_ID;
-		
 		private int _Client_ID;
-		
 		private int _C_Rider_ID;
-		
 		private int _Warehouse_ID;
-		
 		private int _T_Rider_ID;
-		
 		private int _Tailor_ID;
-		
 		private int _DressDetails_ID;
-		
 		private System.Nullable<int> _ClientSample_ID;
-		
 		private int _Status_ID;
-		
 		private string _QR_Code;
-		
 		private string _Remarks;
-		
 		private int _Offer_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -5211,12 +4639,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Order()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int Order_ID
 		{
@@ -5236,7 +4662,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -5256,7 +4681,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_Rider_ID", DbType="Int NOT NULL")]
 		public int C_Rider_ID
 		{
@@ -5276,7 +4700,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -5296,7 +4719,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_Rider_ID", DbType="Int NOT NULL")]
 		public int T_Rider_ID
 		{
@@ -5316,7 +4738,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -5336,7 +4757,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -5356,7 +4776,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int")]
 		public System.Nullable<int> ClientSample_ID
 		{
@@ -5376,7 +4795,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -5396,7 +4814,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -5416,7 +4833,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarks", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Remarks
 		{
@@ -5436,7 +4852,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -5456,7 +4871,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -5476,7 +4890,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int Created_By
 		{
@@ -5496,7 +4909,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -5516,7 +4928,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -5536,7 +4947,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -5556,11 +4966,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -5568,7 +4975,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -5577,27 +4983,17 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Status")]
 	public partial class Status : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Status_ID;
-		
 		private string _Status_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -5617,12 +5013,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Status()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Status_ID
 		{
@@ -5642,7 +5036,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Status_Name
 		{
@@ -5662,7 +5055,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -5682,7 +5074,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -5702,7 +5093,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -5722,7 +5112,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -5742,7 +5131,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -5762,11 +5150,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -5774,7 +5159,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -5783,51 +5167,29 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tailor")]
 	public partial class Tailor : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _Tailor_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -5871,12 +5233,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public Tailor()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Tailor_ID
 		{
@@ -5896,7 +5256,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -5916,7 +5275,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -5936,7 +5294,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -5956,7 +5313,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -5976,7 +5332,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -5996,7 +5351,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -6016,7 +5370,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -6036,7 +5389,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -6056,7 +5408,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -6076,7 +5427,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -6096,7 +5446,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -6116,7 +5465,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -6136,7 +5484,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -6156,7 +5503,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -6176,7 +5522,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -6196,7 +5541,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -6216,7 +5560,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -6236,7 +5579,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -6256,11 +5598,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -6268,7 +5607,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -6277,35 +5615,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TailorCategory")]
 	public partial class TailorCategory : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _TailorCategory_ID;
-		
 		private string _TailorCategory_Name;
-		
 		private int _TailorCategory_Rating;
-		
 		private int _TailorCategory_Days;
-		
 		private int _DressCategory_ID;
-		
 		private int _Tailor_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private char _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -6333,12 +5657,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(char value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public TailorCategory()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int TailorCategory_ID
 		{
@@ -6358,7 +5680,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string TailorCategory_Name
 		{
@@ -6378,7 +5699,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Rating", DbType="Int NOT NULL")]
 		public int TailorCategory_Rating
 		{
@@ -6398,7 +5718,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Days", DbType="Int NOT NULL")]
 		public int TailorCategory_Days
 		{
@@ -6418,7 +5737,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -6438,7 +5756,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -6458,7 +5775,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -6478,7 +5794,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -6498,7 +5813,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -6518,7 +5832,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
 		public int Modified_By
 		{
@@ -6538,7 +5851,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Char(1) NOT NULL")]
 		public char Deleted
 		{
@@ -6558,11 +5870,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -6570,7 +5879,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -6579,45 +5887,26 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TailorRider")]
 	public partial class TailorRider : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _T_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -6655,12 +5944,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public TailorRider()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_RiderID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int T_RiderID
 		{
@@ -6680,7 +5967,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -6700,7 +5986,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -6720,7 +6005,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -6740,7 +6024,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -6760,7 +6043,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -6780,7 +6062,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -6800,7 +6081,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -6820,7 +6100,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -6840,7 +6119,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -6860,7 +6138,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -6880,7 +6157,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -6900,7 +6176,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -6920,7 +6195,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -6940,7 +6214,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -6960,7 +6233,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -6980,11 +6252,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -6992,7 +6261,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -7001,27 +6269,17 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DressCategory")]
 	public partial class DressCategory : INotifyPropertyChanging, INotifyPropertyChanged
 	{
-		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
 		private int _DressCategory_ID;
-		
 		private string _DressCategory_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -7041,12 +6299,10 @@ namespace DatabaseEntity
     partial void OnDeletedChanging(bool value);
     partial void OnDeletedChanged();
     #endregion
-		
 		public DressCategory()
 		{
 			OnCreated();
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int DressCategory_ID
 		{
@@ -7066,7 +6322,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressCategory_Name
 		{
@@ -7086,7 +6341,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -7106,7 +6360,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -7126,7 +6379,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -7146,7 +6398,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -7166,7 +6417,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -7186,11 +6436,8 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
-		
 		public event PropertyChangedEventHandler PropertyChanged;
-		
 		protected virtual void SendPropertyChanging()
 		{
 			if ((this.PropertyChanging != null))
@@ -7198,7 +6445,6 @@ namespace DatabaseEntity
 				this.PropertyChanging(this, emptyChangingEventArgs);
 			}
 		}
-		
 		protected virtual void SendPropertyChanged(String propertyName)
 		{
 			if ((this.PropertyChanged != null))
@@ -7207,48 +6453,28 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_WarehouseUpdateResult
 	{
-		
 		private int _Warehouse_ID;
-		
 		private string _Warehouse_Name;
-		
 		private string _Onwer_Name;
-		
 		private string _Onwer_Details;
-		
 		private int _Landline_Number;
-		
 		private System.Nullable<int> _Fax_Number;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_WarehouseUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -7264,7 +6490,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Warehouse_Name
 		{
@@ -7280,7 +6505,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Name", DbType="Char(20) NOT NULL", CanBeNull=false)]
 		public string Onwer_Name
 		{
@@ -7296,7 +6520,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Details", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Onwer_Details
 		{
@@ -7312,7 +6535,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Landline_Number", DbType="Int NOT NULL")]
 		public int Landline_Number
 		{
@@ -7328,7 +6550,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fax_Number", DbType="Int")]
 		public System.Nullable<int> Fax_Number
 		{
@@ -7344,7 +6565,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -7360,7 +6580,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -7376,7 +6595,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -7392,7 +6610,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -7408,7 +6625,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -7424,7 +6640,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -7440,7 +6655,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -7456,7 +6670,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -7472,7 +6685,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -7488,7 +6700,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -7504,7 +6715,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -7521,52 +6731,30 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientInsertResult
 	{
-		
 		private int _Client_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private System.Nullable<int> _Contact_Number;
-		
 		private int _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -7582,7 +6770,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -7598,7 +6785,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -7614,7 +6800,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -7630,7 +6815,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="NVarChar(20)")]
 		public string Middle_Name
 		{
@@ -7646,7 +6830,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -7662,7 +6845,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -7678,7 +6860,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int")]
 		public System.Nullable<int> Contact_Number
 		{
@@ -7694,7 +6875,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int NOT NULL")]
 		public int Cell_Number
 		{
@@ -7710,7 +6890,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -7726,7 +6905,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -7742,7 +6920,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -7758,7 +6935,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -7774,7 +6950,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -7790,7 +6965,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -7806,7 +6980,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -7822,7 +6995,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -7838,7 +7010,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -7854,7 +7025,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -7871,46 +7041,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientRiderInsertResult
 	{
-		
 		private int _C_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientRiderInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_RiderID", DbType="Int NOT NULL")]
 		public int C_RiderID
 		{
@@ -7926,7 +7077,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -7942,7 +7092,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -7958,7 +7107,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -7974,7 +7122,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -7990,7 +7137,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -8006,7 +7152,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -8022,7 +7167,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -8038,7 +7182,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -8054,7 +7197,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -8070,7 +7212,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -8086,7 +7227,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -8102,7 +7242,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -8118,7 +7257,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -8134,7 +7272,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -8150,7 +7287,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -8167,46 +7303,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientRiderSelectResult
 	{
-		
 		private int _C_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientRiderSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_RiderID", DbType="Int NOT NULL")]
 		public int C_RiderID
 		{
@@ -8222,7 +7339,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -8238,7 +7354,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -8254,7 +7369,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -8270,7 +7384,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -8286,7 +7399,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -8302,7 +7414,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -8318,7 +7429,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -8334,7 +7444,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -8350,7 +7459,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -8366,7 +7474,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -8382,7 +7489,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -8398,7 +7504,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -8414,7 +7519,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -8430,7 +7534,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -8446,7 +7549,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -8463,46 +7565,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientRiderUpdateResult
 	{
-		
 		private int _C_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientRiderUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_RiderID", DbType="Int NOT NULL")]
 		public int C_RiderID
 		{
@@ -8518,7 +7601,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -8534,7 +7616,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -8550,7 +7631,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -8566,7 +7646,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -8582,7 +7661,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -8598,7 +7676,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -8614,7 +7691,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -8630,7 +7706,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -8646,7 +7721,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -8662,7 +7736,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -8678,7 +7751,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -8694,7 +7766,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -8710,7 +7781,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -8726,7 +7796,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -8742,7 +7811,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -8759,30 +7827,19 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientSampleInsertResult
 	{
-		
 		private int _ClientSample_ID;
-		
 		private string _ClientSample_Name;
-		
 		private string _ClientSample_QR_Code;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientSampleInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int NOT NULL")]
 		public int ClientSample_ID
 		{
@@ -8798,7 +7855,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_Name
 		{
@@ -8814,7 +7870,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_QR_Code
 		{
@@ -8830,7 +7885,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -8846,7 +7900,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -8862,7 +7915,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -8878,7 +7930,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -8894,7 +7945,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -8911,30 +7961,19 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientSampleSelectResult
 	{
-		
 		private int _ClientSample_ID;
-		
 		private string _ClientSample_Name;
-		
 		private string _ClientSample_QR_Code;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientSampleSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int NOT NULL")]
 		public int ClientSample_ID
 		{
@@ -8950,7 +7989,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_Name
 		{
@@ -8966,7 +8004,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_QR_Code
 		{
@@ -8982,7 +8019,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -8998,7 +8034,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -9014,7 +8049,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -9030,7 +8064,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -9046,7 +8079,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -9063,30 +8095,19 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientSampleUpdateResult
 	{
-		
 		private int _ClientSample_ID;
-		
 		private string _ClientSample_Name;
-		
 		private string _ClientSample_QR_Code;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientSampleUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int NOT NULL")]
 		public int ClientSample_ID
 		{
@@ -9102,7 +8123,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_Name
 		{
@@ -9118,7 +8138,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string ClientSample_QR_Code
 		{
@@ -9134,7 +8153,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -9150,7 +8168,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -9166,7 +8183,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -9182,7 +8198,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -9198,7 +8213,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -9215,52 +8229,30 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientSelectResult
 	{
-		
 		private int _Client_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private System.Nullable<int> _Contact_Number;
-		
 		private int _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -9276,7 +8268,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -9292,7 +8283,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -9308,7 +8298,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -9324,7 +8313,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="NVarChar(20)")]
 		public string Middle_Name
 		{
@@ -9340,7 +8328,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -9356,7 +8343,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -9372,7 +8358,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int")]
 		public System.Nullable<int> Contact_Number
 		{
@@ -9388,7 +8373,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int NOT NULL")]
 		public int Cell_Number
 		{
@@ -9404,7 +8388,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -9420,7 +8403,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -9436,7 +8418,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -9452,7 +8433,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -9468,7 +8448,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -9484,7 +8463,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -9500,7 +8478,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -9516,7 +8493,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -9532,7 +8508,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -9548,7 +8523,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -9565,52 +8539,30 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_ClientUpdateResult
 	{
-		
 		private int _Client_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private System.Nullable<int> _Contact_Number;
-		
 		private int _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_ClientUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -9626,7 +8578,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -9642,7 +8593,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -9658,7 +8608,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -9674,7 +8623,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="NVarChar(20)")]
 		public string Middle_Name
 		{
@@ -9690,7 +8638,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -9706,7 +8653,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -9722,7 +8668,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int")]
 		public System.Nullable<int> Contact_Number
 		{
@@ -9738,7 +8683,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int NOT NULL")]
 		public int Cell_Number
 		{
@@ -9754,7 +8698,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -9770,7 +8713,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -9786,7 +8728,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -9802,7 +8743,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -9818,7 +8758,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -9834,7 +8773,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -9850,7 +8788,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -9866,7 +8803,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime2 NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -9882,7 +8818,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -9898,7 +8833,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -9915,30 +8849,19 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DimensionInsertResult
 	{
-		
 		private int _Dimension_ID;
-		
 		private string _Dimension_Name;
-		
 		private int _Dimension_Value;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DimensionInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -9954,7 +8877,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Dimension_Name
 		{
@@ -9970,7 +8892,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Value", DbType="Int NOT NULL")]
 		public int Dimension_Value
 		{
@@ -9986,7 +8907,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -10002,7 +8922,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -10018,7 +8937,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -10034,7 +8952,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -10050,7 +8967,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -10067,30 +8983,19 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DimensionSelectResult
 	{
-		
 		private int _Dimension_ID;
-		
 		private string _Dimension_Name;
-		
 		private int _Dimension_Value;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DimensionSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -10106,7 +9011,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Dimension_Name
 		{
@@ -10122,7 +9026,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Value", DbType="Int NOT NULL")]
 		public int Dimension_Value
 		{
@@ -10138,7 +9041,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -10154,7 +9056,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -10170,7 +9071,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -10186,7 +9086,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -10202,7 +9101,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -10219,30 +9117,19 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DimensionUpdateResult
 	{
-		
 		private int _Dimension_ID;
-		
 		private string _Dimension_Name;
-		
 		private int _Dimension_Value;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DimensionUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -10258,7 +9145,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Dimension_Name
 		{
@@ -10274,7 +9160,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_Value", DbType="Int NOT NULL")]
 		public int Dimension_Value
 		{
@@ -10290,7 +9175,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -10306,7 +9190,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -10322,7 +9205,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -10338,7 +9220,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -10354,7 +9235,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -10371,34 +9251,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressDetailsInsertResult
 	{
-		
 		private int _DressDetails_ID;
-		
 		private int _DressCategory_ID;
-		
 		private int _DressType_ID;
-		
 		private int _DressStyle_ID;
-		
 		private int _Dimension_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressDetailsInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -10414,7 +9281,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -10430,7 +9296,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -10446,7 +9311,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -10462,7 +9326,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -10478,7 +9341,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -10494,7 +9356,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -10510,7 +9371,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -10526,7 +9386,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -10542,7 +9401,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -10559,34 +9417,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressDetailsSelectResult
 	{
-		
 		private int _DressDetails_ID;
-		
 		private int _DressCategory_ID;
-		
 		private int _DressType_ID;
-		
 		private int _DressStyle_ID;
-		
 		private int _Dimension_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressDetailsSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -10602,7 +9447,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -10618,7 +9462,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -10634,7 +9477,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -10650,7 +9492,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -10666,7 +9507,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -10682,7 +9522,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -10698,7 +9537,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -10714,7 +9552,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -10730,7 +9567,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -10747,34 +9583,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressDetailsUpdateResult
 	{
-		
 		private int _DressDetails_ID;
-		
 		private int _DressCategory_ID;
-		
 		private int _DressType_ID;
-		
 		private int _DressStyle_ID;
-		
 		private int _Dimension_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressDetailsUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -10790,7 +9613,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -10806,7 +9628,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -10822,7 +9643,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -10838,7 +9658,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dimension_ID", DbType="Int NOT NULL")]
 		public int Dimension_ID
 		{
@@ -10854,7 +9673,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -10870,7 +9688,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -10886,7 +9703,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -10902,7 +9718,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -10918,7 +9733,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -10935,28 +9749,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressStyleInsertResult
 	{
-		
 		private int _DressStyle_ID;
-		
 		private string _DressStyle_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressStyleInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -10972,7 +9776,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressStyle_Name
 		{
@@ -10988,7 +9791,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11004,7 +9806,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11020,7 +9821,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11036,7 +9836,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11052,7 +9851,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11069,28 +9867,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressStyleSelectResult
 	{
-		
 		private int _DressStyle_ID;
-		
 		private string _DressStyle_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressStyleSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -11106,7 +9894,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressStyle_Name
 		{
@@ -11122,7 +9909,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11138,7 +9924,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11154,7 +9939,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11170,7 +9954,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11186,7 +9969,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11203,28 +9985,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressStyleUpdateResult
 	{
-		
 		private int _DressStyle_ID;
-		
 		private string _DressStyle_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressStyleUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_ID", DbType="Int NOT NULL")]
 		public int DressStyle_ID
 		{
@@ -11240,7 +10012,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressStyle_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressStyle_Name
 		{
@@ -11256,7 +10027,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11272,7 +10042,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11288,7 +10057,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11304,7 +10072,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11320,7 +10087,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11337,28 +10103,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressTypeInsertResult
 	{
-		
 		private int _DressType_ID;
-		
 		private string _DressType_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressTypeInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -11374,7 +10130,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressType_Name
 		{
@@ -11390,7 +10145,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11406,7 +10160,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11422,7 +10175,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11438,7 +10190,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11454,7 +10205,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11471,28 +10221,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressTypeSelectResult
 	{
-		
 		private int _DressType_ID;
-		
 		private string _DressType_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressTypeSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -11508,7 +10248,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressType_Name
 		{
@@ -11524,7 +10263,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11540,7 +10278,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11556,7 +10293,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11572,7 +10308,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11588,7 +10323,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11605,28 +10339,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressTypeUpdateResult
 	{
-		
 		private int _DressType_ID;
-		
 		private string _DressType_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressTypeUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_ID", DbType="Int NOT NULL")]
 		public int DressType_ID
 		{
@@ -11642,7 +10366,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressType_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressType_Name
 		{
@@ -11658,7 +10381,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11674,7 +10396,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11690,7 +10411,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11706,7 +10426,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11722,7 +10441,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11739,38 +10457,23 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_Entity_OfferInsertResult
 	{
-		
 		private int _Entity_Offer_ID;
-		
 		private int _Entity_ID;
-		
 		private int _Offer_ID;
-		
 		private int _DressDetails_ID;
-		
 		private int _Rate;
-		
 		private string _Percentage_Discount;
-		
 		private string _Flat_Discount;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_Entity_OfferInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Offer_ID", DbType="Int NOT NULL")]
 		public int Entity_Offer_ID
 		{
@@ -11786,7 +10489,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -11802,7 +10504,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -11818,7 +10519,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -11834,7 +10534,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rate", DbType="Int NOT NULL")]
 		public int Rate
 		{
@@ -11850,7 +10549,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Percentage_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Percentage_Discount
 		{
@@ -11866,7 +10564,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Flat_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Flat_Discount
 		{
@@ -11882,7 +10579,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -11898,7 +10594,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -11914,7 +10609,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -11930,7 +10624,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -11946,7 +10639,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -11963,38 +10655,23 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_Entity_OfferSelectResult
 	{
-		
 		private int _Entity_Offer_ID;
-		
 		private int _Entity_ID;
-		
 		private int _Offer_ID;
-		
 		private int _DressDetails_ID;
-		
 		private int _Rate;
-		
 		private string _Percentage_Discount;
-		
 		private string _Flat_Discount;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_Entity_OfferSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Offer_ID", DbType="Int NOT NULL")]
 		public int Entity_Offer_ID
 		{
@@ -12010,7 +10687,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -12026,7 +10702,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -12042,7 +10717,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -12058,7 +10732,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rate", DbType="Int NOT NULL")]
 		public int Rate
 		{
@@ -12074,7 +10747,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Percentage_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Percentage_Discount
 		{
@@ -12090,7 +10762,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Flat_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Flat_Discount
 		{
@@ -12106,7 +10777,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -12122,7 +10792,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -12138,7 +10807,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -12154,7 +10822,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -12170,7 +10837,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -12187,38 +10853,23 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_Entity_OfferUpdateResult
 	{
-		
 		private int _Entity_Offer_ID;
-		
 		private int _Entity_ID;
-		
 		private int _Offer_ID;
-		
 		private int _DressDetails_ID;
-		
 		private int _Rate;
-		
 		private string _Percentage_Discount;
-		
 		private string _Flat_Discount;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_Entity_OfferUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Offer_ID", DbType="Int NOT NULL")]
 		public int Entity_Offer_ID
 		{
@@ -12234,7 +10885,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -12250,7 +10900,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -12266,7 +10915,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -12282,7 +10930,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rate", DbType="Int NOT NULL")]
 		public int Rate
 		{
@@ -12298,7 +10945,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Percentage_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Percentage_Discount
 		{
@@ -12314,7 +10960,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Flat_Discount", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Flat_Discount
 		{
@@ -12330,7 +10975,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -12346,7 +10990,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -12362,7 +11005,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -12378,7 +11020,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -12394,7 +11035,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -12411,38 +11051,23 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_Entity_Order_TimeframeInsertResult
 	{
-		
 		private int _OrderTimeframe_ID;
-		
 		private int _Order_ID;
-		
 		private int _Entity_ID;
-		
 		private System.DateTime _Estimated_DateTime;
-		
 		private System.DateTime _Actual_DateTime;
-		
 		private System.DateTime _Pick;
-		
 		private System.DateTime _Drop;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_Entity_Order_TimeframeInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderTimeframe_ID", DbType="Int NOT NULL")]
 		public int OrderTimeframe_ID
 		{
@@ -12458,7 +11083,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -12474,7 +11098,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -12490,7 +11113,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estimated_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Estimated_DateTime
 		{
@@ -12506,7 +11128,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actual_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Actual_DateTime
 		{
@@ -12522,7 +11143,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pick", DbType="DateTime NOT NULL")]
 		public System.DateTime Pick
 		{
@@ -12538,7 +11158,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Drop]", Storage="_Drop", DbType="DateTime NOT NULL")]
 		public System.DateTime Drop
 		{
@@ -12554,7 +11173,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -12570,7 +11188,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -12586,7 +11203,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -12602,7 +11218,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -12618,7 +11233,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -12635,38 +11249,23 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_Entity_Order_TimeframeSelectResult
 	{
-		
 		private int _OrderTimeframe_ID;
-		
 		private int _Order_ID;
-		
 		private int _Entity_ID;
-		
 		private System.DateTime _Estimated_DateTime;
-		
 		private System.DateTime _Actual_DateTime;
-		
 		private System.DateTime _Pick;
-		
 		private System.DateTime _Drop;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_Entity_Order_TimeframeSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderTimeframe_ID", DbType="Int NOT NULL")]
 		public int OrderTimeframe_ID
 		{
@@ -12682,7 +11281,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -12698,7 +11296,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -12714,7 +11311,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estimated_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Estimated_DateTime
 		{
@@ -12730,7 +11326,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actual_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Actual_DateTime
 		{
@@ -12746,7 +11341,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pick", DbType="DateTime NOT NULL")]
 		public System.DateTime Pick
 		{
@@ -12762,7 +11356,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Drop]", Storage="_Drop", DbType="DateTime NOT NULL")]
 		public System.DateTime Drop
 		{
@@ -12778,7 +11371,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -12794,7 +11386,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -12810,7 +11401,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -12826,7 +11416,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -12842,7 +11431,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -12859,38 +11447,23 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_Entity_Order_TimeframeUpdateResult
 	{
-		
 		private int _OrderTimeframe_ID;
-		
 		private int _Order_ID;
-		
 		private int _Entity_ID;
-		
 		private System.DateTime _Estimated_DateTime;
-		
 		private System.DateTime _Actual_DateTime;
-		
 		private System.DateTime _Pick;
-		
 		private System.DateTime _Drop;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_Entity_Order_TimeframeUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderTimeframe_ID", DbType="Int NOT NULL")]
 		public int OrderTimeframe_ID
 		{
@@ -12906,7 +11479,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -12922,7 +11494,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -12938,7 +11509,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estimated_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Estimated_DateTime
 		{
@@ -12954,7 +11524,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actual_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Actual_DateTime
 		{
@@ -12970,7 +11539,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pick", DbType="DateTime NOT NULL")]
 		public System.DateTime Pick
 		{
@@ -12986,7 +11554,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Drop]", Storage="_Drop", DbType="DateTime NOT NULL")]
 		public System.DateTime Drop
 		{
@@ -13002,7 +11569,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13018,7 +11584,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -13034,7 +11599,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -13050,7 +11614,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -13066,7 +11629,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -13083,28 +11645,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_EntityInsertResult
 	{
-		
 		private int _Entity_ID;
-		
 		private string _Entity_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_EntityInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -13120,7 +11672,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Entity_Name
 		{
@@ -13136,7 +11687,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13152,7 +11702,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -13168,7 +11717,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -13184,7 +11732,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -13200,7 +11747,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -13217,28 +11763,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_EntitySelectResult
 	{
-		
 		private int _Entity_ID;
-		
 		private string _Entity_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_EntitySelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -13254,7 +11790,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Entity_Name
 		{
@@ -13270,7 +11805,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13286,7 +11820,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -13302,7 +11835,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -13318,7 +11850,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -13334,7 +11865,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -13351,28 +11881,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_EntityUpdateResult
 	{
-		
 		private int _Entity_ID;
-		
 		private string _Entity_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_EntityUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_ID", DbType="Int NOT NULL")]
 		public int Entity_ID
 		{
@@ -13388,7 +11908,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Entity_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Entity_Name
 		{
@@ -13404,7 +11923,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13420,7 +11938,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -13436,7 +11953,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -13452,7 +11968,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -13468,7 +11983,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -13485,34 +11999,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_LocationsInsertResult
 	{
-		
 		private int _Location_ID;
-		
 		private int _Area_ID;
-		
 		private int _Map_ID;
-		
 		private int _City_ID;
-		
 		private int _Country_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_LocationsInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -13528,7 +12029,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area_ID", DbType="Int NOT NULL")]
 		public int Area_ID
 		{
@@ -13544,7 +12044,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Map_ID", DbType="Int NOT NULL")]
 		public int Map_ID
 		{
@@ -13560,7 +12059,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int NOT NULL")]
 		public int City_ID
 		{
@@ -13576,7 +12074,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Country_ID", DbType="Int NOT NULL")]
 		public int Country_ID
 		{
@@ -13592,7 +12089,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13608,7 +12104,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -13624,7 +12119,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -13640,7 +12134,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -13656,7 +12149,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -13673,34 +12165,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_LocationsSelectResult
 	{
-		
 		private int _Location_ID;
-		
 		private int _Area_ID;
-		
 		private int _Map_ID;
-		
 		private int _City_ID;
-		
 		private int _Country_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_LocationsSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -13716,7 +12195,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area_ID", DbType="Int NOT NULL")]
 		public int Area_ID
 		{
@@ -13732,7 +12210,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Map_ID", DbType="Int NOT NULL")]
 		public int Map_ID
 		{
@@ -13748,7 +12225,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int NOT NULL")]
 		public int City_ID
 		{
@@ -13764,7 +12240,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Country_ID", DbType="Int NOT NULL")]
 		public int Country_ID
 		{
@@ -13780,7 +12255,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13796,7 +12270,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -13812,7 +12285,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -13828,7 +12300,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -13844,7 +12315,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -13861,34 +12331,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_LocationsUpdateResult
 	{
-		
 		private int _Location_ID;
-		
 		private int _Area_ID;
-		
 		private int _Map_ID;
-		
 		private int _City_ID;
-		
 		private int _Country_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_LocationsUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -13904,7 +12361,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area_ID", DbType="Int NOT NULL")]
 		public int Area_ID
 		{
@@ -13920,7 +12376,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Map_ID", DbType="Int NOT NULL")]
 		public int Map_ID
 		{
@@ -13936,7 +12391,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City_ID", DbType="Int NOT NULL")]
 		public int City_ID
 		{
@@ -13952,7 +12406,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Country_ID", DbType="Int NOT NULL")]
 		public int Country_ID
 		{
@@ -13968,7 +12421,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -13984,7 +12436,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -14000,7 +12451,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -14016,7 +12466,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -14032,7 +12481,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -14049,34 +12497,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_OffersInsertResult
 	{
-		
 		private int _Offer_ID;
-		
 		private string _Offer_Name;
-		
 		private string _Offer_Event;
-		
 		private System.DateTime _Offer_Valid_From;
-		
 		private System.DateTime _Offer_Valid_Till;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_OffersInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -14092,7 +12527,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Name
 		{
@@ -14108,7 +12542,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Event", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Event
 		{
@@ -14124,7 +12557,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_From", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_From
 		{
@@ -14140,7 +12572,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_Till", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_Till
 		{
@@ -14156,7 +12587,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -14172,7 +12602,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -14188,7 +12617,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -14204,7 +12632,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -14220,7 +12647,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -14237,34 +12663,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_OfferselectResult
 	{
-		
 		private int _Offer_ID;
-		
 		private string _Offer_Name;
-		
 		private string _Offer_Event;
-		
 		private System.DateTime _Offer_Valid_From;
-		
 		private System.DateTime _Offer_Valid_Till;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_OfferselectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -14280,7 +12693,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Name
 		{
@@ -14296,7 +12708,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Event", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Event
 		{
@@ -14312,7 +12723,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_From", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_From
 		{
@@ -14328,7 +12738,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_Till", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_Till
 		{
@@ -14344,7 +12753,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -14360,7 +12768,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -14376,7 +12783,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -14392,7 +12798,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -14408,7 +12813,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -14425,34 +12829,21 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_OffersUpdateResult
 	{
-		
 		private int _Offer_ID;
-		
 		private string _Offer_Name;
-		
 		private string _Offer_Event;
-		
 		private System.DateTime _Offer_Valid_From;
-		
 		private System.DateTime _Offer_Valid_Till;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_OffersUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -14468,7 +12859,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Name
 		{
@@ -14484,7 +12874,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Event", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Offer_Event
 		{
@@ -14500,7 +12889,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_From", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_From
 		{
@@ -14516,7 +12904,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_Valid_Till", DbType="DateTime NOT NULL")]
 		public System.DateTime Offer_Valid_Till
 		{
@@ -14532,7 +12919,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -14548,7 +12934,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -14564,7 +12949,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -14580,7 +12964,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -14596,7 +12979,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -14613,48 +12995,28 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_OrderInsertResult
 	{
-		
 		private int _Order_ID;
-		
 		private int _Client_ID;
-		
 		private int _C_Rider_ID;
-		
 		private int _Warehouse_ID;
-		
 		private int _T_Rider_ID;
-		
 		private int _Tailor_ID;
-		
 		private int _DressDetails_ID;
-		
 		private System.Nullable<int> _ClientSample_ID;
-		
 		private int _Status_ID;
-		
 		private string _QR_Code;
-		
 		private string _Remarks;
-		
 		private int _Offer_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_OrderInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -14670,7 +13032,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -14686,7 +13047,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_Rider_ID", DbType="Int NOT NULL")]
 		public int C_Rider_ID
 		{
@@ -14702,7 +13062,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -14718,7 +13077,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_Rider_ID", DbType="Int NOT NULL")]
 		public int T_Rider_ID
 		{
@@ -14734,7 +13092,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -14750,7 +13107,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -14766,7 +13122,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int")]
 		public System.Nullable<int> ClientSample_ID
 		{
@@ -14782,7 +13137,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -14798,7 +13152,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -14814,7 +13167,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarks", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Remarks
 		{
@@ -14830,7 +13182,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -14846,7 +13197,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -14862,7 +13212,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -14878,7 +13227,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -14894,7 +13242,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -14910,7 +13257,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -14927,48 +13273,28 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_OrderSelectResult
 	{
-		
 		private int _Order_ID;
-		
 		private int _Client_ID;
-		
 		private int _C_Rider_ID;
-		
 		private int _Warehouse_ID;
-		
 		private int _T_Rider_ID;
-		
 		private int _Tailor_ID;
-		
 		private int _DressDetails_ID;
-		
 		private System.Nullable<int> _ClientSample_ID;
-		
 		private int _Status_ID;
-		
 		private string _QR_Code;
-		
 		private string _Remarks;
-		
 		private int _Offer_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_OrderSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -14984,7 +13310,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -15000,7 +13325,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_Rider_ID", DbType="Int NOT NULL")]
 		public int C_Rider_ID
 		{
@@ -15016,7 +13340,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -15032,7 +13355,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_Rider_ID", DbType="Int NOT NULL")]
 		public int T_Rider_ID
 		{
@@ -15048,7 +13370,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -15064,7 +13385,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -15080,7 +13400,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int")]
 		public System.Nullable<int> ClientSample_ID
 		{
@@ -15096,7 +13415,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -15112,7 +13430,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -15128,7 +13445,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarks", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Remarks
 		{
@@ -15144,7 +13460,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -15160,7 +13475,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -15176,7 +13490,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -15192,7 +13505,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -15208,7 +13520,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -15224,7 +13535,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -15241,48 +13551,28 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_OrderUpdateResult
 	{
-		
 		private int _Order_ID;
-		
 		private int _Client_ID;
-		
 		private int _C_Rider_ID;
-		
 		private int _Warehouse_ID;
-		
 		private int _T_Rider_ID;
-		
 		private int _Tailor_ID;
-		
 		private int _DressDetails_ID;
-		
 		private System.Nullable<int> _ClientSample_ID;
-		
 		private int _Status_ID;
-		
 		private string _QR_Code;
-		
 		private string _Remarks;
-		
 		private int _Offer_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_OrderUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_ID", DbType="Int NOT NULL")]
 		public int Order_ID
 		{
@@ -15298,7 +13588,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
 		public int Client_ID
 		{
@@ -15314,7 +13603,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C_Rider_ID", DbType="Int NOT NULL")]
 		public int C_Rider_ID
 		{
@@ -15330,7 +13618,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -15346,7 +13633,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_Rider_ID", DbType="Int NOT NULL")]
 		public int T_Rider_ID
 		{
@@ -15362,7 +13648,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -15378,7 +13663,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressDetails_ID", DbType="Int NOT NULL")]
 		public int DressDetails_ID
 		{
@@ -15394,7 +13678,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClientSample_ID", DbType="Int")]
 		public System.Nullable<int> ClientSample_ID
 		{
@@ -15410,7 +13693,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -15426,7 +13708,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -15442,7 +13723,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarks", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Remarks
 		{
@@ -15458,7 +13738,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Offer_ID", DbType="Int NOT NULL")]
 		public int Offer_ID
 		{
@@ -15474,7 +13753,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -15490,7 +13768,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -15506,7 +13783,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -15522,7 +13798,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -15538,7 +13813,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -15555,28 +13829,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_StatusInsertResult
 	{
-		
 		private int _Status_ID;
-		
 		private string _Status_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_StatusInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -15592,7 +13856,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Status_Name
 		{
@@ -15608,7 +13871,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -15624,7 +13886,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -15640,7 +13901,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -15656,7 +13916,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -15672,7 +13931,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -15689,28 +13947,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_StatusSelectResult
 	{
-		
 		private int _Status_ID;
-		
 		private string _Status_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_StatusSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -15726,7 +13974,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Status_Name
 		{
@@ -15742,7 +13989,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -15758,7 +14004,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -15774,7 +14019,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -15790,7 +14034,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -15806,7 +14049,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -15823,28 +14065,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_StatusUpdateResult
 	{
-		
 		private int _Status_ID;
-		
 		private string _Status_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_StatusUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_ID", DbType="Int NOT NULL")]
 		public int Status_ID
 		{
@@ -15860,7 +14092,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Status_Name
 		{
@@ -15876,7 +14107,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -15892,7 +14122,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -15908,7 +14137,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -15924,7 +14152,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -15940,7 +14167,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -15957,36 +14183,22 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorCategoryInsertResult
 	{
-		
 		private int _TailorCategory_ID;
-		
 		private string _TailorCategory_Name;
-		
 		private int _TailorCategory_Rating;
-		
 		private int _TailorCategory_Days;
-		
 		private int _DressCategory_ID;
-		
 		private int _Tailor_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private char _Deleted;
-		
 		public usp_TailorCategoryInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_ID", DbType="Int NOT NULL")]
 		public int TailorCategory_ID
 		{
@@ -16002,7 +14214,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string TailorCategory_Name
 		{
@@ -16018,7 +14229,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Rating", DbType="Int NOT NULL")]
 		public int TailorCategory_Rating
 		{
@@ -16034,7 +14244,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Days", DbType="Int NOT NULL")]
 		public int TailorCategory_Days
 		{
@@ -16050,7 +14259,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -16066,7 +14274,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -16082,7 +14289,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -16098,7 +14304,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -16114,7 +14319,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -16130,7 +14334,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -16146,7 +14349,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Char(1) NOT NULL")]
 		public char Deleted
 		{
@@ -16163,36 +14365,22 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorCategorySelectResult
 	{
-		
 		private int _TailorCategory_ID;
-		
 		private string _TailorCategory_Name;
-		
 		private int _TailorCategory_Rating;
-		
 		private int _TailorCategory_Days;
-		
 		private int _DressCategory_ID;
-		
 		private int _Tailor_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private char _Deleted;
-		
 		public usp_TailorCategorySelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_ID", DbType="Int NOT NULL")]
 		public int TailorCategory_ID
 		{
@@ -16208,7 +14396,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string TailorCategory_Name
 		{
@@ -16224,7 +14411,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Rating", DbType="Int NOT NULL")]
 		public int TailorCategory_Rating
 		{
@@ -16240,7 +14426,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Days", DbType="Int NOT NULL")]
 		public int TailorCategory_Days
 		{
@@ -16256,7 +14441,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -16272,7 +14456,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -16288,7 +14471,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -16304,7 +14486,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -16320,7 +14501,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -16336,7 +14516,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -16352,7 +14531,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Char(1) NOT NULL")]
 		public char Deleted
 		{
@@ -16369,36 +14547,22 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorCategoryUpdateResult
 	{
-		
 		private int _TailorCategory_ID;
-		
 		private string _TailorCategory_Name;
-		
 		private int _TailorCategory_Rating;
-		
 		private int _TailorCategory_Days;
-		
 		private int _DressCategory_ID;
-		
 		private int _Tailor_ID;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private char _Deleted;
-		
 		public usp_TailorCategoryUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_ID", DbType="Int NOT NULL")]
 		public int TailorCategory_ID
 		{
@@ -16414,7 +14578,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string TailorCategory_Name
 		{
@@ -16430,7 +14593,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Rating", DbType="Int NOT NULL")]
 		public int TailorCategory_Rating
 		{
@@ -16446,7 +14608,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TailorCategory_Days", DbType="Int NOT NULL")]
 		public int TailorCategory_Days
 		{
@@ -16462,7 +14623,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -16478,7 +14638,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -16494,7 +14653,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -16510,7 +14668,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -16526,7 +14683,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -16542,7 +14698,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -16558,7 +14713,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Char(1) NOT NULL")]
 		public char Deleted
 		{
@@ -16575,52 +14729,30 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorInsertResult
 	{
-		
 		private int _Tailor_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_TailorInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -16636,7 +14768,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -16652,7 +14783,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -16668,7 +14798,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -16684,7 +14813,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -16700,7 +14828,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -16716,7 +14843,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -16732,7 +14858,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -16748,7 +14873,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -16764,7 +14888,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -16780,7 +14903,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -16796,7 +14918,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -16812,7 +14933,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -16828,7 +14948,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -16844,7 +14963,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -16860,7 +14978,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -16876,7 +14993,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -16892,7 +15008,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -16908,7 +15023,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -16925,46 +15039,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorRiderInsertResult
 	{
-		
 		private int _T_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_TailorRiderInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_RiderID", DbType="Int NOT NULL")]
 		public int T_RiderID
 		{
@@ -16980,7 +15075,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -16996,7 +15090,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -17012,7 +15105,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -17028,7 +15120,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -17044,7 +15135,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -17060,7 +15150,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -17076,7 +15165,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -17092,7 +15180,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -17108,7 +15195,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -17124,7 +15210,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -17140,7 +15225,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -17156,7 +15240,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -17172,7 +15255,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -17188,7 +15270,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -17204,7 +15285,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -17221,46 +15301,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorRiderSelectResult
 	{
-		
 		private int _T_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_TailorRiderSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_RiderID", DbType="Int NOT NULL")]
 		public int T_RiderID
 		{
@@ -17276,7 +15337,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -17292,7 +15352,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -17308,7 +15367,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -17324,7 +15382,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -17340,7 +15397,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -17356,7 +15412,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -17372,7 +15427,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -17388,7 +15442,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -17404,7 +15457,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -17420,7 +15472,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -17436,7 +15487,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -17452,7 +15502,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -17468,7 +15517,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -17484,7 +15532,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -17500,7 +15547,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -17517,46 +15563,27 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorRiderUpdateResult
 	{
-		
 		private int _T_RiderID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_TailorRiderUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_T_RiderID", DbType="Int NOT NULL")]
 		public int T_RiderID
 		{
@@ -17572,7 +15599,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -17588,7 +15614,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -17604,7 +15629,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -17620,7 +15644,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -17636,7 +15659,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -17652,7 +15674,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -17668,7 +15689,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -17684,7 +15704,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -17700,7 +15719,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -17716,7 +15734,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -17732,7 +15749,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -17748,7 +15764,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -17764,7 +15779,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -17780,7 +15794,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -17796,7 +15809,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -17813,52 +15825,30 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorSelectResult
 	{
-		
 		private int _Tailor_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_TailorSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -17874,7 +15864,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -17890,7 +15879,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -17906,7 +15894,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -17922,7 +15909,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -17938,7 +15924,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -17954,7 +15939,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -17970,7 +15954,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -17986,7 +15969,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -18002,7 +15984,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -18018,7 +15999,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -18034,7 +16014,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -18050,7 +16029,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -18066,7 +16044,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -18082,7 +16059,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -18098,7 +16074,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -18114,7 +16089,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -18130,7 +16104,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -18146,7 +16119,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -18163,52 +16135,30 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_TailorUpdateResult
 	{
-		
 		private int _Tailor_ID;
-		
 		private string _Profile_Name;
-		
 		private string _Password;
-		
 		private string _First_Name;
-		
 		private string _Middle_Name;
-		
 		private string _Last_Name;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _PickUp_Address;
-		
 		private string _Drop_Address;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_TailorUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tailor_ID", DbType="Int NOT NULL")]
 		public int Tailor_ID
 		{
@@ -18224,7 +16174,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Profile_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Profile_Name
 		{
@@ -18240,7 +16189,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Password
 		{
@@ -18256,7 +16204,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
@@ -18272,7 +16219,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Middle_Name", DbType="Char(10)")]
 		public string Middle_Name
 		{
@@ -18288,7 +16234,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="Char(10) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
@@ -18304,7 +16249,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -18320,7 +16264,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -18336,7 +16279,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -18352,7 +16294,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -18368,7 +16309,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PickUp_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string PickUp_Address
 		{
@@ -18384,7 +16324,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Drop_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Drop_Address
 		{
@@ -18400,7 +16339,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -18416,7 +16354,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -18432,7 +16369,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -18448,7 +16384,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -18464,7 +16399,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -18480,7 +16414,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -18496,7 +16429,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -18513,48 +16445,28 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_WarehouseInsertResult
 	{
-		
 		private int _Warehouse_ID;
-		
 		private string _Warehouse_Name;
-		
 		private string _Onwer_Name;
-		
 		private string _Onwer_Details;
-		
 		private int _Landline_Number;
-		
 		private System.Nullable<int> _Fax_Number;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_WarehouseInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -18570,7 +16482,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Warehouse_Name
 		{
@@ -18586,7 +16497,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Name", DbType="Char(20) NOT NULL", CanBeNull=false)]
 		public string Onwer_Name
 		{
@@ -18602,7 +16512,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Details", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Onwer_Details
 		{
@@ -18618,7 +16527,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Landline_Number", DbType="Int NOT NULL")]
 		public int Landline_Number
 		{
@@ -18634,7 +16542,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fax_Number", DbType="Int")]
 		public System.Nullable<int> Fax_Number
 		{
@@ -18650,7 +16557,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -18666,7 +16572,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -18682,7 +16587,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -18698,7 +16602,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -18714,7 +16617,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -18730,7 +16632,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -18746,7 +16647,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -18762,7 +16662,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -18778,7 +16677,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -18794,7 +16692,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -18810,7 +16707,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -18827,48 +16723,28 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_WarehouseSelectResult
 	{
-		
 		private int _Warehouse_ID;
-		
 		private string _Warehouse_Name;
-		
 		private string _Onwer_Name;
-		
 		private string _Onwer_Details;
-		
 		private int _Landline_Number;
-		
 		private System.Nullable<int> _Fax_Number;
-		
 		private string _Email_Address;
-		
 		private int _Contact_Number;
-		
 		private System.Nullable<int> _Cell_Number;
-		
 		private int _Location_ID;
-		
 		private string _QR_Code;
-		
 		private int _Rating;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_WarehouseSelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_ID", DbType="Int NOT NULL")]
 		public int Warehouse_ID
 		{
@@ -18884,7 +16760,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Warehouse_Name", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Warehouse_Name
 		{
@@ -18900,7 +16775,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Name", DbType="Char(20) NOT NULL", CanBeNull=false)]
 		public string Onwer_Name
 		{
@@ -18916,7 +16790,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Onwer_Details", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
 		public string Onwer_Details
 		{
@@ -18932,7 +16805,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Landline_Number", DbType="Int NOT NULL")]
 		public int Landline_Number
 		{
@@ -18948,7 +16820,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fax_Number", DbType="Int")]
 		public System.Nullable<int> Fax_Number
 		{
@@ -18964,7 +16835,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Address", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Email_Address
 		{
@@ -18980,7 +16850,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact_Number", DbType="Int NOT NULL")]
 		public int Contact_Number
 		{
@@ -18996,7 +16865,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cell_Number", DbType="Int")]
 		public System.Nullable<int> Cell_Number
 		{
@@ -19012,7 +16880,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location_ID", DbType="Int NOT NULL")]
 		public int Location_ID
 		{
@@ -19028,7 +16895,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QR_Code", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string QR_Code
 		{
@@ -19044,7 +16910,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Int NOT NULL")]
 		public int Rating
 		{
@@ -19060,7 +16925,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -19076,7 +16940,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -19092,7 +16955,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -19108,7 +16970,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -19124,7 +16985,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -19141,28 +17001,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressCategoryInsertResult
 	{
-		
 		private int _DressCategory_ID;
-		
 		private string _DressCategory_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressCategoryInsertResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -19178,7 +17028,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressCategory_Name
 		{
@@ -19194,7 +17043,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -19210,7 +17058,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -19226,7 +17073,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -19242,7 +17088,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -19258,7 +17103,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -19275,28 +17119,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressCategorySelectResult
 	{
-		
 		private int _DressCategory_ID;
-		
 		private string _DressCategory_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressCategorySelectResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -19312,7 +17146,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressCategory_Name
 		{
@@ -19328,7 +17161,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -19344,7 +17176,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -19360,7 +17191,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -19376,7 +17206,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -19392,7 +17221,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{
@@ -19409,28 +17237,18 @@ namespace DatabaseEntity
 			}
 		}
 	}
-	
 	public partial class usp_DressCategoryUpdateResult
 	{
-		
 		private int _DressCategory_ID;
-		
 		private string _DressCategory_Name;
-		
 		private System.DateTime _Created_DateTime;
-		
 		private int _Created_By;
-		
 		private System.DateTime _Modified_DateTime;
-		
 		private int _Modified_By;
-		
 		private bool _Deleted;
-		
 		public usp_DressCategoryUpdateResult()
 		{
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_ID", DbType="Int NOT NULL")]
 		public int DressCategory_ID
 		{
@@ -19446,7 +17264,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DressCategory_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string DressCategory_Name
 		{
@@ -19462,7 +17279,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Created_DateTime
 		{
@@ -19478,7 +17294,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Created_By", DbType="Int NOT NULL")]
 		public int Created_By
 		{
@@ -19494,7 +17309,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_DateTime", DbType="DateTime NOT NULL")]
 		public System.DateTime Modified_DateTime
 		{
@@ -19510,7 +17324,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modified_By", DbType="Int NOT NULL")]
 		public int Modified_By
 		{
@@ -19526,7 +17339,6 @@ namespace DatabaseEntity
 				}
 			}
 		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Deleted", DbType="Bit NOT NULL")]
 		public bool Deleted
 		{

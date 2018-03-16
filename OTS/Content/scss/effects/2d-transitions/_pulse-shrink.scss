@@ -4,10 +4,8 @@
 		@include prefixed(transform, scale(.9));
 	}
 }
-
 @mixin pulse-shrink {
 	@include hacks();
-
 	&:hover,
 	&:focus,
 	&:active {

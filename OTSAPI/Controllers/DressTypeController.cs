@@ -8,7 +8,6 @@ using DatabaseContext;
 using DatabaseEntity;
 // User Defined Model to Handle Api Call Models. 
 using OTS.Model;
-
 namespace OTSAPI.Controllers
 {
     /// <summary>
@@ -19,7 +18,6 @@ namespace OTSAPI.Controllers
     {
         #region Database CRUD (Create, Read, Update, Delete) Operations
         DataClasses_DataContext DBContext = new DataClasses_DataContext();
-
         #region Create / Insert
         [HttpPost]
         public int Create(DressType ObjDressType)
@@ -36,7 +34,6 @@ namespace OTSAPI.Controllers
             }
         }
         #endregion
-
         #region Read / Select
         [HttpGet]
         public List<usp_DressTypeSelectResult> Index(int? id = null)
@@ -51,7 +48,6 @@ namespace OTSAPI.Controllers
             }
         }
         #endregion
-
         #region Update / Edit
         [HttpPost]
         public int Edit(int id, DressTypeModel ObjDressTypeModel)
@@ -99,7 +95,6 @@ namespace OTSAPI.Controllers
             }
         }
         #endregion
-
         #region Delete
         [HttpPost]
         public int Delete(int id, DressTypeModel ObjInputDressTypeModel)
@@ -123,7 +118,6 @@ namespace OTSAPI.Controllers
             }
         }
         #endregion
-
         #endregion
     }
 }

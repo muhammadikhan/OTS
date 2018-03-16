@@ -4,7 +4,6 @@
 	position: relative;
 	padding-right: 2.2em;
 	.prefixed(transition-duration, @mediumDuration);
-
 	&:before {
 		content: "\f01a";
 		position: absolute;
@@ -16,11 +15,9 @@
 		.prefixed(transition-property, transform);
 		.prefixed(transition-timing-function, ease-out);
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			.prefixed(transform, translateY(4px));
 		}

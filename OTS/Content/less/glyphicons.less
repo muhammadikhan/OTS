@@ -6,7 +6,6 @@
 // inline element with the appropriate classes, like so:
 //
 // <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
-
 // Import the fonts
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -16,7 +15,6 @@
        url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
        url('@{icon-font-path}@{icon-font-name}.svg#glyphicons_halflingsregular') format('svg');
 }
-
 // Catchall baseclass
 .glyphicon {
   position: relative;
@@ -28,12 +26,10 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   &:empty {
     width: 1em;
   }
 }
-
 // Individual icons
 .glyphicon-asterisk               { &:before { content: "\2a"; } }
 .glyphicon-plus                   { &:before { content: "\2b"; } }

@@ -6,12 +6,9 @@ using System.Web.Script.Serialization;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Text;
-
 public class iWebServiceConsumer
 {
-
     #region JSON Service Consumer
-
     /// <summary>
     /// Consume Json based WebService (External Service must take input object as JSON and return an Object). USED FOR GET METHOD
     /// </summary>
@@ -26,11 +23,9 @@ public class iWebServiceConsumer
             JavaScriptSerializer JSS = new JavaScriptSerializer();
             // corrected to WebRequest from HttpWebRequest
             WebRequest request = WebRequest.Create(_url);
-
             request.Method = "GET";
             request.Timeout = request_timeout;
             request.ContentType = "Application/json";
-
             using (Stream s = request.GetResponse().GetResponseStream())
             {
                 using (StreamReader sr = new StreamReader(s))
@@ -42,7 +37,6 @@ public class iWebServiceConsumer
         }
         catch (Exception ex) { throw ex; }
     }
-
     /// <summary>
     /// Consume Json based WebService (External Service must take input object as JSON and return an Object).
     /// </summary>
@@ -59,14 +53,11 @@ public class iWebServiceConsumer
             //2097152 = 4MB.  (2097152 * 5 as 4MB*5) = 20MB. So 10485760 = 20MB
             JSS.MaxJsonLength = 10485760; // 20MB Max data travel;
             string Json_String = JSS.Serialize(_Input_Object);
-
             // corrected to WebRequest from HttpWebRequest
             WebRequest request = WebRequest.Create(_url);
-
             request.Method = "POST";
             request.Timeout = request_timeout;
             request.ContentType = "application/json";
-
             //get a reference to the request-stream, and write the postData to it
             using (Stream s = request.GetRequestStream())
             {
@@ -85,7 +76,6 @@ public class iWebServiceConsumer
         }
         catch (Exception ex) { throw ex; }
     }
-
     /// <summary>
     /// Consume Json based WebService (External Service must take input object as JSON and return an Object).
     /// </summary>
@@ -102,17 +92,13 @@ public class iWebServiceConsumer
             {
                 if (ServicePointManagerPass)
                     System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
                 JavaScriptSerializer JSS = new JavaScriptSerializer();
                 string Json_String = JSS.Serialize(_Input_Object);
-
                 // corrected to WebRequest from HttpWebRequest
                 WebRequest request = WebRequest.Create(_url);
-
                 request.Method = "POST";
                 request.Timeout = request_timeout;
                 request.ContentType = "application/json";
-
                 ////get a reference to the request-stream, and write the postData to it
                 using (Stream s = request.GetRequestStream())
                 {
@@ -133,11 +119,8 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return null;
     }
-
     #endregion
-
     #region XML Service Consumer
-
     public static string ConsumeXMLWebService_GET(string url, string remote_user, string remote_pwd, string proxy_ip, string proxy_port, int request_timeout, out HttpStatusCode StatusCode)
     {
         try
@@ -160,7 +143,6 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return string.Empty;
     }
-
     /// <summary>
     /// 
     /// </summary>
@@ -185,7 +167,6 @@ public class iWebServiceConsumer
             {
                 if (ServicePointManagerPass)
                     System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
                 HttpWebRequest _Request = (HttpWebRequest)HttpWebRequest.Create(url);
                 _Request.Method = "GET";
                 _Request.Timeout = request_timeout;
@@ -201,7 +182,6 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return null;
     }
-
     /// <summary>
     /// 
     /// </summary>
@@ -224,7 +204,6 @@ public class iWebServiceConsumer
             {
                 if (ServicePointManagerPass)
                     System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
                 HttpWebRequest _Request = (HttpWebRequest)HttpWebRequest.Create(url);
                 _Request.Method = "GET";
                 _Request.Timeout = request_timeout;
@@ -240,8 +219,6 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return null;
     }
-
-
     /// <summary>
     /// ConsumeXMLWebService POST ONLY
     /// </summary>
@@ -277,7 +254,6 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return null;
     }
-
     /// <summary>
     /// ConsumeXMLWebService POST ONLY
     /// </summary>
@@ -317,7 +293,6 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return null;
     }
-
     /// <summary>
     /// ConsumeXMLWebService POST ONLY
     /// </summary>
@@ -358,7 +333,6 @@ public class iWebServiceConsumer
         catch (Exception ex) { throw ex; }
         return null;
     }
-
     static bool SetProxy(string ip_addr, string port_no)
     {
         try
@@ -375,9 +349,7 @@ public class iWebServiceConsumer
         }
         catch (Exception exx) { throw exx; }
     }
-
     #endregion
-
 }
 public class iSerializer
 {
@@ -392,7 +364,6 @@ public class iSerializer
         {
             var output = new MemoryStream();
             var settings = new XmlWriterSettings { Encoding = Encoding.UTF8, Indent = true };
-
             using (var xmlWriter = XmlWriter.Create(output, settings))
             {
                 var serializer = new XmlSerializer(_Object.GetType());
@@ -423,7 +394,6 @@ public class iSerializer
         try
         {
             var serializer = new XmlSerializer(objToDeSerialize.GetType());
-
             object result;
             using (TextReader reader = new StringReader(XMLContent))
                 result = serializer.Deserialize(reader);
@@ -434,7 +404,6 @@ public class iSerializer
             throw ex;
         }
     }
-
     public static string ObjectToJson(object _Input_Object)
     {
         JavaScriptSerializer JSS = new JavaScriptSerializer();
@@ -444,5 +413,4 @@ public class iSerializer
         string Json_String = JSS.Serialize(_Input_Object);
         return Json_String;
     }
-
 }

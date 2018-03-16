@@ -4,10 +4,8 @@
 		@include prefixed(transform, scale(1.2));
 	}
 }
-
 @mixin pop {
 	@include hacks();
-
 	&:hover,
 	&:focus,
 	&:active {

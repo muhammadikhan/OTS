@@ -2,26 +2,21 @@
 @include keyframes(#{$nameSpace}-icon-drop) {
 	0% {
 		opacity: 0;
-
 	}
-
 	50% {
 		opacity: 0;
 		@include prefixed(transform, translateY(-100%));
 	}
-
 	51%,
 	100% {
 		opacity: 1;
 	}
 }
-
 /* Icon Drop */
 @mixin icon-drop {
 	@include hacks();
 	position: relative;
 	padding-right: #{$spaceBetweenTextAndArrows};
-
 	&:before {
 		content: "\f041";
 		position: absolute;
@@ -31,11 +26,9 @@
 		font-family: FontAwesome;
 		@include prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			opacity: 0;
 			@include prefixed(transition-duration, #{$mediumDuration});

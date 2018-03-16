@@ -10,19 +10,16 @@
 		@include prefixed(transform, translateY(-6px));
 	}
 }
-
 @include keyframes(#{$nameSpace}-icon-bob-float) {
 	100% {
 		@include prefixed(transform, translateY(-6px));
 	}
 }
-
 @mixin icon-bob {
 	@include hacks();
 	position: relative;
 	padding-right: 2.2em;
 	@include prefixed(transition-duration, $mediumDuration);
-
 	&:before {
 		content: "\f077";
 		position: absolute;
@@ -31,11 +28,9 @@
 		font-family: FontAwesome;
 		@include prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			@include prefixed(animation-name, "#{$nameSpace}-icon-bob-float, #{$nameSpace}-icon-bob");
 			@include prefixed(animation-duration, ".3s, 1.5s");

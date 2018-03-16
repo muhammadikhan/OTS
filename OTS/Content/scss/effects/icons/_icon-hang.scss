@@ -10,19 +10,16 @@
 		@include prefixed(transform, translateY(6px));
 	}
 }
-
 @include keyframes(#{$nameSpace}-icon-hang-sink) {
 	100% {
 		@include prefixed(transform, translateY(6px));
 	}
 }
-
 @mixin icon-hang {
 	@include hacks();
 	position: relative;
 	padding-right: 2.2em;
 	@include prefixed(transition-duration, $mediumDuration);
-
 	&:before {
 		content: "\f078";
 		position: absolute;
@@ -31,11 +28,9 @@
 		font-family: FontAwesome;
 		@include prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			@include prefixed(animation-name, "#{$nameSpace}-icon-hang-sink, #{$nameSpace}-icon-hang");
 			@include prefixed(animation-duration, ".3s, 1.5s");

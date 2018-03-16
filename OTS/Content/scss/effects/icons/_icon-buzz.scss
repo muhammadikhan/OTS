@@ -3,18 +3,15 @@
 	50% {
 		@include prefixed(transform, translateX(3px) rotate(2deg));
 	}
-
 	100% {
 		@include prefixed(transform, translateX(-3px) rotate(-2deg));
 	}
 }
-
 @mixin icon-buzz {
 	@include hacks();
 	position: relative;
 	padding-right: 2.2em;
 	@include prefixed(transition-duration, $mediumDuration);
-
 	&:before {
 		content: "\f017";
 		position: absolute;
@@ -23,11 +20,9 @@
 		font-family: FontAwesome;
 		@include prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			@include prefixed(animation-name, #{$nameSpace}-icon-buzz);
 			@include prefixed(animation-duration, .15s);

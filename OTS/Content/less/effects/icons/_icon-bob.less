@@ -10,19 +10,16 @@
 		.prefixed(transform, translateY(-6px));
 	}
 });
-
 .keyframes(~"@{nameSpace}-icon-bob-float", {
 	100% {
 		.prefixed(transform, translateY(-6px));
 	}
 });
-
 .icon-bob() {
 	.hacks();
 	position: relative;
 	padding-right: 2.2em;
 	.prefixed(transition-duration, @mediumDuration);
-
 	&:before {
 		content: "\f077";
 		position: absolute;
@@ -31,11 +28,9 @@
 		font-family: FontAwesome;
 		.prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			.prefixed(animation-name, ~"@{nameSpace}-icon-bob-float, @{nameSpace}-icon-bob");
 			.prefixed(animation-duration, ~".3s, 1.5s");

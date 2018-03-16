@@ -4,13 +4,11 @@
 		@include prefixed(transform, scale(1.5));
 	}
 }
-
 @mixin icon-pop {
 	@include hacks();
 	position: relative;
 	padding-right: #{$spaceBetweenTextAndArrows};
 	@include prefixed(transition-duration, $mediumDuration);
-
 	&:before {
 		content: "\f005";
 		position: absolute;
@@ -22,11 +20,9 @@
 		@include prefixed(transition-property, transform);
 		@include prefixed(transition-timing-function, ease-out);
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			@include prefixed(animation-name, #{$nameSpace}-icon-pop);
 			@include prefixed(animation-duration, $mediumDuration);

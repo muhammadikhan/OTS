@@ -2,10 +2,8 @@
 .outline-out() {
 	@outerBorderWidth: 4px;
 	@innerBorderWidth: 4px;
-
 	.hacks();
 	position: relative;
-
 	&:before {
 		content: '';
 		position: absolute;
@@ -17,7 +15,6 @@
 		.prefixed(transition-duration, .3s);
 		.prefixed(transition-property, "top, right, bottom, left");
 	}
-
 	&:hover:before,
 	&:focus:before,
 	&:active:before {

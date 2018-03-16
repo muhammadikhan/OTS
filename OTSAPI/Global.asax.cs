@@ -1,7 +1,6 @@
 ﻿using System.Configuration;
 using System.Web;
 using System.Web.Http;
-
 namespace OTSAPI
 {
     public class WebApiApplication : HttpApplication
@@ -10,7 +9,6 @@ namespace OTSAPI
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
-
     }
     public static class GlobalSettings
     {

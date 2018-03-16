@@ -1,17 +1,14 @@
 //
 // Modals
 // --------------------------------------------------
-
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
-
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
 }
-
 // Container that the modal scrolls within
 .modal {
   display: none;
@@ -23,7 +20,6 @@
   bottom: 0;
   left: 0;
   z-index: @zindex-modal-background;
-
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     .translate(0, -25%);
@@ -31,7 +27,6 @@
   }
   &.in .modal-dialog { .translate(0, 0)}
 }
-
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
@@ -41,7 +36,6 @@
   padding: 10px;
   z-index: (@zindex-modal-background + 10);
 }
-
 // Actual modal
 .modal-content {
   position: relative;
@@ -54,7 +48,6 @@
   // Remove focus outline from opened modal
   outline: none;
 }
-
 // Modal background
 .modal-backdrop {
   position: fixed;
@@ -68,7 +61,6 @@
   &.fade { .opacity(0); }
   &.in { .opacity(.5); }
 }
-
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
@@ -80,20 +72,17 @@
 .modal-header .close {
   margin-top: -2px;
 }
-
 // Title text within header
 .modal-title {
   margin: 0;
   line-height: @modal-title-line-height;
 }
-
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
   padding: @modal-inner-padding;
 }
-
 // Footer (for actions)
 .modal-footer {
   margin-top: 15px;
@@ -101,7 +90,6 @@
   text-align: right; // right align buttons
   border-top: 1px solid @modal-footer-border-color;
   .clearfix(); // clear it in case folks use .pull-* classes on buttons
-
   // Properly space out buttons
   .btn + .btn {
     margin-left: 5px;
@@ -116,10 +104,8 @@
     margin-left: 0;
   }
 }
-
 // Scale up the modal
 @media screen and (min-width: @screen-sm-min) {
-
   .modal-dialog {
     width: 600px;
     padding-top: 30px;
@@ -128,5 +114,4 @@
   .modal-content {
     .box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
-
 }

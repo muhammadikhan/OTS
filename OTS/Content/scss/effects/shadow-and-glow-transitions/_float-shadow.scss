@@ -4,7 +4,6 @@
 	position: relative;
 	@include prefixed(transition-duration, $mediumDuration);
 	@include prefixed(transition-property, transform);
-
 	&:before {
 	  pointer-events: none;
 	  position: absolute;
@@ -20,12 +19,10 @@
 		@include prefixed(transition-duration, $mediumDuration);
 		@include prefixed(transition-property, "transform, opacity");
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
 		@include prefixed(transform, translateY(-5px)); /* move the element up by 5px */
-
 		&:before {
 			opacity: 1;
 			@include prefixed(transform, translateY(5px)); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */

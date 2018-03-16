@@ -10,16 +10,13 @@
 		@include prefixed(transform, translateY(-8px));
 	}
 }
-
 @include keyframes(#{$nameSpace}-bob-float) {
 	100% {
 		@include prefixed(transform, translateY(-8px));
 	}
 }
-
 @mixin bob {
 	@include hacks();
-
 	&:hover,
 	&:focus,
 	&:active {

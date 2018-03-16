@@ -4,10 +4,8 @@
 		@include prefixed(transform, scale(1.1));
 	}
 }
-
 @mixin pulse-grow {
 	@include hacks();
-
 	&:hover,
 	&:focus,
 	&:active {

@@ -2,7 +2,6 @@
 @mixin bubble-right {
 	@include hacks();
 	position: relative;
-
 	&:before {
 		pointer-events: none;
 		position: absolute;
@@ -16,7 +15,6 @@
 		border-width: $tipHeight 0 $tipHeight $tipWidth;
 		border-color: transparent transparent transparent $tipColor;
 	}
-
 	&:hover:before,
 	&:focus:before,
 	&:active:before {

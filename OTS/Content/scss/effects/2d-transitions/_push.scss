@@ -3,15 +3,12 @@
 	50% {
 		@include prefixed(transform, scale(.8));
 	}
-
 	100% {
 		@include prefixed(transform, scale(1));
 	}
 }
-
 @mixin push {
 	@include hacks();
-
 	&:hover,
 	&:focus,
 	&:active {

@@ -3,18 +3,15 @@
 	50% {
 		.prefixed(transform, translateX(3px) rotate(2deg));
 	}
-
 	100% {
 		.prefixed(transform, translateX(-3px) rotate(-2deg));
 	}
 });
-
 .icon-buzz() {
 	.hacks();
 	position: relative;
 	padding-right: 2.2em;
 	.prefixed(transition-duration, @mediumDuration);
-
 	&:before {
 		content: "\f017";
 		position: absolute;
@@ -23,11 +20,9 @@
 		font-family: FontAwesome;
 		.prefixed(transform, translateZ(0));
 	}
-
 	&:hover,
 	&:focus,
 	&:active {
-
 		&:before {
 			.prefixed(animation-name, ~"@{nameSpace}-icon-buzz");
 			.prefixed(animation-duration, .15s);

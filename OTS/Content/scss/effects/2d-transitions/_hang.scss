@@ -10,16 +10,13 @@
 		@include prefixed(transform, translateY(8px));
 	}
 }
-
 @include keyframes(#{$nameSpace}-hang-sink) {
 	100% {
 		@include prefixed(transform, translateY(8px));
 	}
 }
-
 @mixin hang {
 	@include hacks();
-
 	&:hover,
 	&:focus,
 	&:active {

@@ -1,7 +1,6 @@
 //
 // List groups
 // --------------------------------------------------
-
 // Base class
 //
 // Easily usable on <ul>, <ol>, or <div>.
@@ -10,10 +9,8 @@
   margin-bottom: 20px;
   padding-left: 0; // reset padding because ul and ol
 }
-
 // Individual list items
 // -------------------------
-
 .list-group-item {
   position: relative;
   display: block;
@@ -22,7 +19,6 @@
   margin-bottom: -1px;
   background-color: @list-group-bg;
   border: 1px solid @list-group-border;
-
   // Round the first and last items
   &:first-child {
     .border-top-radius(@list-group-border-radius);
@@ -31,7 +27,6 @@
     margin-bottom: 0;
     .border-bottom-radius(@list-group-border-radius);
   }
-
   // Align badges within list items
   > .badge {
     float: right;
@@ -40,22 +35,18 @@
     margin-right: 5px;
   }
 }
-
 // Linked list items
 a.list-group-item {
   color: @list-group-link-color;
-
   .list-group-item-heading {
     color: @list-group-link-heading-color;
   }
-
   // Hover state
   &:hover,
   &:focus {
     text-decoration: none;
     background-color: @list-group-hover-bg;
   }
-
   // Active class on item itself, not parent
   &.active,
   &.active:hover,
@@ -64,7 +55,6 @@ a.list-group-item {
     color: @list-group-active-color;
     background-color: @list-group-active-bg;
     border-color: @list-group-active-border;
-
     // Force color to inherit for custom content
     .list-group-item-heading {
       color: inherit;
@@ -74,10 +64,8 @@ a.list-group-item {
     }
   }
 }
-
 // Custom content options
 // -------------------------
-
 .list-group-item-heading {
   margin-top: 0;
   margin-bottom: 5px;
