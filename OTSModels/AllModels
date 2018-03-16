@@ -1,0 +1,559 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace OTSModels
+{
+    public class Client
+    {
+        public int Client_ID { get; set; }
+
+        public string Profile_Name { get; set; }
+
+        public string Password { get; set; }
+
+        public string First_Name { get; set; }
+
+        public string Middle_Name { get; set; }
+
+        public string Last_Name { get; set; }
+
+        public string Email_Address { get; set; }
+
+        public System.Nullable<int> Contact_Number { get; set; }
+
+        public int Cell_Number { get; set; }
+
+        public int Location_ID { get; set; }
+
+        public string PickUp_Address { get; set; }
+
+        public string Drop_Address { get; set; }
+
+        public string QR_Code { get; set; }
+
+        public int Rating { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+
+    }
+    public class Warehouse
+    {
+
+
+
+        public int Warehouse_ID { get; set; }
+
+        public string Warehouse_Name { get; set; }
+
+        public string Onwer_Name { get; set; }
+
+        public string Onwer_Details { get; set; }
+
+        public int Landline_Number { get; set; }
+
+        public System.Nullable<int> Fax_Number { get; set; }
+
+        public string Email_Address { get; set; }
+
+        public int Contact_Number { get; set; }
+
+        public System.Nullable<int> Cell_Number { get; set; }
+
+        public int Location_ID { get; set; }
+
+        public string QR_Code { get; set; }
+
+        public int Rating { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class ClientRider
+    {
+
+
+
+        public int C_RiderID { get; set; }
+
+        public string Profile_Name { get; set; }
+
+        public string Password { get; set; }
+
+        public string First_Name { get; set; }
+
+        public string Middle_Name { get; set; }
+
+        public string Last_Name { get; set; }
+
+        public string Email_Address { get; set; }
+
+        public int Contact_Number { get; set; }
+
+        public System.Nullable<int> Cell_Number { get; set; }
+
+        public string QR_Code { get; set; }
+
+        public int Rating { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class ClientSample
+    {
+
+
+
+        public int ClientSample_ID { get; set; }
+
+        public string ClientSample_Name { get; set; }
+
+        public string ClientSample_QR_Code { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Dimension
+    {
+
+
+
+        public int Dimension_ID { get; set; }
+
+        public string Dimension_Name { get; set; }
+
+        public int Dimension_Value { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class DressDetail
+    {
+
+
+
+        public int DressDetails_ID { get; set; }
+
+        public int DressCategory_ID { get; set; }
+
+        public int DressType_ID { get; set; }
+
+        public int DressStyle_ID { get; set; }
+
+        public int Dimension_ID { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class DressStyle
+    {
+
+
+
+        public int DressStyle_ID { get; set; }
+
+        public string DressStyle_Name { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class DressType
+    {
+
+
+
+        public int DressType_ID { get; set; }
+
+        public string DressType_Name { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Entity
+    {
+
+
+
+        public int Entity_ID { get; set; }
+
+        public string Entity_Name { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Entity_Offer
+    {
+
+
+
+        public int Entity_Offer_ID { get; set; }
+
+        public int Entity_ID { get; set; }
+
+        public int Offer_ID { get; set; }
+
+        public int DressDetails_ID { get; set; }
+
+        public int Rate { get; set; }
+
+        public string Percentage_Discount { get; set; }
+
+        public string Flat_Discount { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Entity_Order_Timeframe
+    {
+
+
+
+        public int OrderTimeframe_ID { get; set; }
+
+        public int Order_ID { get; set; }
+
+        public int Entity_ID { get; set; }
+
+        public System.DateTime Estimated_DateTime { get; set; }
+
+        public System.DateTime Actual_DateTime { get; set; }
+
+        public System.DateTime Pick { get; set; }
+
+        public System.DateTime Drop { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Location
+    {
+
+
+
+        public int Location_ID { get; set; }
+
+        public int Area_ID { get; set; }
+
+        public int Map_ID { get; set; }
+
+        public int City_ID { get; set; }
+
+        public int Country_ID { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Offer
+    {
+
+
+
+        public int Offer_ID { get; set; }
+
+        public string Offer_Name { get; set; }
+
+        public string Offer_Event { get; set; }
+
+        public System.DateTime Offer_Valid_From { get; set; }
+
+        public System.DateTime Offer_Valid_Till { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Order
+    {
+
+
+
+        public int Order_ID { get; set; }
+
+        public int Client_ID { get; set; }
+
+        public int C_Rider_ID { get; set; }
+
+        public int Warehouse_ID { get; set; }
+
+        public int T_Rider_ID { get; set; }
+
+        public int Tailor_ID { get; set; }
+
+        public int DressDetails_ID { get; set; }
+
+        public System.Nullable<int> ClientSample_ID { get; set; }
+
+        public int Status_ID { get; set; }
+
+        public string QR_Code { get; set; }
+
+        public string Remarks { get; set; }
+
+        public int Offer_ID { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Status
+    {
+
+
+
+        public int Status_ID { get; set; }
+
+        public string Status_Name { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class Tailor
+    {
+
+
+
+        public int Tailor_ID { get; set; }
+
+        public string Profile_Name { get; set; }
+
+        public string Password { get; set; }
+
+        public string First_Name { get; set; }
+
+        public string Middle_Name { get; set; }
+
+        public string Last_Name { get; set; }
+
+        public string Email_Address { get; set; }
+
+        public int Contact_Number { get; set; }
+
+        public System.Nullable<int> Cell_Number { get; set; }
+
+        public int Location_ID { get; set; }
+
+        public string PickUp_Address { get; set; }
+
+        public string Drop_Address { get; set; }
+
+        public string QR_Code { get; set; }
+
+        public int Rating { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class TailorCategory
+    {
+
+
+
+        public int TailorCategory_ID { get; set; }
+
+        public string TailorCategory_Name { get; set; }
+
+        public int TailorCategory_Rating { get; set; }
+
+        public int TailorCategory_Days { get; set; }
+
+        public int DressCategory_ID { get; set; }
+
+        public int Tailor_ID { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public char Deleted { get; set; }
+
+    }
+    public class TailorRider
+    {
+
+
+
+        public int T_RiderID { get; set; }
+
+        public string Profile_Name { get; set; }
+
+        public string Password { get; set; }
+
+        public string First_Name { get; set; }
+
+        public string Middle_Name { get; set; }
+
+        public string Last_Name { get; set; }
+
+        public string Email_Address { get; set; }
+
+        public int Contact_Number { get; set; }
+
+        public System.Nullable<int> Cell_Number { get; set; }
+
+        public string QR_Code { get; set; }
+
+        public int Rating { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+
+    }
+    public class DressCategory
+    {
+
+
+
+        public int DressCategory_ID { get; set; }
+
+        public string DressCategory_Name { get; set; }
+
+        public System.DateTime Created_DateTime { get; set; }
+
+        public int Created_By { get; set; }
+
+        public System.DateTime Modified_DateTime { get; set; }
+
+        public int Modified_By { get; set; }
+
+        public bool Deleted { get; set; }
+    }
+}
