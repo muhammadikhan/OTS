@@ -1,9 +1,9 @@
-﻿@model CIIT_HEMS_Student_Console.Models.StudentProfile
+﻿
 <header>
     <div class="row clearfix top_row">
         <div class="inner_row">
             <div class="col-md-7 column">
-                <span class="label label-default label_without_bg">Welcome : @Model.studentName</span>
+                <span class="label label-default label_without_bg">Welcome : Imran</span>
             </div>
         </div>
     </div>
@@ -14,10 +14,25 @@
             </div>
             <div class="col-md-10 column rounded_menu_boxes">
                 <ul class="pull-right">
-                    <li><a title="Home" class="home" href="@Model.StudentConsoleURL.ToString()/DashBoard.aspx">Home</a><span></span></li>
-                    <li><a title="My Profile" class="attndnce" href="@Model.StudentConsoleURL.ToString()/AddCellEmailInfo.aspx">My Profile</a><span></span></li>
-                    <li><a title="My Profile" class="courses selected" href="javascript:void(0);">Courses</a><span></span></li>
-                    <li><a title="Results" class="marks" href="@Model.StudentConsoleURL.ToString()/QAMarks.aspx">Results</a><span></span></li>
+                    <li><a title="Client" class="Client" href="/Client">Client</a><span></span></li>
+                    <li><a title="ClientRider" class="ClientRider" href="/ClientRider">ClientRider</a><span></span></li>
+                    <li><a title="ClientSample" class="ClientSample" href="/ClientSample">ClientSample</a><span></span></li>
+                    <li><a title="Dimension" class="Dimension" href="/Dimension">Dimension</a><span></span></li>
+                    <li><a title="DressCategory" class="DressCategory" href="/DressCategory">DressCategory</a><span></span></li>
+                    <li><a title="DressDetails" class="DressDetails" href="/DressDetails">DressDetails</a><span></span></li>
+                    <li><a title="DressStyle" class="DressStyle" href="/DressStyle">DressStyle</a><span></span></li>
+                    <li><a title="DressType" class="DressType" href="/DressType">DressType</a><span></span></li>
+                    <li><a title="Entity" class="Entity" href="/Entity">Entity</a><span></span></li>
+                    <li><a title="Entity_Offer" class="Entity_Offer" href="/Entity_Offer">Entity_Offer</a><span></span></li>
+                    <li><a title="Entity_Order_Timeframe" class="Entity_Order_Timeframe" href="/Entity_Order_Timeframe">Entity_Order_Timeframe</a><span></span></li>
+                    <li><a title="Locations" class="Locations" href="/Locations">Locations</a><span></span></li>
+                    <li><a title="Offers" class="Offers" href="/Offers">Offers</a><span></span></li>
+                    <li><a title="Order" class="Order" href="/Order">Order</a><span></span></li>
+                    <li><a title="Status" class="Status" href="/Status">Status</a><span></span></li>
+                    <li><a title="Tailor" class="Tailor" href="/Tailor">Tailor</a><span></span></li>
+                    <li><a title="TailorCategory" class="TailorCategory" href="/TailorCategory">TailorCategory</a><span></span></li>
+                    <li><a title="TailorRider" class="TailorRider" href="/TailorRider">TailorRider</a><span></span></li>
+                    <li><a title="Warehouse" class="Warehouse" href="/Warehouse">Warehouse</a><span></span></li>
                     <li><a title="Logout" class="reports" href="~/AuthenticatePortal/Log_out">Logout</a><span></span></li>
                 </ul>
             </div>
@@ -34,11 +49,26 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="@Model.StudentConsoleURL.ToString()/DashBoard.aspx">Home</a></li>
-                            <li><a href="@Model.StudentConsoleURL.ToString()/AddCellEmailInfo.aspx">My Profile</a></li>
-                            <li class="active"><a href="javascript:void(0);">Courses</a></li>
-                            <li><a href="@Model.StudentConsoleURL.ToString()/QAMarks.aspx">Results</a></li>
-                            <li><a href="~/AuthenticatePortal/Log_out">Logout</a></li>
+                            <li><a href="/Client">Client</a></li>
+                            <li><a href="/ClientRider">ClientRider</a></li>
+                            <li><a href="/ClientSample">ClientSample</a></li>
+                            <li><a href="/Dimension">Dimension</a></li>
+                            <li><a href="/DressCategory">DressCategory</a></li>
+                            <li><a href="/DressDetails">DressDetails</a></li>
+                            <li><a href="/DressStyle">DressStyle</a></li>
+                            <li><a href="/DressType">DressType</a></li>
+                            <li><a href="/Entity">Entity</a></li>
+                            <li><a href="/Entity_Offer">Entity_Offer</a></li>
+                            <li><a href="/Entity_Order_Timeframe">Entity_Order_Timeframe</a></li>
+                            <li><a href="/Locations">Locations</a></li>
+                            <li><a href="/Offers">Offers</a></li>
+                            <li><a href="/Order">Order</a></li>
+                            <li><a href="/Status">Status</a></li>
+                            <li><a href="/Tailor">Tailor</a></li>
+                            <li><a href="/TailorCategory">TailorCategory</a></li>
+                            <li><a href="/TailorRider">TailorRider</a></li>
+                            <li><a href="/Warehouse">Warehouse</a></li>
+                            <li><a href="/Log_out">Logout</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -48,25 +78,27 @@
     <div class="row clearfix page_title_row">
         <div class="inner_row">
             <div class="col-md-5 column page_title_container">
-                <h3 style="padding: 15px 0;">@Model.selectedCourseTitle</h3>
-                <h5>Course Code : @Model.selectedCourseNo</h5>
-                <h5 class="teachername">Teacher : @Model.selectedTeacher</h5>
+                <h3 style="padding: 15px 0;">selectedCourseTitle</h3>
+                <h5>Course Code : selectedCourseNo</h5>
+                <h5 class="teachername">Teacher : selectedTeacher</h5>
             </div>
             <div class="col-md-7 column circuled_menu_boxes">
                 <ul class="pull-right">
-                    <li id="id_marks_summary"><a title="Marks Summary" class="marks_summary" href="@Model.StudentConsoleURL.ToString()/QAMarks.aspx"></a>Marks Summary</li>
-                    <li id="id_course_announcements"><a title="Announcements" class="course_announcements" href="~/Announcements/Index"></a>Course Notification</li>
-                    <li id="id_learning_resources"><a title="Learning Resources" class="learning_resources" href="~/LessonsResources/Index"></a>Learning Resources</li>
-                    <li id="id_assigments"><a title="Assignments" class="assigments" href="~/Assignments/Index"></a>Assignments</li>
-                    @if (Model.isCourseVirtual)
-                    {
-                        <li id="id_mdb"><a title="MDB" class="mdb" href="~/MDB/Index"></a>MDB</li>
-                        <li id="id_quizzes"><a title="Quizzes" class="quizzes" href="~/Quizzes/Index"></a>Quizzes</li>
-                        <li id="id_live_sessions"><a title="Videos" class="live_sessions" href="~/VideoLessons/Index"></a>Videos</li>
-                        <li id="id_course_information"><a title="Course Information" class="course_information" href="~/CourseInformation/Index"></a>Course Information</li>
-                    }
+                    <li id="id_create">
+                        @Html.ActionLink("Create", "Create", new { title = "Create record" })
+                    </li>
+                    <li id="id_edit">
+                        @Html.ActionLink("Edit", "Edit",   new { title = "Update record" })
+                    </li>
+                    <li id="id_delete">
+                        @Html.ActionLink("Delete", "Delete",  new { title = "Delete record" })
+                    </li>
                 </ul>
+
             </div>
         </div>
     </div>
 </header>
+
+
+@*new { id = item.Client_ID }*@

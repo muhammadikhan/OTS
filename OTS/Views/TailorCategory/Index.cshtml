@@ -1,0 +1,87 @@
+﻿@model IEnumerable<OTS.Model.TailorCategoryModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TailorCategory_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TailorCategory_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TailorCategory_Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TailorCategory_Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressCategory_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tailor_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TailorCategory_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TailorCategory_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TailorCategory_Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TailorCategory_Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressCategory_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tailor_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

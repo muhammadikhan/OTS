@@ -1,0 +1,114 @@
+﻿@model OTS.Model.Entity_Order_TimeframeModel
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Entity_Order_TimeframeModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderTimeframe_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderTimeframe_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Entity_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Entity_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estimated_DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estimated_DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actual_DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actual_DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pick)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pick)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Created_DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created_DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Created_By)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created_By)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modified_DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modified_DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modified_By)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modified_By)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deleted)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

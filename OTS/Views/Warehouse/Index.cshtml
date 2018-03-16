@@ -1,0 +1,123 @@
+﻿@model IEnumerable<OTS.Model.WarehouseModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Warehouse_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Warehouse_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Onwer_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Onwer_Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Landline_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cell_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QR_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Warehouse_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Warehouse_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Onwer_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Onwer_Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Landline_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cell_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QR_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

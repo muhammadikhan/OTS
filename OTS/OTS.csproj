@@ -158,6 +158,7 @@
     <Compile Include="Controllers\EntityController.cs" />
     <Compile Include="Controllers\Entity_OfferController.cs" />
     <Compile Include="Controllers\Entity_Order_TimeframeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
     <Compile Include="Controllers\OffersController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
@@ -641,7 +642,6 @@
     <Content Include="Views\Shared\HeaderSection.cshtml" />
     <Content Include="Views\Shared\Master_Layout.cshtml" />
     <Content Include="Views\Shared\Style.cshtml" />
-    <Content Include="Views\Shared\CleanHeaderSection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -677,6 +677,79 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\OnlineTailoringService.pubxml" />
     <None Include="Properties\PublishProfiles\WebSite.pubxml" />
+    <Content Include="Views\ClientRider\Create.cshtml" />
+    <Content Include="Views\ClientRider\Index.cshtml" />
+    <Content Include="Views\ClientRider\Edit.cshtml" />
+    <Content Include="Views\ClientRider\Delete.cshtml" />
+    <Content Include="Views\Tailor\Create.cshtml" />
+    <Content Include="Views\Tailor\Index.cshtml" />
+    <Content Include="Views\Tailor\Edit.cshtml" />
+    <Content Include="Views\Tailor\Delete.cshtml" />
+    <Content Include="Views\ClientSample\Create.cshtml" />
+    <Content Include="Views\ClientSample\Index.cshtml" />
+    <Content Include="Views\ClientSample\Edit.cshtml" />
+    <Content Include="Views\ClientSample\Delete.cshtml" />
+    <Content Include="Views\Dimension\Create.cshtml" />
+    <Content Include="Views\Dimension\Index.cshtml" />
+    <Content Include="Views\Dimension\Edit.cshtml" />
+    <Content Include="Views\Dimension\Delete.cshtml" />
+    <Content Include="Views\DressCategory\Create.cshtml" />
+    <Content Include="Views\DressCategory\Index.cshtml" />
+    <Content Include="Views\DressCategory\Edit.cshtml" />
+    <Content Include="Views\DressCategory\Delete.cshtml" />
+    <Content Include="Views\DressDetails\Create.cshtml" />
+    <Content Include="Views\DressDetails\Index.cshtml" />
+    <Content Include="Views\DressDetails\Edit.cshtml" />
+    <Content Include="Views\DressDetails\Delete.cshtml" />
+    <Content Include="Views\DressStyle\Create.cshtml" />
+    <Content Include="Views\DressStyle\Index.cshtml" />
+    <Content Include="Views\DressStyle\Edit.cshtml" />
+    <Content Include="Views\DressStyle\Delete.cshtml" />
+    <Content Include="Views\DressType\Create.cshtml" />
+    <Content Include="Views\DressType\Index.cshtml" />
+    <Content Include="Views\DressType\Edit.cshtml" />
+    <Content Include="Views\DressType\Delete.cshtml" />
+    <Content Include="Views\Entity_Offer\Create.cshtml" />
+    <Content Include="Views\Entity_Offer\Index.cshtml" />
+    <Content Include="Views\Entity_Offer\Edit.cshtml" />
+    <Content Include="Views\Entity_Offer\Delete.cshtml" />
+    <Content Include="Views\Entity_Order_Timeframe\Create.cshtml" />
+    <Content Include="Views\Entity_Order_Timeframe\Index.cshtml" />
+    <Content Include="Views\Entity_Order_Timeframe\Edit.cshtml" />
+    <Content Include="Views\Entity_Order_Timeframe\Delete.cshtml" />
+    <Content Include="Views\Entity\Create.cshtml" />
+    <Content Include="Views\Entity\Index.cshtml" />
+    <Content Include="Views\Entity\Edit.cshtml" />
+    <Content Include="Views\Entity\Delete.cshtml" />
+    <Content Include="Views\Locations\Create.cshtml" />
+    <Content Include="Views\Locations\Index.cshtml" />
+    <Content Include="Views\Locations\Edit.cshtml" />
+    <Content Include="Views\Locations\Delete.cshtml" />
+    <Content Include="Views\Offers\Create.cshtml" />
+    <Content Include="Views\Offers\Index.cshtml" />
+    <Content Include="Views\Offers\Edit.cshtml" />
+    <Content Include="Views\Offers\Delete.cshtml" />
+    <Content Include="Views\Order\Create.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\Edit.cshtml" />
+    <Content Include="Views\Order\Delete.cshtml" />
+    <Content Include="Views\Status\Create.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\TailorCategory\Create.cshtml" />
+    <Content Include="Views\TailorCategory\Index.cshtml" />
+    <Content Include="Views\TailorCategory\Edit.cshtml" />
+    <Content Include="Views\TailorCategory\Delete.cshtml" />
+    <Content Include="Views\TailorRider\Create.cshtml" />
+    <Content Include="Views\TailorRider\Index.cshtml" />
+    <Content Include="Views\TailorRider\Edit.cshtml" />
+    <Content Include="Views\TailorRider\Delete.cshtml" />
+    <Content Include="Views\Warehouse\Create.cshtml" />
+    <Content Include="Views\Warehouse\Index.cshtml" />
+    <Content Include="Views\Warehouse\Edit.cshtml" />
+    <Content Include="Views\Warehouse\Delete.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

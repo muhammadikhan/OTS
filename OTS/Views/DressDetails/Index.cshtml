@@ -1,0 +1,81 @@
+﻿@model IEnumerable<OTS.Model.DressDetailsModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DressDetails_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressCategory_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressType_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DressStyle_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dimension_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressDetails_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressCategory_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressType_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DressStyle_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dimension_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

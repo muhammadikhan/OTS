@@ -1,0 +1,93 @@
+﻿@model IEnumerable<OTS.Model.Entity_Order_TimeframeModel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderTimeframe_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Entity_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estimated_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actual_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pick)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deleted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderTimeframe_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entity_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estimated_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actual_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pick)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deleted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
